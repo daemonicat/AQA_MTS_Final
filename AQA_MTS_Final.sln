@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AQA_MTS_Final", "AQA_MTS_Final\AQA_MTS_Final.csproj", "{5336D2A4-9A67-44C6-A420-35264B6F1C0C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QaseTestProject", "QaseTestProject\QaseTestProject.csproj", "{5336D2A4-9A67-44C6-A420-35264B6F1C0C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
