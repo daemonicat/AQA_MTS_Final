@@ -9,7 +9,7 @@ public class LoginPage : BasePage
     private static readonly By SignInButtonBy = By.CssSelector("button[type = 'submit']");
     private static readonly By ErrorAlertBy = By.ClassName("xtWHgv");
 
-    public LoginPage(IWebDriver driver, bool openPageByUrl = true) : base(driver, openPageByUrl)
+    public LoginPage(IWebDriver driver) : base(driver)
     {
     }
 
@@ -17,4 +17,6 @@ public class LoginPage : BasePage
     public IWebElement PasswordInput => WaitsHelper.WaitForExists(PasswordInputBy);
     public IWebElement SignInButton => WaitsHelper.WaitForExists(SignInButtonBy);
     public IWebElement ErrorAlert => WaitsHelper.WaitForVisibilityLocatedBy(ErrorAlertBy);
+
+    public override bool IsPageOpened() => SignInButton.Displayed;
 }

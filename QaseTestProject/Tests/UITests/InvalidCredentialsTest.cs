@@ -1,8 +1,4 @@
-﻿using QaseTestProject.Helpers.Configuration;
-using QaseTestProject.Objects.Pages;
-using QaseTestProject.Objects.Steps;
-
-namespace QaseTestProject.Tests.UITests;
+﻿namespace QaseTestProject.Tests.UITests;
 
 public class InvalidCredentialsTest : BaseTest
 {
@@ -10,9 +6,9 @@ public class InvalidCredentialsTest : BaseTest
     [Category("Regression")]
     public void InvalidLoginTest()
     {
-        var loginPage = new LoginPage(Driver);
-        LoginSteps.Login("blah@blah.com", "definitelyWrongPassword");
-        
-        Assert.That(loginPage.ErrorAlert.Text, Is.EqualTo("These credentials do not match our records."));
+        Assert.That(
+            LoginSteps.UnsuccessfulLogin("blah@blah.com", "definitelyWrongPassword")
+                .ErrorAlert.Text.Trim(),
+            Is.EqualTo("These credentials do not match our records."));
     }
 }
