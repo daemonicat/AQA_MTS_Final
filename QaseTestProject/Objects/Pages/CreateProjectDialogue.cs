@@ -1,11 +1,12 @@
-﻿using OpenQA.Selenium;
+﻿using System.Security.Cryptography.X509Certificates;
+using OpenQA.Selenium;
 
 namespace QaseTestProject.Objects.Pages;
 
 public class CreateProjectDialogue : BasePage
 {
-    private static readonly By ProjectNameBy = By.Name("project-name");
-    private static readonly By ProjectCodeBy = By.Name("project-code");
+    private static readonly By ProjectNameBy = By.Id("project-name");
+    private static readonly By ProjectCodeBy = By.Id("project-code");
     private static readonly By ProjectDescriptionBy = By.Name("description-area");
     private static readonly By ProjectAccessPrivateBy = By.CssSelector("input[type = 'radio'][@value='private']");
     private static readonly By ProjectAccessPublicBy = By.CssSelector("input[type = 'radio'][@value='public']");
@@ -33,5 +34,46 @@ public class CreateProjectDialogue : BasePage
     public override bool IsPageOpened()
     {
         return CreateProjectButton.Displayed;
+    }
+
+    public void FillInNameField(string name) => ProjectName.SendKeys(name);
+    public void FillInProjectCode(string code) => ProjectCode.SendKeys(code);
+    public void FillInProjectDescription(string desc) => ProjectDescription.SendKeys(desc);
+    public void ClickCreateProjectButton() => CreateProjectButton.Click();
+    public void ClickCancelProjectButton() => CancelProjectButton.Click();
+
+    public void SetProjectAccessType(string projectAccessType)
+    {
+        switch (projectAccessType)
+        {
+            case "public":
+                ProjectAccessPublic.Click();
+                break;
+            case "private":
+                ProjectAccessPrivate.Click();
+                break;
+            default:
+                ProjectAccessPrivate.Click();
+                break;
+        }
+    }
+
+    public void SetMemberAccessType(string memberAccessType)
+    {
+        switch (memberAccessType)
+        {
+            case "All":
+                MemberAccessAll.Click();
+                break;
+            case "Group":
+                MemberAccessGroup.Click();
+                break;
+            case "None":
+                MemberAccessNone.Click();
+                break;
+            default:
+                MemberAccessNone.Click();
+                break;
+        }
     }
 }

@@ -17,4 +17,8 @@ public class ProjectsPage : BasePage
     public IWebElement DeleteProjectButton => WaitsHelper.WaitForExists(DeleteProjectButtonBy);
     
     public override bool IsPageOpened() => CreateNewProjectButton.Displayed;
+    
+    public void ClickCreateNewProjectButton() => CreateNewProjectButton.Click();
+    public void ClickRemoveProjectButton() => RemoveProjectButton.Click();
+    public void ClickDeleteProjectButton() => DeleteProjectButton.Click();
 }
