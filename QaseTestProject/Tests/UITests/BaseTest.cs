@@ -14,6 +14,7 @@ public class BaseTest
     protected WaitsHelper WaitsHelper { get; private set; }
 
     protected LoginSteps LoginSteps;
+    protected CreateNewProjectSteps CreateNewProjectSteps;
 
     [SetUp]
     public void FactoryDriverTest()
@@ -22,6 +23,7 @@ public class BaseTest
         WaitsHelper = new WaitsHelper(Driver, TimeSpan.FromSeconds(Configurator.WaitsTimeout));
 
         LoginSteps = new LoginSteps(Driver);
+        CreateNewProjectSteps = new CreateNewProjectSteps(Driver);
         
         Driver.Navigate().GoToUrl(Configurator.AppSettings.URL);
     }

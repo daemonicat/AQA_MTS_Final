@@ -8,11 +8,11 @@ public class CreateProjectDialogue : BasePage
     private static readonly By ProjectNameBy = By.Id("project-name");
     private static readonly By ProjectCodeBy = By.Id("project-code");
     private static readonly By ProjectDescriptionBy = By.Name("description-area");
-    private static readonly By ProjectAccessPrivateBy = By.CssSelector("input[type = 'radio'][@value='private']");
-    private static readonly By ProjectAccessPublicBy = By.CssSelector("input[type = 'radio'][@value='public']");
-    private static readonly By MemberAccessAllBy = By.CssSelector("input[type = 'radio'][@value='all']");
-    private static readonly By MemberAccessGroupBy = By.CssSelector("input[type = 'radio'][@value='group']");
-    private static readonly By MemberAccessNoneBy = By.CssSelector("input[type = 'radio'][@value='none']");
+    private static readonly By ProjectAccessPrivateBy = By.XPath("//input[@type='radio'][@value='private']");
+    private static readonly By ProjectAccessPublicBy = By.XPath("//input[@type='radio'][@value='public']");
+    private static readonly By MemberAccessAllBy = By.XPath("//input[@type='radio'][@value='all']");
+    private static readonly By MemberAccessGroupBy = By.XPath("//input[@type='radio'][@value='group']");
+    private static readonly By MemberAccessNoneBy = By.XPath("//input[@type='radio'][@value='none']");
     private static readonly By CreateProjectButtonBy = By.XPath("//button[@type='submit']");
     private static readonly By CancelProjectButtonBy = By.XPath("//button[@type='button']");
 
