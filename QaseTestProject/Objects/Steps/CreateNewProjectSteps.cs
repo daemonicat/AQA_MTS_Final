@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using Allure.NUnit.Attributes;
+using OpenQA.Selenium;
 using QaseTestProject.Objects.Pages;
 
 namespace QaseTestProject.Objects.Steps;
@@ -14,6 +15,7 @@ public class CreateNewProjectSteps : BaseSteps
         _projectsPage = new ProjectsPage(Driver);
     }
 
+    [AllureStep("Create new project")]
     public ProjectPage CreateProject(string name, string code, string description, string projectAccessType, string? memberAccessType)
     {
         _projectsPage.ClickCreateNewProjectButton();

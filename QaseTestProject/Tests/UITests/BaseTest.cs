@@ -1,3 +1,5 @@
+using Allure.Net.Commons;
+using Allure.NUnit;
 using OpenQA.Selenium;
 using QaseTestProject.Core;
 using QaseTestProject.Helpers;
@@ -8,6 +10,7 @@ namespace QaseTestProject.Tests.UITests;
 
 [Parallelizable(scope: ParallelScope.All)]
 [FixtureLifeCycle(LifeCycle.InstancePerTestCase)]
+[AllureNUnit]
 public class BaseTest
 {
     protected IWebDriver Driver { get; private set; }
@@ -15,6 +18,12 @@ public class BaseTest
 
     protected LoginSteps LoginSteps;
     protected CreateNewProjectSteps CreateNewProjectSteps;
+
+    [OneTimeSetUp]
+    public static void GlobalSetup()
+    {
+        AllureLifecycle.Instance.CleanupResultDirectory();
+    }
 
     [SetUp]
     public void FactoryDriverTest()
@@ -24,13 +33,28 @@ public class BaseTest
 
         LoginSteps = new LoginSteps(Driver);
         CreateNewProjectSteps = new CreateNewProjectSteps(Driver);
-        
+
         Driver.Navigate().GoToUrl(Configurator.AppSettings.URL);
     }
 
     [TearDown]
     public void TearDown()
     {
+        try
+        {
+            if (TestContext.CurrentContext.Result.Outcome.Status == NUnit.Framework.Interfaces.TestStatus.Failed)
+            {
+                Screenshot screenshot = ((ITakesScreenshot)Driver).GetScreenshot();
+                byte[] screenshotBytes = screenshot.AsByteArray;
+
+                AllureApi.AddAttachment("Screenshot", "image/png", screenshotBytes);
+            }
+        }
+        catch
+        {
+            // ignored
+        }
+
         Driver.Quit();
     }
 }

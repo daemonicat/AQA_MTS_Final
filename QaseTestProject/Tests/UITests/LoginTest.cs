@@ -1,14 +1,15 @@
-﻿using NLog;
+﻿using Allure.Net.Commons;
+using Allure.NUnit.Attributes;
 using QaseTestProject.Helpers.Configuration;
-using QaseTestProject.Objects.Pages;
 
 namespace QaseTestProject.Tests.UITests;
 
 public class LoginTest : BaseTest
 {
-    [Test]
+    [Test(Description = "Base positive login test")]
     [Category("Smoke")]
     [Category("Regression")]
+    [AllureSeverity(SeverityLevel.blocker)]
     public void SuccessfulLoginTest()
     {
         Assert.That(LoginSteps.SuccessfulLogin(Configurator.AppSettings.Username!, Configurator.AppSettings.Password!)

@@ -1,9 +1,13 @@
-﻿namespace QaseTestProject.Tests.UITests;
+﻿using Allure.Net.Commons;
+using Allure.NUnit.Attributes;
+
+namespace QaseTestProject.Tests.UITests;
 
 public class InvalidCredentialsTest : BaseTest
 {
-    [Test]
+    [Test(Description = "Negative login test")]
     [Category("Regression")]
+    [AllureSeverity(SeverityLevel.blocker)]
     public void InvalidLoginTest()
     {
         Assert.That(
