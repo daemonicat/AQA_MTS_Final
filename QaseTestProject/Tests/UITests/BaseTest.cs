@@ -17,7 +17,8 @@ public class BaseTest
     protected WaitsHelper WaitsHelper { get; private set; }
 
     protected LoginSteps LoginSteps;
-    protected CreateNewProjectSteps CreateNewProjectSteps;
+    protected ProjectsSteps ProjectsSteps;
+    protected ProjectSteps ProjectSteps;
 
     [OneTimeSetUp]
     public static void GlobalSetup()
@@ -32,7 +33,8 @@ public class BaseTest
         WaitsHelper = new WaitsHelper(Driver, TimeSpan.FromSeconds(Configurator.WaitsTimeout));
 
         LoginSteps = new LoginSteps(Driver);
-        CreateNewProjectSteps = new CreateNewProjectSteps(Driver);
+        ProjectsSteps = new ProjectsSteps(Driver);
+        ProjectSteps = new ProjectSteps(Driver);
 
         Driver.Navigate().GoToUrl(Configurator.AppSettings.URL);
     }
