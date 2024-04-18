@@ -26,7 +26,7 @@ public class CreateNewProjectSteps : BaseSteps
         Thread.Sleep(2000);
         _createProjectDialogue.SetProjectAccessType(projectAccessType);
         Thread.Sleep(2000);
-        _createProjectDialogue.SetMemberAccessType(memberAccessType!);
+        if (projectAccessType != "public") {_createProjectDialogue.SetMemberAccessType(memberAccessType!);}
         Thread.Sleep(2000);
         _createProjectDialogue.ClickCreateProjectButton();
         Thread.Sleep(2000);

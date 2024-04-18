@@ -4,7 +4,6 @@ namespace QaseTestProject.Tests.UITests;
 
 public class CreateNewProjectTest : BaseTest
 {
-    //WIP
     [Test]
     [Category("Regression")]
     public void CreateProjectTest()
