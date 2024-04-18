@@ -52,6 +52,10 @@
         <Content Include="Resources\testdata.json">
           <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </Content>
+        <None Remove="Resources\testdatanegative.json" />
+        <Content Include="Resources\testdatanegative.json">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
     </ItemGroup>
     
 </Project>
