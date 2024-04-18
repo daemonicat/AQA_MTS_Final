@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using Allure.NUnit.Attributes;
+using OpenQA.Selenium;
 using QaseTestProject.Objects.Pages;
 
 namespace QaseTestProject.Objects.Steps;
@@ -12,6 +13,7 @@ public class LoginSteps : BaseSteps
         _loginPage = new LoginPage(Driver);
     }
     
+    [AllureStep]
     public ProjectsPage SuccessfulLogin(string username, string password)
     {
         _loginPage.EmailInput.SendKeys(username);
@@ -21,6 +23,7 @@ public class LoginSteps : BaseSteps
         return new ProjectsPage(Driver);
     }
     
+    [AllureStep]
     public LoginPage UnsuccessfulLogin(string username, string password)
     {
         _loginPage.EmailInput.SendKeys(username);
