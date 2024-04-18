@@ -1,5 +1,4 @@
-﻿using System.Security.Cryptography.X509Certificates;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 
 namespace QaseTestProject.Objects.Pages;
 
@@ -14,7 +13,8 @@ public class CreateProjectDialogue : BasePage
     private static readonly By MemberAccessGroupBy = By.XPath("//input[@type='radio'][@value='group']");
     private static readonly By MemberAccessNoneBy = By.XPath("//input[@type='radio'][@value='none']");
     private static readonly By CreateProjectButtonBy = By.XPath("//button[@type='submit']");
-    private static readonly By CancelProjectButtonBy = By.XPath("//button[@type='button']");
+    private static readonly By MinCharsProjectCodeErrorBy = By.XPath("//div[text()='The code must be at least 2 characters.']");
+    private static readonly By MaxCharsProjectCodeErrorBy = By.XPath("//div[text()='The code may not be greater than 10 characters.']");
 
     public CreateProjectDialogue(IWebDriver driver) : base(driver)
     {
@@ -29,7 +29,8 @@ public class CreateProjectDialogue : BasePage
     public IWebElement MemberAccessGroup => WaitsHelper.WaitForExists(MemberAccessGroupBy);
     public IWebElement MemberAccessNone => WaitsHelper.WaitForVisibilityLocatedBy(MemberAccessNoneBy);
     public IWebElement CreateProjectButton => WaitsHelper.WaitForExists(CreateProjectButtonBy);
-    public IWebElement CancelProjectButton => WaitsHelper.WaitForExists(CancelProjectButtonBy);
+    public IWebElement MinCharsProjectCodeError => WaitsHelper.WaitForExists(MinCharsProjectCodeErrorBy);
+    public IWebElement MaxCharsProjectCodeError => WaitsHelper.WaitForExists(MaxCharsProjectCodeErrorBy);
 
     public override bool IsPageOpened()
     {
@@ -37,11 +38,15 @@ public class CreateProjectDialogue : BasePage
     }
 
     public void FillInNameField(string name) => ProjectName.SendKeys(name);
-    public void FillInProjectCode(string code) => ProjectCode.SendKeys(code);
+
+    public void FillInProjectCode(string code)
+    {
+        ProjectCode.Clear();
+        ProjectCode.SendKeys(code);
+    }
+
     public void FillInProjectDescription(string desc) => ProjectDescription.SendKeys(desc);
     public void ClickCreateProjectButton() => CreateProjectButton.Click();
-    public void ClickCancelProjectButton() => CancelProjectButton.Click();
-
     public void SetProjectAccessType(string projectAccessType)
     {
         switch (projectAccessType)
@@ -76,4 +81,7 @@ public class CreateProjectDialogue : BasePage
                 break;
         }
     }
+    
+    public bool CheckMinCharsProjectCodeError() => MinCharsProjectCodeError.Displayed;
+    public bool CheckMaxCharsProjectCodeError() => MaxCharsProjectCodeError.Displayed;
 }

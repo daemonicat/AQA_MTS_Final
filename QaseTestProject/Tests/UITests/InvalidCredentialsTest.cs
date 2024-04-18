@@ -7,7 +7,7 @@ public class InvalidCredentialsTest : BaseTest
 {
     [Test(Description = "Negative login test")]
     [Category("Regression")]
-    [AllureSeverity(SeverityLevel.blocker)]
+    [AllureSeverity(SeverityLevel.critical)]
     public void InvalidLoginTest()
     {
         Assert.That(

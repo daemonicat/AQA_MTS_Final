@@ -7,14 +7,15 @@ namespace QaseTestProject.Tests.UITests;
 public class CreateNewProjectTest : BaseTest
 {
     [Test(Description = "Create entity (new project) test")]
+    [Category("Smoke")]
     [Category("Regression")]
-    [AllureSeverity(SeverityLevel.blocker)]
+    [AllureSeverity(SeverityLevel.critical)]
     public void CreateProjectTest()
     {
         LoginSteps.SuccessfulLogin(Configurator.AppSettings.Username!, Configurator.AppSettings.Password!);
         Assert.That(
-            CreateNewProjectSteps.CreateProject(
-                    "name", "code", "description text", "public", "All")
+            ProjectsSteps.CreateProject(
+                    "name", "code", "description text", "private", "All")
                 .IsPageOpened);
     }
 }
