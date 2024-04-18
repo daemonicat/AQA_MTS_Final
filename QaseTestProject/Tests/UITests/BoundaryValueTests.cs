@@ -8,6 +8,7 @@ public class BoundaryValueTests : BaseTest
 {
     [Test(Description = "Minimum (2) Value test")]
     [Category("Regression")]
+    [AllureOwner("Dmitry Kuzmin")]
     [AllureSeverity(SeverityLevel.critical)]
     public void MinValueTest()
     {
@@ -20,6 +21,7 @@ public class BoundaryValueTests : BaseTest
     
     [Test(Description = "Maximum (10) Value test")]
     [Category("Regression")]
+    [AllureOwner("Dmitry Kuzmin")]
     [AllureSeverity(SeverityLevel.critical)]
     public void MaxValueTest()
     {
@@ -32,6 +34,7 @@ public class BoundaryValueTests : BaseTest
     
     [Test(Description = "Minimum Out of Bounds (1) Value Test")]
     [Category("Regression")]
+    [AllureOwner("Dmitry Kuzmin")]
     [AllureSeverity(SeverityLevel.critical)]
     public void MinOOBValueTest()
     {
@@ -43,6 +46,7 @@ public class BoundaryValueTests : BaseTest
     
     [Test(Description = "Maximum Out of Bounds Value Test")]
     [Category("Regression")]
+    [AllureOwner("Dmitry Kuzmin")]
     [AllureSeverity(SeverityLevel.critical)]
     public void MaxOOBValueTest()
     {

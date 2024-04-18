@@ -8,6 +8,7 @@ public class DeleteProjectTest : BaseTest
 {
     [Test(Description = "Delete entity (project) test")]
     [Category("Regression")]
+    [AllureOwner("Dmitry Kuzmin")]
     [AllureSeverity(SeverityLevel.critical)]
     public void RemoveProjectTest()
     {

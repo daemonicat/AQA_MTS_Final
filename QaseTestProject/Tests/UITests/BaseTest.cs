@@ -8,8 +8,8 @@ using QaseTestProject.Objects.Steps;
 
 namespace QaseTestProject.Tests.UITests;
 
-//[Parallelizable(scope: ParallelScope.All)]
-//[FixtureLifeCycle(LifeCycle.InstancePerTestCase)]
+[Parallelizable(scope: ParallelScope.All)]
+[FixtureLifeCycle(LifeCycle.InstancePerTestCase)]
 [AllureNUnit]
 public class BaseTest
 {
@@ -18,6 +18,7 @@ public class BaseTest
 
     protected LoginSteps LoginSteps;
     protected ProjectsSteps ProjectsSteps;
+    protected ProjectSteps ProjectSteps;
 
     [OneTimeSetUp]
     public static void GlobalSetup()
@@ -33,6 +34,7 @@ public class BaseTest
 
         LoginSteps = new LoginSteps(Driver);
         ProjectsSteps = new ProjectsSteps(Driver);
+        ProjectSteps = new ProjectSteps(Driver);
 
         Driver.Navigate().GoToUrl(Configurator.AppSettings.URL);
     }

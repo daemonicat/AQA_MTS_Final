@@ -14,7 +14,7 @@ public class LoginSteps : BaseSteps
     }
     
     [AllureStep]
-    public ProjectsPage SuccessfulLogin(string username, [Name("password")] string password)
+    public ProjectsPage SuccessfulLogin(string username, string password)
     {
         _loginPage.EmailInput.SendKeys(username);
         _loginPage.PasswordInput.SendKeys(password);

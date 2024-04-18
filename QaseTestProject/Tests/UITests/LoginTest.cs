@@ -9,6 +9,7 @@ public class LoginTest : BaseTest
     [Test(Description = "Base positive login test")]
     [Category("Smoke")]
     [Category("Regression")]
+    [AllureOwner("Dmitry Kuzmin")]
     [AllureSeverity(SeverityLevel.blocker)]
     public void SuccessfulLoginTest()
     {
