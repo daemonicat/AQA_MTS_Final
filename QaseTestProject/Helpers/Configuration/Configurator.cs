@@ -38,6 +38,8 @@ public static class Configurator
             var child = Configuration.GetSection("AppSettings");
 
             appSettings.URL = child["URL"];
+            appSettings.Username = child["Username"];
+            appSettings.Password = child["Password"];
 
             return appSettings;
         }
