@@ -19,8 +19,9 @@ public class ProjectSteps : BaseSteps
     [AllureStep("Import Tests")]
     public ProjectPage ImportTests(string fileName)
     {
-        string? assemblyPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-        string filePath = Path.Combine(assemblyPath!, "Resources", fileName);
+        string location = Assembly.GetExecutingAssembly().Location;
+        string assemblyPath = Path.GetDirectoryName(location) ?? throw new Exception("Wrong assembly path");
+        string filePath = Path.Combine(assemblyPath, "Resources", fileName);
 
         _projectsPage.ClickOpenFirstProject();
         _projectPage.ClickDataMenuButton();

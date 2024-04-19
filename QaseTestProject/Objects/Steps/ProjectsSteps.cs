@@ -16,14 +16,19 @@ public class ProjectsSteps : BaseSteps
     }
 
     [AllureStep("Create new project")]
-    public ProjectPage CreateProject(string name, string code, string description, string projectAccessType, string? memberAccessType)
+    public ProjectPage CreateProject(string name, string code, string description, string projectAccessType, string memberAccessType)
     {
         _projectsPage.ClickCreateNewProjectButton();
         _createProjectDialogue.FillInNameField(name);
         _createProjectDialogue.FillInProjectCode(code);
         _createProjectDialogue.FillInProjectDescription(description);
-        if (projectAccessType == "public") {_createProjectDialogue.SetProjectAccessType(projectAccessType);}
-        if (projectAccessType != "public") {_createProjectDialogue.SetMemberAccessType(memberAccessType!);}
+        if (projectAccessType == "public")
+        {
+            _createProjectDialogue.SetProjectAccessType(projectAccessType);
+        } else
+        {
+            _createProjectDialogue.SetMemberAccessType(memberAccessType);
+        }
         _createProjectDialogue.ClickCreateProjectButton();
         
         return new ProjectPage(Driver);
@@ -40,14 +45,20 @@ public class ProjectsSteps : BaseSteps
     }
     
     [AllureStep("Fail new project creation")]
-    public CreateProjectDialogue FailNewProjectCreation(string name, string code, string description, string projectAccessType, string? memberAccessType)
+    public CreateProjectDialogue FailNewProjectCreation(string name, string code, string description, string projectAccessType, string memberAccessType)
     {
         _projectsPage.ClickCreateNewProjectButton();
         _createProjectDialogue.FillInNameField(name);
         _createProjectDialogue.FillInProjectCode(code);
         _createProjectDialogue.FillInProjectDescription(description);
-        if (projectAccessType == "public") {_createProjectDialogue.SetProjectAccessType(projectAccessType);}
-        if (projectAccessType != "public") {_createProjectDialogue.SetMemberAccessType(memberAccessType!);}
+        if (projectAccessType == "public")
+        {
+            _createProjectDialogue.SetProjectAccessType(projectAccessType);
+        } else
+        {
+            _createProjectDialogue.SetMemberAccessType(memberAccessType);
+        }
+        
         _createProjectDialogue.ClickCreateProjectButton();
         
         return _createProjectDialogue;

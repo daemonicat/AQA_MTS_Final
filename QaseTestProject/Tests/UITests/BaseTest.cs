@@ -29,7 +29,7 @@ public class BaseTest
     [SetUp]
     public void FactoryDriverTest()
     {
-        Driver = new Browser().Driver!;
+        Driver = new Browser().Driver;
         WaitsHelper = new WaitsHelper(Driver, TimeSpan.FromSeconds(Configurator.WaitsTimeout));
 
         LoginSteps = new LoginSteps(Driver);

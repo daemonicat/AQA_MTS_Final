@@ -13,7 +13,7 @@ public class CreateNewProjectTest : BaseTest
     [AllureSeverity(SeverityLevel.blocker)]
     public void CreateProjectTest()
     {
-        LoginSteps.SuccessfulLogin(Configurator.AppSettings.Username!, Configurator.AppSettings.Password!);
+        LoginSteps.SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
         Assert.That(
             ProjectsSteps.CreateProject(
                     "name0", "code", "description text", "private", "All")
