@@ -1,5 +1,4 @@
-﻿using System.Net;
-using System.Reflection;
+﻿using System.Reflection;
 using Allure.NUnit.Attributes;
 using OpenQA.Selenium;
 using QaseTestProject.Objects.Pages;
@@ -20,8 +19,8 @@ public class ProjectSteps : BaseSteps
     [AllureStep("Import Tests")]
     public ProjectPage ImportTests(string fileName)
     {
-        string assemblyPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-        string filePath = Path.Combine(assemblyPath, "Resources", fileName);
+        string? assemblyPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+        string filePath = Path.Combine(assemblyPath!, "Resources", fileName);
 
         _projectsPage.ClickOpenFirstProject();
         _projectPage.ClickDataMenuButton();

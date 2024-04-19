@@ -14,11 +14,11 @@ public class ProjectsPage : BasePage
     {
     }
 
-    public IWebElement CreateNewProjectButton => WaitsHelper.WaitForExists(CreateNewProjectButtonBy);
-    public IWebElement ProjectMenuButton => WaitsHelper.WaitForExists(ProjectMenuButtonBy);
-    public IWebElement RemoveProjectButton => WaitsHelper.WaitForExists(RemoveProjectButtonBy);
-    public IWebElement DeleteProjectButton => WaitsHelper.WaitForExists(DeleteProjectButtonBy);
-    public IWebElement OpenFirstProject => WaitsHelper.WaitForExists(OpenFirstProjectBy);
+    private IWebElement CreateNewProjectButton => WaitsHelper.WaitForExists(CreateNewProjectButtonBy);
+    private IWebElement ProjectMenuButton => WaitsHelper.WaitForExists(ProjectMenuButtonBy);
+    private IWebElement RemoveProjectButton => WaitsHelper.WaitForExists(RemoveProjectButtonBy);
+    private IWebElement DeleteProjectButton => WaitsHelper.WaitForExists(DeleteProjectButtonBy);
+    private IWebElement OpenFirstProject => WaitsHelper.WaitForExists(OpenFirstProjectBy);
     
     public override bool IsPageOpened() => CreateNewProjectButton.Displayed;
     

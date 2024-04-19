@@ -20,17 +20,17 @@ public class CreateProjectDialogue : BasePage
     {
     }
 
-    public IWebElement ProjectName => WaitsHelper.WaitForExists(ProjectNameBy);
-    public IWebElement ProjectCode => WaitsHelper.WaitForExists(ProjectCodeBy);
-    public IWebElement ProjectDescription => WaitsHelper.WaitForExists(ProjectDescriptionBy);
-    public IWebElement ProjectAccessPrivate => WaitsHelper.WaitForVisibilityLocatedBy(ProjectAccessPrivateBy);
-    public IWebElement ProjectAccessPublic => WaitsHelper.WaitForExists(ProjectAccessPublicBy);
-    public IWebElement MemberAccessAll => WaitsHelper.WaitForExists(MemberAccessAllBy);
-    public IWebElement MemberAccessGroup => WaitsHelper.WaitForExists(MemberAccessGroupBy);
-    public IWebElement MemberAccessNone => WaitsHelper.WaitForVisibilityLocatedBy(MemberAccessNoneBy);
-    public IWebElement CreateProjectButton => WaitsHelper.WaitForExists(CreateProjectButtonBy);
-    public IWebElement MinCharsProjectCodeError => WaitsHelper.WaitForExists(MinCharsProjectCodeErrorBy);
-    public IWebElement MaxCharsProjectCodeError => WaitsHelper.WaitForExists(MaxCharsProjectCodeErrorBy);
+    private IWebElement ProjectName => WaitsHelper.WaitForExists(ProjectNameBy);
+    private IWebElement ProjectCode => WaitsHelper.WaitForExists(ProjectCodeBy);
+    private IWebElement ProjectDescription => WaitsHelper.WaitForExists(ProjectDescriptionBy);
+    private IWebElement ProjectAccessPrivate => WaitsHelper.WaitForVisibilityLocatedBy(ProjectAccessPrivateBy);
+    private IWebElement ProjectAccessPublic => WaitsHelper.WaitForExists(ProjectAccessPublicBy);
+    private IWebElement MemberAccessAll => WaitsHelper.WaitForExists(MemberAccessAllBy);
+    private IWebElement MemberAccessGroup => WaitsHelper.WaitForExists(MemberAccessGroupBy);
+    private IWebElement MemberAccessNone => WaitsHelper.WaitForVisibilityLocatedBy(MemberAccessNoneBy);
+    private IWebElement CreateProjectButton => WaitsHelper.WaitForExists(CreateProjectButtonBy);
+    private IWebElement MinCharsProjectCodeError => WaitsHelper.WaitForExists(MinCharsProjectCodeErrorBy);
+    private IWebElement MaxCharsProjectCodeError => WaitsHelper.WaitForExists(MaxCharsProjectCodeErrorBy);
 
     public override bool IsPageOpened()
     {

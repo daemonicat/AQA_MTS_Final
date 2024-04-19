@@ -46,5 +46,5 @@ public static class Configurator
     }
 
     public static string? BrowserType => Configuration[nameof(BrowserType)];
-    public static double WaitsTimeout => Double.Parse(Configuration[nameof(WaitsTimeout)]);
+    public static double WaitsTimeout => Double.Parse(Configuration[nameof(WaitsTimeout)] ?? "120");
 }
