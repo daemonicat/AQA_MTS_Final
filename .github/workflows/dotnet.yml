@@ -40,7 +40,7 @@ jobs:
       with:
           gh_pages: gh-pages
           allure_history: allure-history
-          allure_results: TestRail/bin/Debug/net8.0/allure-results
+          allure_results: QaseTestProject/bin/Debug/net8.0/allure-results
 
     - name: Publish test report
       uses: peaceiris/actions-gh-pages@v4
