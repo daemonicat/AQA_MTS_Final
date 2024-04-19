@@ -1,12 +1,12 @@
 using System.Reflection;
 using Microsoft.Extensions.Configuration;
+using Microsoft.VisualStudio.TestPlatform.ObjectModel;
 
 namespace QaseTestProject.Helpers.Configuration;
 
 public static class Configurator
 {
     private static readonly Lazy<IConfiguration> s_configuration;
-    public static IConfiguration Configuration => s_configuration.Value;
 
     static Configurator()
     {
@@ -15,12 +15,12 @@ public static class Configurator
 
     private static IConfiguration BuildConfiguration()
     {
-        var basePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+        var basePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? throw new InvalidOperationException();
         var builder = new ConfigurationBuilder()
-            .SetBasePath(basePath ?? throw new InvalidOperationException())
+            .SetBasePath(basePath)
             .AddJsonFile("appsettings.json");
 
-        var appSettingFiles = Directory.EnumerateFiles(basePath ?? string.Empty, "appsettings.*.json");
+        var appSettingFiles = Directory.EnumerateFiles(basePath, "appsettings.*.json");
 
         foreach (var appSettingFile in appSettingFiles)
         {
@@ -35,16 +35,16 @@ public static class Configurator
         get
         {
             var appSettings = new AppSettings();
-            var child = Configuration.GetSection("AppSettings");
+            var child = s_configuration.Value.GetSection("AppSettings");
 
-            appSettings.URL = child["URL"];
-            appSettings.Username = child["Username"];
-            appSettings.Password = child["Password"];
+            appSettings.URL = child["URL"] ?? throw new SettingsException("No URL in appsettings.json");
+            appSettings.Username = child["Username"] ?? throw new SettingsException("No Username in appsettings.json");
+            appSettings.Password = child["Password"] ?? throw new SettingsException("No Password in appsettings.json");
 
             return appSettings;
         }
     }
 
-    public static string? BrowserType => Configuration[nameof(BrowserType)];
-    public static double WaitsTimeout => Double.Parse(Configuration[nameof(WaitsTimeout)] ?? "120");
+    public static string? BrowserType => s_configuration.Value[nameof(BrowserType)];
+    public static double WaitsTimeout => double.Parse(s_configuration.Value[nameof(WaitsTimeout)] ?? "120");
 }

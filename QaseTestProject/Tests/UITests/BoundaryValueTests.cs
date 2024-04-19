@@ -12,7 +12,7 @@ public class BoundaryValueTests : BaseTest
     [AllureSeverity(SeverityLevel.critical)]
     public void MinValueTest()
     {
-        LoginSteps.SuccessfulLogin(Configurator.AppSettings.Username!, Configurator.AppSettings.Password!);
+        LoginSteps.SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
         Assert.That(
             ProjectsSteps.CreateProject(
                     "name1", "co", "description text", "private", "All")
@@ -25,7 +25,7 @@ public class BoundaryValueTests : BaseTest
     [AllureSeverity(SeverityLevel.critical)]
     public void MaxValueTest()
     {
-        LoginSteps.SuccessfulLogin(Configurator.AppSettings.Username!, Configurator.AppSettings.Password!);
+        LoginSteps.SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
         Assert.That(
             ProjectsSteps.CreateProject(
                     "name2", "codecodeco", "description text", "private", "All")
@@ -38,7 +38,7 @@ public class BoundaryValueTests : BaseTest
     [AllureSeverity(SeverityLevel.critical)]
     public void MinOOBValueTest()
     {
-        LoginSteps.SuccessfulLogin(Configurator.AppSettings.Username!, Configurator.AppSettings.Password!);
+        LoginSteps.SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
         Assert.That(
             ProjectsSteps.FailNewProjectCreation("name3", "q", "description text", "private", "All").CheckMinCharsProjectCodeError());
 
@@ -50,7 +50,7 @@ public class BoundaryValueTests : BaseTest
     [AllureSeverity(SeverityLevel.critical)]
     public void MaxOOBValueTest()
     {
-        LoginSteps.SuccessfulLogin(Configurator.AppSettings.Username!, Configurator.AppSettings.Password!);
+        LoginSteps.SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
         Assert.That(
             ProjectsSteps.FailNewProjectCreation("name4", "1234567891011", "description text", "private", "All").CheckMaxCharsProjectCodeError());
     }

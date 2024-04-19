@@ -12,7 +12,7 @@ public class FileUploadTests : BaseTest
     [AllureSeverity(SeverityLevel.critical)]
     public void UploadFilePositiveTest()
     {
-        LoginSteps.SuccessfulLogin(Configurator.AppSettings.Username!, Configurator.AppSettings.Password!);
+        LoginSteps.SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
         Assert.That(
             ProjectSteps.ImportTests("testdata.json").SuccessTextPopUpDisplayed
         );
@@ -24,7 +24,7 @@ public class FileUploadTests : BaseTest
     [AllureSeverity(SeverityLevel.critical)]
     public void UploadFileNegativeTest()
     {
-        LoginSteps.SuccessfulLogin(Configurator.AppSettings.Username!, Configurator.AppSettings.Password!);
+        LoginSteps.SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
         
         Assert.That(
             ProjectSteps.ImportTests("testdatanegative.json").ErrorTextPopUpDisplayed
