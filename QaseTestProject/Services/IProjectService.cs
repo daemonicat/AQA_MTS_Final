@@ -4,7 +4,7 @@ namespace QaseTestProject.Services;
 
 public interface IProjectService
 {
-    Task<Project> CreateNewProject(Project project);
-    Task<Project> GetProjectByCode(string code);
-    Task<Project> DeleteProjectByCode(string code);
+    Task<ApiResult<Project>> CreateNewProject(Project? project);
+    Task<ApiResult<Project>> GetProjectByCode(string code);
+    Task<ApiResult<Project>> DeleteProjectByCode(string code);
 }

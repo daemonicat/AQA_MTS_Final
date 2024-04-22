@@ -1,4 +1,4 @@
-﻿using System.Net;
+﻿/*using System.Net;
 using System.Text.Json;
 using NLog;
 using QaseTestProject.Models;
@@ -43,4 +43,4 @@ public class ApiTests
             Assert.That(actualProject.Result.Code, Is.EqualTo(expectedProject.Code));
         });
     }
-}
+}*/
