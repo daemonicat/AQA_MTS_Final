@@ -2,7 +2,7 @@
 
 namespace QaseTestProject.Objects.Pages;
 
-public class LoginPage : BasePage
+public class LoginPage(IWebDriver driver) : BasePage(driver)
 {
     private static readonly By EmailInputBy = By.Name("email");
     private static readonly By PasswordInputBy = By.Name("password");
@@ -10,10 +10,6 @@ public class LoginPage : BasePage
 
     private static readonly By ErrorAlertBy =
         By.XPath("//div[@id='app']//span[text()='These credentials do not match our records.']");
-
-    public LoginPage(IWebDriver driver) : base(driver)
-    {
-    }
 
     public IWebElement EmailInput => WaitsHelper.WaitForExists(EmailInputBy);
     public IWebElement PasswordInput => WaitsHelper.WaitForExists(PasswordInputBy);

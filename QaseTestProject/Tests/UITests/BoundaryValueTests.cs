@@ -1,6 +1,7 @@
 ﻿using Allure.Net.Commons;
 using Allure.NUnit.Attributes;
 using QaseTestProject.Helpers.Configuration;
+using QaseTestProject.Models.UI;
 
 namespace QaseTestProject.Tests.UITests;
 
@@ -12,10 +13,17 @@ public class BoundaryValueTests : BaseTest
     [AllureSeverity(SeverityLevel.critical)]
     public void MinValueTest()
     {
-        LoginSteps.SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
+        var projectInput = new Project.Builder()
+            .SetTitle("ATProject")
+            .SetCode("AT")
+            .SetDescription("That's a description, right?")
+            .SetProjectAccessType("public")
+            .Build();
+        
+        LoginSteps.SuccessfulLogin(Configurator.Default.Username, Configurator.Default.Password);
         Assert.That(
             ProjectsSteps.CreateProject(
-                    "name1", "co", "description text", "private", "All")
+                    projectInput)
                 .IsPageOpened);
     }
     
@@ -25,10 +33,17 @@ public class BoundaryValueTests : BaseTest
     [AllureSeverity(SeverityLevel.critical)]
     public void MaxValueTest()
     {
-        LoginSteps.SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
+        var projectInput = new Project.Builder()
+            .SetTitle("ATProject")
+            .SetCode("TENCHARSCO")
+            .SetDescription("That's a description, right?")
+            .SetProjectAccessType("public")
+            .Build();
+        
+        LoginSteps.SuccessfulLogin(Configurator.Default.Username, Configurator.Default.Password);
         Assert.That(
             ProjectsSteps.CreateProject(
-                    "name2", "codecodeco", "description text", "private", "All")
+                    projectInput)
                 .IsPageOpened);
     }
     
@@ -38,9 +53,17 @@ public class BoundaryValueTests : BaseTest
     [AllureSeverity(SeverityLevel.critical)]
     public void MinOOBValueTest()
     {
-        LoginSteps.SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
+        var projectInput = new Project.Builder()
+            .SetTitle("ATProject")
+            .SetCode("C")
+            .SetDescription("That's a description, right?")
+            .SetProjectAccessType("public")
+            .SetMemberAccessType("all")
+            .Build();
+        
+        LoginSteps.SuccessfulLogin(Configurator.Default.Username, Configurator.Default.Password);
         Assert.That(
-            ProjectsSteps.FailNewProjectCreation("name3", "q", "description text", "private", "All").CheckMinCharsProjectCodeError());
+            ProjectsSteps.FailNewProjectCreation(projectInput).CheckMinCharsProjectCodeError());
 
     }
     
@@ -50,8 +73,16 @@ public class BoundaryValueTests : BaseTest
     [AllureSeverity(SeverityLevel.critical)]
     public void MaxOOBValueTest()
     {
-        LoginSteps.SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
+        var projectInput = new Project.Builder()
+            .SetTitle("ATProject")
+            .SetCode("TWELVECHARSC")
+            .SetDescription("That's a description, right?")
+            .SetProjectAccessType("public")
+            .SetMemberAccessType("all")
+            .Build();
+        
+        LoginSteps.SuccessfulLogin(Configurator.Default.Username, Configurator.Default.Password);
         Assert.That(
-            ProjectsSteps.FailNewProjectCreation("name4", "1234567891011", "description text", "private", "All").CheckMaxCharsProjectCodeError());
+            ProjectsSteps.FailNewProjectCreation(projectInput).CheckMaxCharsProjectCodeError());
     }
 }

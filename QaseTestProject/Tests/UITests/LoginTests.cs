@@ -13,7 +13,7 @@ public class LoginTests : BaseTest
     [AllureSeverity(SeverityLevel.blocker)]
     public void SuccessfulLoginTest()
     {
-        Assert.That(LoginSteps.SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password)
+        Assert.That(LoginSteps.SuccessfulLogin(Configurator.Default.Username, Configurator.Default.Password)
             .IsPageOpened());
     }
     
@@ -24,7 +24,7 @@ public class LoginTests : BaseTest
     [AllureSeverity(SeverityLevel.blocker)]
     public void FailedLoginTest()
     {
-        Assert.That(LoginSteps.SuccessfulLogin("Testeam@ail.com", Configurator.AppSettings.Password)
+        Assert.That(LoginSteps.SuccessfulLogin("Testeam@ail.com", Configurator.Default.Password)
             .IsPageOpened());
     }
 }

@@ -12,7 +12,7 @@ public class DeleteProjectTest : BaseTest
     [AllureSeverity(SeverityLevel.critical)]
     public void RemoveProjectTest()
     {
-        LoginSteps.SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
+        LoginSteps.SuccessfulLogin(Configurator.Default.Username, Configurator.Default.Password);
         Assert.That(ProjectsSteps.DeleteLastProject().IsPageOpened);
     }
 }
