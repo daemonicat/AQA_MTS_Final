@@ -8,15 +8,16 @@ public class ProjectsSteps : BaseSteps
 {
     private readonly CreateProjectDialogue _createProjectDialogue;
     private readonly ProjectsPage _projectsPage;
-    
-    public ProjectsSteps (IWebDriver driver) : base(driver)
+
+    public ProjectsSteps(IWebDriver driver) : base(driver)
     {
         _createProjectDialogue = new CreateProjectDialogue(Driver);
         _projectsPage = new ProjectsPage(Driver);
     }
 
     [AllureStep("Create new project")]
-    public ProjectPage CreateProject(string name, string code, string description, string projectAccessType, string memberAccessType)
+    public ProjectPage CreateProject(string name, string code, string description, string projectAccessType,
+        string memberAccessType)
     {
         _projectsPage.ClickCreateNewProjectButton();
         _createProjectDialogue.FillInNameField(name);
@@ -25,12 +26,14 @@ public class ProjectsSteps : BaseSteps
         if (projectAccessType == "public")
         {
             _createProjectDialogue.SetProjectAccessType(projectAccessType);
-        } else
+        }
+        else
         {
             _createProjectDialogue.SetMemberAccessType(memberAccessType);
         }
+
         _createProjectDialogue.ClickCreateProjectButton();
-        
+
         return new ProjectPage(Driver);
     }
 
@@ -43,9 +46,10 @@ public class ProjectsSteps : BaseSteps
 
         return _projectsPage;
     }
-    
+
     [AllureStep("Fail new project creation")]
-    public CreateProjectDialogue FailNewProjectCreation(string name, string code, string description, string projectAccessType, string memberAccessType)
+    public CreateProjectDialogue FailNewProjectCreation(string name, string code, string description,
+        string projectAccessType, string memberAccessType)
     {
         _projectsPage.ClickCreateNewProjectButton();
         _createProjectDialogue.FillInNameField(name);
@@ -54,13 +58,14 @@ public class ProjectsSteps : BaseSteps
         if (projectAccessType == "public")
         {
             _createProjectDialogue.SetProjectAccessType(projectAccessType);
-        } else
+        }
+        else
         {
             _createProjectDialogue.SetMemberAccessType(memberAccessType);
         }
-        
+
         _createProjectDialogue.ClickCreateProjectButton();
-        
+
         return _createProjectDialogue;
     }
 }
