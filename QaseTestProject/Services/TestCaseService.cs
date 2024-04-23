@@ -5,15 +5,9 @@ using RestSharp;
 
 namespace QaseTestProject.Services;
 
-public class TestCaseService : ITestCaseService, IDisposable
+public class TestCaseService(RestClientExtended client) : ITestCaseService, IDisposable
 {
     private readonly Logger _logger = LogManager.GetCurrentClassLogger();
-    private readonly RestClientExtended _client;
-
-    public TestCaseService(RestClientExtended client)
-    {
-        _client = client;
-    }
 
     public async Task<ApiResult<TestCase>> CreateNewTestCase(TestCase? testCase, string code)
     {
@@ -21,7 +15,7 @@ public class TestCaseService : ITestCaseService, IDisposable
             .AddJsonBody(testCase)
             .AddUrlSegment("code", code);
         _logger.Info(request);
-        return await _client.ExecuteAsync<ApiResult<TestCase>>(request);
+        return await client.ExecuteAsync<ApiResult<TestCase>>(request);
     }
 
     public async Task<ApiResult<TestCase>> GetTestCase(string code, int id)
@@ -30,7 +24,7 @@ public class TestCaseService : ITestCaseService, IDisposable
             .AddUrlSegment("code", code)
             .AddUrlSegment("id", id);
         _logger.Info(request);
-        return await _client.ExecuteAsync<ApiResult<TestCase>>(request);
+        return await client.ExecuteAsync<ApiResult<TestCase>>(request);
     }
 
     public async Task<ApiResult<TestCase>> UpdateTestCase(TestCase? testCase, string code, int id)
@@ -40,7 +34,7 @@ public class TestCaseService : ITestCaseService, IDisposable
             .AddUrlSegment("code", code)
             .AddUrlSegment("id", id);
         _logger.Info(request);
-        return await _client.ExecuteAsync<ApiResult<TestCase>>(request);
+        return await client.ExecuteAsync<ApiResult<TestCase>>(request);
     }
 
     public async Task<ApiResult<TestCase>> DeleteTestCase(string code, int id)
@@ -49,12 +43,12 @@ public class TestCaseService : ITestCaseService, IDisposable
             .AddUrlSegment("code", code)
             .AddUrlSegment("id", id);
         _logger.Info(request);
-        return await _client.ExecuteAsync<ApiResult<TestCase>>(request);
+        return await client.ExecuteAsync<ApiResult<TestCase>>(request);
     }
 
     public void Dispose()
     {
-        _client.Dispose();
+        client.Dispose();
         GC.SuppressFinalize(this);
     }
 }

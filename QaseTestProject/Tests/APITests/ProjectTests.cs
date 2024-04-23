@@ -33,7 +33,7 @@ public class ProjectTests : BaseApiTest
     [Category("AFE")]
     public void GetMissingProjectTest()
     {
-        const string code = "CODE1";
+        const string code = "CODE2";
 
         var actualProject = ProjectService.GetProjectByCode(code);
 

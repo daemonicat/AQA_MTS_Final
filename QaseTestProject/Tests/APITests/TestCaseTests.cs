@@ -44,7 +44,6 @@ public class TestCaseTests : BaseApiTest
 
     [Test]
     [Order(2)]
-    [Category("Smoke")]
     [Category("Regression")]
     [Category("AFE")]
     public async Task UpdateTestCaseTest()
@@ -58,24 +57,22 @@ public class TestCaseTests : BaseApiTest
 
     [Test]
     [Order(3)]
-    [Category("Smoke")]
     [Category("Regression")]
     [Category("NFE")]
     public async Task GetTestCaseTest()
     {
-        var actualTestCase = await TestCaseService.GetTestCase("TESTCODE", _testCaseId);
+        var actualTestCase = await TestCaseService.GetTestCase(ProjectCode, _testCaseId);
         Assert.That(actualTestCase.Status, Is.EqualTo(true));
         Logger.Info("GetTestCaseTest is successful");
     }
 
     [Test]
     [Order(4)]
-    [Category("Smoke")]
     [Category("Regression")]
     [Category("NFE")]
     public async Task DeleteTestCaseTest()
     {
-        var actualTestCase = await TestCaseService.DeleteTestCase("TESTCODE", _testCaseId);
+        var actualTestCase = await TestCaseService.DeleteTestCase(ProjectCode, _testCaseId);
         Assert.That(actualTestCase.Status, Is.EqualTo(true));
         Logger.Info("DeleteTestCaseTest is successful");
     }

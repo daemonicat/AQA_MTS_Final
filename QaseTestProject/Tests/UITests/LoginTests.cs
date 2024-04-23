@@ -18,7 +18,6 @@ public class LoginTests : BaseTest
     }
     
     [Test(Description = "Defect login test")]
-    [Category("Smoke")]
     [Category("Regression")]
     [AllureOwner("Dmitry Kuzmin")]
     [AllureSeverity(SeverityLevel.blocker)]

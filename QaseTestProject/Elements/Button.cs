@@ -4,7 +4,7 @@ namespace QaseTestProject.Elements;
 
 public class Button
 {
-    private UIElement _uiElement;
+    private readonly UIElement _uiElement;
 
     public Button(IWebDriver webDriver, By by) => _uiElement = new UIElement(webDriver, by);
 
