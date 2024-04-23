@@ -11,7 +11,7 @@ public class BaseApiTest
     protected readonly Logger Logger = LogManager.GetCurrentClassLogger();
     protected ProjectService ProjectService;
     protected TestCaseService TestCaseService;
-    
+
     [OneTimeSetUp]
     public void SetUpApi()
     {

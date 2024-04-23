@@ -5,6 +5,7 @@ namespace QaseTestProject.Tests.APITests;
 public class TestCaseTests : BaseApiTest
 {
     private const string ProjectCode = "TESTCODE";
+    private int _testCaseId;
 
     [Test]
     [Order(1)]
@@ -13,7 +14,7 @@ public class TestCaseTests : BaseApiTest
     [Category("NFE")]
     public async Task CreateNewTestCaseTest()
     {
-        var testCase = new TestCase()
+        var testCase = new TestCase
         {
             Title = "MeowTest",
             Description = "Test description",
@@ -29,49 +30,32 @@ public class TestCaseTests : BaseApiTest
             UpdatedAt = "2024-04-23T01:20:00"
         };
 
-        Logger.Info(testCase);
-
         var actualTestCase = await TestCaseService.CreateNewTestCase(testCase, ProjectCode);
-        Logger.Info($"_project.Status = {actualTestCase.Status}");
+
         Assert.Multiple(() =>
             {
                 Assert.That(actualTestCase.Status, Is.EqualTo(true));
                 Assert.That(actualTestCase.Result.Id, Is.Not.EqualTo(0));
             }
         );
+        _testCaseId = actualTestCase.Result.Id;
+        Logger.Info("CreateNewTestCaseTest is successful");
     }
-    
-    //WIP
+
     [Test]
     [Order(2)]
     [Category("Smoke")]
     [Category("Regression")]
-    [Category("NFE")]
+    [Category("AFE")]
     public async Task UpdateTestCaseTest()
     {
-        var testCase = new TestCase()
-        {
-            Title = "MeowTest",
-            Description = "Test description",
-            Severity = 4,
-            Priority = 1,
-            Type = 1,
-            Layer = 1,
-        };
+        var testCase = new TestCase();
 
-        Logger.Info(testCase);
-
-        var actualTestCase = await TestCaseService.UpdateTestCase(testCase, ProjectCode, 3);
-        Logger.Info($"_project.Status = {actualTestCase.Status}");
-        Assert.Multiple(() =>
-            {
-                Assert.That(actualTestCase.Status, Is.EqualTo(true));
-                Assert.That(actualTestCase.Result.Id, Is.Not.EqualTo(0));
-            }
-        );
+        var actualTestCase = await TestCaseService.UpdateTestCase(testCase, ProjectCode, _testCaseId);
+        Assert.That(actualTestCase.Status, Is.EqualTo(false));
+        Logger.Info("UpdateTestCaseTest is successful");
     }
-    
-    // WIP
+
     [Test]
     [Order(3)]
     [Category("Smoke")]
@@ -79,13 +63,20 @@ public class TestCaseTests : BaseApiTest
     [Category("NFE")]
     public async Task GetTestCaseTest()
     {
-        var actualTestCase = await TestCaseService.GetTestCase("TESTCODE", 1);
-        Logger.Info($"_project.Status = {actualTestCase.Status}");
-        Assert.Multiple(() =>
-            {
-                Assert.That(actualTestCase.Status, Is.EqualTo(true));
-                Assert.That(actualTestCase.Result.Id, Is.Not.EqualTo(0));
-            }
-        );
+        var actualTestCase = await TestCaseService.GetTestCase("TESTCODE", _testCaseId);
+        Assert.That(actualTestCase.Status, Is.EqualTo(true));
+        Logger.Info("GetTestCaseTest is successful");
+    }
+
+    [Test]
+    [Order(4)]
+    [Category("Smoke")]
+    [Category("Regression")]
+    [Category("NFE")]
+    public async Task DeleteTestCaseTest()
+    {
+        var actualTestCase = await TestCaseService.DeleteTestCase("TESTCODE", _testCaseId);
+        Assert.That(actualTestCase.Status, Is.EqualTo(true));
+        Logger.Info("DeleteTestCaseTest is successful");
     }
 }

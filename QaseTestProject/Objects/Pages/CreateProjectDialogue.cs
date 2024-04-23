@@ -13,8 +13,12 @@ public class CreateProjectDialogue : BasePage
     private static readonly By MemberAccessGroupBy = By.XPath("//input[@type='radio'][@value='group']");
     private static readonly By MemberAccessNoneBy = By.XPath("//input[@type='radio'][@value='none']");
     private static readonly By CreateProjectButtonBy = By.XPath("//button[@type='submit']");
-    private static readonly By MinCharsProjectCodeErrorBy = By.XPath("//div[text()='The code must be at least 2 characters.']");
-    private static readonly By MaxCharsProjectCodeErrorBy = By.XPath("//div[text()='The code may not be greater than 10 characters.']");
+
+    private static readonly By MinCharsProjectCodeErrorBy =
+        By.XPath("//div[text()='The code must be at least 2 characters.']");
+
+    private static readonly By MaxCharsProjectCodeErrorBy =
+        By.XPath("//div[text()='The code may not be greater than 10 characters.']");
 
     public CreateProjectDialogue(IWebDriver driver) : base(driver)
     {
@@ -47,6 +51,7 @@ public class CreateProjectDialogue : BasePage
 
     public void FillInProjectDescription(string desc) => ProjectDescription.SendKeys(desc);
     public void ClickCreateProjectButton() => CreateProjectButton.Click();
+
     public void SetProjectAccessType(string projectAccessType)
     {
         switch (projectAccessType)
@@ -81,7 +86,7 @@ public class CreateProjectDialogue : BasePage
                 break;
         }
     }
-    
+
     public bool CheckMinCharsProjectCodeError() => MinCharsProjectCodeError.Displayed;
     public bool CheckMaxCharsProjectCodeError() => MaxCharsProjectCodeError.Displayed;
 }

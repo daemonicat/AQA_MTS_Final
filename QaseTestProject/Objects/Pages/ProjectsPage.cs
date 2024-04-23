@@ -5,9 +5,15 @@ namespace QaseTestProject.Objects.Pages;
 public class ProjectsPage : BasePage
 {
     private static readonly By CreateNewProjectButtonBy = By.Id("createButton");
-    private static readonly By ProjectMenuButtonBy = By.CssSelector("tbody tr:nth-last-child(1) td:nth-last-child(1) div button");
+
+    private static readonly By ProjectMenuButtonBy =
+        By.CssSelector("tbody tr:nth-last-child(1) td:nth-last-child(1) div button");
+
     private static readonly By RemoveProjectButtonBy = By.XPath("//button[text()='Remove']");
-    private static readonly By DeleteProjectButtonBy = By.XPath("//div[@id='modals']//span[text()='Delete project']/..");
+
+    private static readonly By DeleteProjectButtonBy =
+        By.XPath("//div[@id='modals']//span[text()='Delete project']/..");
+
     private static readonly By OpenFirstProjectBy = By.XPath("//div[@id='application-content']//tbody/tr[1]/td[2]//a");
 
     public ProjectsPage(IWebDriver driver) : base(driver)
