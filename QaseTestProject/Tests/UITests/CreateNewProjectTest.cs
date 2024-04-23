@@ -1,6 +1,7 @@
 ﻿using Allure.Net.Commons;
 using Allure.NUnit.Attributes;
 using QaseTestProject.Helpers.Configuration;
+using QaseTestProject.Models.UI;
 
 namespace QaseTestProject.Tests.UITests;
 
@@ -13,10 +14,16 @@ public class CreateNewProjectTest : BaseTest
     [AllureSeverity(SeverityLevel.blocker)]
     public void CreateProjectTest()
     {
-        LoginSteps.SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
+        var projectInput = new Project.Builder()
+            .SetTitle("ATProject")
+            .SetCode("TESTATCODE")
+            .SetDescription("That's a description, right?")
+            .SetProjectAccessType("public")
+            .Build();
+        
+        LoginSteps.SuccessfulLogin(Configurator.Default.Username, Configurator.Default.Password);
         Assert.That(
-            ProjectsSteps.CreateProject(
-                    "name0", "code", "description text", "private", "All")
+            ProjectsSteps.CreateProject(projectInput)
                 .IsPageOpened);
     }
 }
