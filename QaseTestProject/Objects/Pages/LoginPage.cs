@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using QaseTestProject.Elements;
 
 namespace QaseTestProject.Objects.Pages;
 
@@ -13,7 +14,7 @@ public class LoginPage(IWebDriver driver) : BasePage(driver)
 
     public IWebElement EmailInput => WaitsHelper.WaitForExists(EmailInputBy);
     public IWebElement PasswordInput => WaitsHelper.WaitForExists(PasswordInputBy);
-    public IWebElement SignInButton => WaitsHelper.WaitForExists(SignInButtonBy);
+    public Button SignInButton => new Button(Driver, SignInButtonBy);
     public IWebElement ErrorAlert => WaitsHelper.WaitForVisibilityLocatedBy(ErrorAlertBy);
 
     public override bool IsPageOpened() => SignInButton.Displayed;

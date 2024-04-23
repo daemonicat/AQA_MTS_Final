@@ -1,8 +1,9 @@
 ﻿using OpenQA.Selenium;
+using QaseTestProject.Elements;
 
 namespace QaseTestProject.Objects.Pages;
 
-public class ProjectsPage : BasePage
+public class ProjectsPage(IWebDriver driver) : BasePage(driver)
 {
     private static readonly By CreateNewProjectButtonBy = By.Id("createButton");
 
@@ -16,14 +17,10 @@ public class ProjectsPage : BasePage
 
     private static readonly By OpenFirstProjectBy = By.XPath("//div[@id='application-content']//tbody/tr[1]/td[2]//a");
 
-    public ProjectsPage(IWebDriver driver) : base(driver)
-    {
-    }
-
-    private IWebElement CreateNewProjectButton => WaitsHelper.WaitForExists(CreateNewProjectButtonBy);
-    private IWebElement ProjectMenuButton => WaitsHelper.WaitForExists(ProjectMenuButtonBy);
-    private IWebElement RemoveProjectButton => WaitsHelper.WaitForExists(RemoveProjectButtonBy);
-    private IWebElement DeleteProjectButton => WaitsHelper.WaitForExists(DeleteProjectButtonBy);
+    private Button CreateNewProjectButton => new Button(Driver, CreateNewProjectButtonBy);
+    private Button ProjectMenuButton => new Button(Driver, ProjectMenuButtonBy);
+    private Button RemoveProjectButton => new Button(Driver, RemoveProjectButtonBy);
+    private Button DeleteProjectButton => new Button(Driver, DeleteProjectButtonBy);
     private IWebElement OpenFirstProject => WaitsHelper.WaitForExists(OpenFirstProjectBy);
     public override bool IsPageOpened() => CreateNewProjectButton.Displayed;
     public void ClickCreateNewProjectButton() => CreateNewProjectButton.Click();

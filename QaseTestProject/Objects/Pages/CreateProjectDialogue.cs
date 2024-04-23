@@ -1,8 +1,9 @@
 ﻿using OpenQA.Selenium;
+using QaseTestProject.Elements;
 
 namespace QaseTestProject.Objects.Pages;
 
-public class CreateProjectDialogue : BasePage
+public class CreateProjectDialogue(IWebDriver driver) : BasePage(driver)
 {
     private static readonly By ProjectNameBy = By.Id("project-name");
     private static readonly By ProjectCodeBy = By.Id("project-code");
@@ -20,10 +21,6 @@ public class CreateProjectDialogue : BasePage
     private static readonly By MaxCharsProjectCodeErrorBy =
         By.XPath("//div[text()='The code may not be greater than 10 characters.']");
 
-    public CreateProjectDialogue(IWebDriver driver) : base(driver)
-    {
-    }
-
     private IWebElement ProjectName => WaitsHelper.WaitForExists(ProjectNameBy);
     private IWebElement ProjectCode => WaitsHelper.WaitForExists(ProjectCodeBy);
     private IWebElement ProjectDescription => WaitsHelper.WaitForExists(ProjectDescriptionBy);
@@ -32,7 +29,7 @@ public class CreateProjectDialogue : BasePage
     private IWebElement MemberAccessAll => WaitsHelper.WaitForExists(MemberAccessAllBy);
     private IWebElement MemberAccessGroup => WaitsHelper.WaitForExists(MemberAccessGroupBy);
     private IWebElement MemberAccessNone => WaitsHelper.WaitForVisibilityLocatedBy(MemberAccessNoneBy);
-    private IWebElement CreateProjectButton => WaitsHelper.WaitForExists(CreateProjectButtonBy);
+    private Button CreateProjectButton => new Button(Driver, CreateProjectButtonBy);
     private IWebElement MinCharsProjectCodeError => WaitsHelper.WaitForExists(MinCharsProjectCodeErrorBy);
     private IWebElement MaxCharsProjectCodeError => WaitsHelper.WaitForExists(MaxCharsProjectCodeErrorBy);
 
