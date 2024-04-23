@@ -1,4 +1,4 @@
-﻿using QaseTestProject.Models;
+﻿using QaseTestProject.Models.API;
 
 namespace QaseTestProject.Services;
 

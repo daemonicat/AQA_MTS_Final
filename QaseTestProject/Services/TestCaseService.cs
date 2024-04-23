@@ -1,6 +1,6 @@
 ﻿using NLog;
 using QaseTestProject.Clients;
-using QaseTestProject.Models;
+using QaseTestProject.Models.API;
 using RestSharp;
 
 namespace QaseTestProject.Services;

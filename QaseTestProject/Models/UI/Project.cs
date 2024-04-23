@@ -20,11 +20,11 @@ public class Project
 
     public class Builder
     {
-        private string Title { get; set; }
-        private string Code { get; set; }
-        private string Description { get; set; }
-        private string ProjectAccessType { get; set; }
-        private string MemberAccessType { get; set; }
+        private string Title { get; set; } = string.Empty;
+        private string Code { get; set; } = string.Empty;
+        private string Description { get; set; } = string.Empty;
+        private string ProjectAccessType { get; set; } = string.Empty;
+        private string MemberAccessType { get; set; } = string.Empty;
 
         public Builder SetTitle(string title)
         {

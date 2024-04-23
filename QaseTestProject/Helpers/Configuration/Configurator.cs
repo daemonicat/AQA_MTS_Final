@@ -8,11 +8,11 @@ namespace QaseTestProject.Helpers.Configuration;
 
 public static class Configurator
 {
-    private static readonly Lazy<IConfiguration> s_configuration;
+    private static readonly Lazy<IConfiguration> SConfiguration;
 
     static Configurator()
     {
-        s_configuration = new Lazy<IConfiguration>(BuildConfiguration);
+        SConfiguration = new Lazy<IConfiguration>(BuildConfiguration);
     }
 
     private static IConfiguration BuildConfiguration()
@@ -38,7 +38,7 @@ public static class Configurator
         get
         {
             var appSettings = new AppSettings();
-            var child = s_configuration.Value.GetSection("AppSettings");
+            var child = SConfiguration.Value.GetSection("AppSettings");
 
             appSettings.URL = child["URL"] ?? throw new SettingsException("No URL in appsettings.json");
             appSettings.URI = child["URI"] ?? throw new SettingsException("No URI in appsettings.json");
@@ -49,12 +49,12 @@ public static class Configurator
         }
     }
 
-    public static List<User> Users
+    private static List<User> Users
     {
         get
         {
             var users = new List<User>();
-            var child = s_configuration.Value.GetSection("Users");
+            var child = SConfiguration.Value.GetSection("Users");
 
             foreach (var section in child.GetChildren())
             {
@@ -64,7 +64,7 @@ public static class Configurator
                     Password = section["Password"] ?? throw new SettingsException("No Password in appsettings.json")
                 };
 
-                user.UserType = section["UserType"].ToLower() switch
+                user.UserType = section["UserType"] switch
                 {
                     "Existing" => UserType.Default,
                     "Nonexisting" => UserType.Broken,
@@ -79,6 +79,6 @@ public static class Configurator
     }
 
     public static User Default => Users.Find(x => x.UserType == UserType.Default) ?? throw new SettingsException("No such user");
-    public static string? BrowserType => s_configuration.Value[nameof(BrowserType)];
-    public static double WaitsTimeout => double.Parse(s_configuration.Value[nameof(WaitsTimeout)] ?? "15");
+    public static string? BrowserType => SConfiguration.Value[nameof(BrowserType)];
+    public static double WaitsTimeout => double.Parse(SConfiguration.Value[nameof(WaitsTimeout)] ?? "15");
 }
