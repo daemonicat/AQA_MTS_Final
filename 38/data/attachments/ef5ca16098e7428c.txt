@@ -1,0 +1,7 @@
+2024/04/24 22:13:22.417|INFO|RestSharp.RestRequest 
+2024/04/24 22:13:22.417|DEBUG|Post request to: /v1/case/{code} 
+2024/04/24 22:13:22.421|DEBUG|body: {"id":0,"title":"2d5p5oorpa","description":"Islands Locks e-commerce Communications generating","severity":4,"priority":1,"type":2,"layer":1,"behavior":1,"automation":0,"author_id":216468,"created_at":"04/24/2024 22:13:22","updated_at":"04/24/2024 22:13:22"} 
+2024/04/24 22:13:22.514|ERROR|Error retrieving response. Check inner details for more info. 
+Request failed with status code NotFound 
+2024/04/24 22:13:22.514|DEBUG|Request finished with status code: NotFound 
+2024/04/24 22:13:22.514|DEBUG|Responce: {"status":false,"errorMessage":"Project not found"} 
