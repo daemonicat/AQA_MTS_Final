@@ -5,7 +5,7 @@ namespace QaseTestProject.Objects.Pages;
 
 public class ProjectPage(IWebDriver driver) : BasePage(driver)
 {
-    private static readonly By CreateNewCaseButtonBy = By.Id("create-case-button");
+    private static readonly By CreateNewCaseButtonBy = By.XPath("//div[@id='application-content']//span[text()='Create new case']/..");
     private static readonly By DataMenuButtonBy = By.XPath("//div[@id='application-content']//div[2]/button");
     private static readonly By ImportDataButtonBy = By.XPath("//a[text()='Import data']");
     private static readonly By ChooseFileButtonBy = By.XPath("//input[@type='file']");
