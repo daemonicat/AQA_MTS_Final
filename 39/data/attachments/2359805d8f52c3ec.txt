@@ -1,0 +1,12 @@
+2024/04/24 22:25:52.945|INFO|Successful Login: 
+2024/04/24 22:25:53.556|INFO|EmailInput.SendKeys 
+2024/04/24 22:25:53.706|INFO|PasswordInput.SendKeys 
+2024/04/24 22:25:53.864|INFO|SignInButton.Click 
+2024/04/24 22:25:53.864|INFO|Import Tests: 
+2024/04/24 22:25:53.864|INFO|Path.Combine done 
+2024/04/24 22:25:57.322|INFO|ClickOpenFirstProject done 
+2024/04/24 22:25:58.506|INFO|ClickDataMenuButton done 
+2024/04/24 22:25:58.763|INFO|ClickImportDataButton done 
+2024/04/24 22:25:59.025|INFO|ClickChooseFileButton done 
+2024/04/24 22:25:59.140|INFO|ClickImportTestsButton done 
+2024/04/24 22:25:59.140|INFO|Import Tests finished 
