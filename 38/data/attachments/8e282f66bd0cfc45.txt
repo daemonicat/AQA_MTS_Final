@@ -1,0 +1,10 @@
+2024/04/24 22:16:48.836|INFO|Successful Login: 
+2024/04/24 22:16:48.933|INFO|EmailInput.SendKeys 
+2024/04/24 22:16:49.026|INFO|PasswordInput.SendKeys 
+2024/04/24 22:16:49.229|INFO|SignInButton.Click 
+2024/04/24 22:16:49.229|INFO|Delete project: 
+2024/04/24 22:16:51.522|INFO|IsPageOpened done 
+2024/04/24 22:16:52.505|INFO|GoToUrl = https://app.qase.io/project/TESTATCODE/settings/general 
+2024/04/24 22:16:52.684|INFO|ClickDeleteProjectButton done 
+2024/04/24 22:16:52.742|INFO|ClickDeleteProjectFinalButton done 
+2024/04/24 22:16:52.742|INFO|Delete project finished 
