@@ -13,7 +13,6 @@ public record TestCase
     [JsonPropertyName("layer")] public int Layer { get; set; }
     [JsonPropertyName("behavior")] public int Behavior { get; set; }
     [JsonPropertyName("automation")] public int Automation { get; set; }
-    [JsonPropertyName("status")] public int Status { get; set; }
     [JsonPropertyName("author_id")] public int AuthorId { get; set; }
     [JsonPropertyName("created_at")] public string CreatedAt { get; set; } = string.Empty;
     [JsonPropertyName("updated_at")] public string UpdatedAt { get; set; } = string.Empty;

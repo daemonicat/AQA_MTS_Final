@@ -78,7 +78,9 @@ public static class Configurator
         }
     }
 
-    public static User Default => Users.Find(x => x.UserType == UserType.Default) ?? throw new SettingsException("No such user");
+    public static User Default =>
+        Users.Find(x => x.UserType == UserType.Default) ?? throw new SettingsException("No such user");
+
     public static string? BrowserType => SConfiguration.Value[nameof(BrowserType)];
     public static double WaitsTimeout => double.Parse(SConfiguration.Value[nameof(WaitsTimeout)] ?? "15");
 }

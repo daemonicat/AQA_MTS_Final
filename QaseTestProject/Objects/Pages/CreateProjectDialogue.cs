@@ -29,7 +29,7 @@ public class CreateProjectDialogue(IWebDriver driver) : BasePage(driver)
     private IWebElement MemberAccessAll => WaitsHelper.WaitForExists(MemberAccessAllBy);
     private IWebElement MemberAccessGroup => WaitsHelper.WaitForExists(MemberAccessGroupBy);
     private IWebElement MemberAccessNone => WaitsHelper.WaitForVisibilityLocatedBy(MemberAccessNoneBy);
-    private Button CreateProjectButton => new Button(Driver, CreateProjectButtonBy);
+    private Button CreateProjectButton => new(Driver, CreateProjectButtonBy);
     private IWebElement MinCharsProjectCodeError => WaitsHelper.WaitForExists(MinCharsProjectCodeErrorBy);
     private IWebElement MaxCharsProjectCodeError => WaitsHelper.WaitForExists(MaxCharsProjectCodeErrorBy);
 

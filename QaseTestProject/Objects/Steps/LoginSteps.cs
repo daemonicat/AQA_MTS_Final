@@ -16,9 +16,16 @@ public class LoginSteps : BaseSteps
     [AllureStep]
     public ProjectsPage SuccessfulLogin(string username, string password)
     {
+        Logger.Info("Successful Login:");
+        
         _loginPage.EmailInput.SendKeys(username);
+        Logger.Info("EmailInput.SendKeys");
+        
         _loginPage.PasswordInput.SendKeys(password);
+        Logger.Info("PasswordInput.SendKeys");
+        
         _loginPage.SignInButton.Click();
+        Logger.Info("SignInButton.Click");
 
         return new ProjectsPage(Driver);
     }
@@ -26,9 +33,16 @@ public class LoginSteps : BaseSteps
     [AllureStep]
     public LoginPage UnsuccessfulLogin(string username, string password)
     {
+        Logger.Info("Successful Login:");
+        
         _loginPage.EmailInput.SendKeys(username);
+        Logger.Info("EmailInput.SendKeys");
+        
         _loginPage.PasswordInput.SendKeys(password);
+        Logger.Info("PasswordInput.SendKeys");
+        
         _loginPage.SignInButton.Click();
+        Logger.Info("SignInButton.Click");
 
         return _loginPage;
     }

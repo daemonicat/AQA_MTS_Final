@@ -11,8 +11,6 @@ public class Button
     public Button(IWebDriver webDriver, IWebElement webElement) => _uiElement = new UIElement(webDriver, webElement);
     
     public void Click() => _uiElement.Click();
-    public void Submit() => _uiElement.Submit();
     public void SendKeys(string text) => _uiElement.SendKeys(text);
-    public string Text => _uiElement.Text;
     public bool Displayed => _uiElement.Displayed;
 }

@@ -15,11 +15,11 @@ public class ProjectPage(IWebDriver driver) : BasePage(driver)
     private static readonly By SuccessTextPopUpBy =
         By.XPath("//div[@role='alert']//span[contains(text(), 'successfully imported!')]");
 
-    private Button CreateNewCaseButton => new Button(Driver, CreateNewCaseButtonBy);
-    private Button DataMenuButton => new Button(Driver, DataMenuButtonBy);
-    private Button ImportDataButton => new Button(Driver, ImportDataButtonBy);
-    private Button ChooseFileButton => new Button(Driver, ChooseFileButtonBy);
-    private Button ImportTestsButton => new Button(Driver, ImportTestsButtonBy);
+    private Button CreateNewCaseButton => new(Driver, CreateNewCaseButtonBy);
+    private Button DataMenuButton => new(Driver, DataMenuButtonBy);
+    private Button ImportDataButton => new(Driver, ImportDataButtonBy);
+    private Button ChooseFileButton => new(Driver, ChooseFileButtonBy);
+    private Button ImportTestsButton => new(Driver, ImportTestsButtonBy);
     private IWebElement ErrorTextPopUp => WaitsHelper.WaitForExists(ErrorTextPopUpBy);
     private IWebElement SuccessTextPopUp => WaitsHelper.WaitForExists(SuccessTextPopUpBy);
 

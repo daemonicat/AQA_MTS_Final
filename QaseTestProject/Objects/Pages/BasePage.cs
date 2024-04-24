@@ -6,8 +6,8 @@ namespace QaseTestProject.Objects.Pages;
 
 public abstract class BasePage
 {
-    protected IWebDriver Driver { get; set; }
-    protected WaitsHelper WaitsHelper { get; set; }
+    protected IWebDriver Driver { get; }
+    protected WaitsHelper WaitsHelper { get; }
 
     protected BasePage(IWebDriver driver)
     {

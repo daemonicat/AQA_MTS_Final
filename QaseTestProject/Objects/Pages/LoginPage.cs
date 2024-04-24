@@ -14,7 +14,7 @@ public class LoginPage(IWebDriver driver) : BasePage(driver)
 
     public IWebElement EmailInput => WaitsHelper.WaitForExists(EmailInputBy);
     public IWebElement PasswordInput => WaitsHelper.WaitForExists(PasswordInputBy);
-    public Button SignInButton => new Button(Driver, SignInButtonBy);
+    public Button SignInButton => new(Driver, SignInButtonBy);
     public IWebElement ErrorAlert => WaitsHelper.WaitForVisibilityLocatedBy(ErrorAlertBy);
 
     public override bool IsPageOpened() => SignInButton.Displayed;
