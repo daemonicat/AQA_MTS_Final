@@ -7,7 +7,7 @@ namespace QaseTestProject.Tests.UITests;
 
 public class BoundaryValueTests : BaseTest
 {
-    [Test(Description = "Minimum (2) Value test")]
+    [Test(Description = "Minimum (2) boundary value Test")]
     [Category("Regression")]
     [AllureOwner("Dmitry Kuzmin")]
     [AllureSeverity(SeverityLevel.critical)]
@@ -19,15 +19,15 @@ public class BoundaryValueTests : BaseTest
             .SetDescription("That's a description, right?")
             .SetProjectAccessType("public")
             .Build();
-        
+
         LoginSteps.SuccessfulLogin(Configurator.Default.Username, Configurator.Default.Password);
         Assert.That(
             ProjectsSteps.CreateProject(
                     projectInput)
                 .IsPageOpened);
     }
-    
-    [Test(Description = "Maximum (10) Value test")]
+
+    [Test(Description = "Maximum (10) boundary value Test")]
     [Category("Regression")]
     [AllureOwner("Dmitry Kuzmin")]
     [AllureSeverity(SeverityLevel.critical)]
@@ -39,15 +39,15 @@ public class BoundaryValueTests : BaseTest
             .SetDescription("That's a description, right?")
             .SetProjectAccessType("public")
             .Build();
-        
+
         LoginSteps.SuccessfulLogin(Configurator.Default.Username, Configurator.Default.Password);
         Assert.That(
             ProjectsSteps.CreateProject(
                     projectInput)
                 .IsPageOpened);
     }
-    
-    [Test(Description = "Minimum Out of Bounds (1) Value Test")]
+
+    [Test(Description = "Minimum Out of Bounds (1) boundary value Test")]
     [Category("Regression")]
     [AllureOwner("Dmitry Kuzmin")]
     [AllureSeverity(SeverityLevel.critical)]
@@ -60,14 +60,13 @@ public class BoundaryValueTests : BaseTest
             .SetProjectAccessType("public")
             .SetMemberAccessType("all")
             .Build();
-        
+
         LoginSteps.SuccessfulLogin(Configurator.Default.Username, Configurator.Default.Password);
         Assert.That(
             ProjectsSteps.FailNewProjectCreation(projectInput).CheckMinCharsProjectCodeError());
-
     }
-    
-    [Test(Description = "Maximum Out of Bounds Value Test")]
+
+    [Test(Description = "Maximum Out of Bounds (11) boundary value Test")]
     [Category("Regression")]
     [AllureOwner("Dmitry Kuzmin")]
     [AllureSeverity(SeverityLevel.critical)]
@@ -80,7 +79,7 @@ public class BoundaryValueTests : BaseTest
             .SetProjectAccessType("public")
             .SetMemberAccessType("all")
             .Build();
-        
+
         LoginSteps.SuccessfulLogin(Configurator.Default.Username, Configurator.Default.Password);
         Assert.That(
             ProjectsSteps.FailNewProjectCreation(projectInput).CheckMaxCharsProjectCodeError());

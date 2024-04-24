@@ -19,6 +19,7 @@ public class BaseTest
     protected LoginSteps LoginSteps;
     protected ProjectsSteps ProjectsSteps;
     protected ProjectSteps ProjectSteps;
+    protected SettingsSteps SettingsSteps;
 
     [OneTimeSetUp]
     public static void GlobalSetup()
@@ -35,6 +36,7 @@ public class BaseTest
         LoginSteps = new LoginSteps(Driver);
         ProjectsSteps = new ProjectsSteps(Driver);
         ProjectSteps = new ProjectSteps(Driver);
+        SettingsSteps = new SettingsSteps(Driver);
 
         Driver.Navigate().GoToUrl(Configurator.AppSettings.URL);
     }
@@ -46,8 +48,8 @@ public class BaseTest
         {
             if (TestContext.CurrentContext.Result.Outcome.Status != NUnit.Framework.Interfaces.TestStatus.Passed)
             {
-                Screenshot screenshot = ((ITakesScreenshot)Driver).GetScreenshot();
-                byte[] screenshotBytes = screenshot.AsByteArray;
+                var screenshot = ((ITakesScreenshot)Driver).GetScreenshot();
+                var screenshotBytes = screenshot.AsByteArray;
 
                 AllureApi.AddAttachment("Screenshot", "image/png", screenshotBytes);
             }

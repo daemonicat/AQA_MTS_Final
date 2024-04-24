@@ -6,7 +6,7 @@ namespace QaseTestProject.Tests.UITests;
 
 public class FileUploadTests : BaseTest
 {
-    [Test(Description = "Create entity (new project) test")]
+    [Test(Description = "Upload test cases test")]
     [Category("Regression")]
     [AllureOwner("Dmitry Kuzmin")]
     [AllureSeverity(SeverityLevel.critical)]
@@ -18,7 +18,7 @@ public class FileUploadTests : BaseTest
         );
     }
     
-    [Test(Description = "Create entity (new project) test")]
+    [Test(Description = "Fail to upload test cases test")]
     [Category("Regression")]
     [AllureOwner("Dmitry Kuzmin")]
     [AllureSeverity(SeverityLevel.critical)]

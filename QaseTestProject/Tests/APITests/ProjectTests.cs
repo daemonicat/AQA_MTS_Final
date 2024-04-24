@@ -1,10 +1,14 @@
-﻿using NLog;
-using QaseTestProject.Models;
+﻿using Bogus;
+using QaseTestProject.Fakers;
+using QaseTestProject.Models.API;
 
 namespace QaseTestProject.Tests.APITests;
 
 public class ProjectTests : BaseApiTest
 {
+    private static Faker<Project> Project => new ProjectFaker();
+    private readonly Project _project = Project.Generate();
+    
     [Test]
     [Order(1)]
     [Category("Smoke")]
@@ -12,20 +16,13 @@ public class ProjectTests : BaseApiTest
     [Category("NFE")]
     public async Task AddProjectTest()
     {
-        var project = new Project
-        {
-            Title = "APITest",
-            Code = "Code1",
-            Access = "all"
-        };
+        Logger.Info(_project);
 
-        Logger.Info(project);
-
-        var actualProject = await ProjectService.CreateNewProject(project);
+        var actualProject = await ProjectService.CreateNewProject(_project);
         Logger.Info($"_project.Status = {actualProject.Status}");
         Logger.Info($"actualProject.Result.Code = {actualProject.Result.Code}");
 
-        Assert.That(true);
+        Assert.That(actualProject.Status, Is.EqualTo(true));
     }
 
     [Test]
@@ -34,7 +31,7 @@ public class ProjectTests : BaseApiTest
     [Category("AFE")]
     public void GetMissingProjectTest()
     {
-        const string code = "CODE1";
+        const string code = "CODE2";
 
         var actualProject = ProjectService.GetProjectByCode(code);
 
@@ -53,9 +50,7 @@ public class ProjectTests : BaseApiTest
     [Category("NFE")]
     public void DeleteProjectTest()
     {
-        const string code = "CODE1";
-
-        var actualProject = ProjectService.DeleteProjectByCode(code);
+        var actualProject = ProjectService.DeleteProjectByCode(_project.Code);
 
         Logger.Info($"Response Status = {actualProject.Result.Status}.");
         Assert.That(actualProject.Result.Status, Is.EqualTo(true));

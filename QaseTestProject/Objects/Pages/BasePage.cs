@@ -6,10 +6,10 @@ namespace QaseTestProject.Objects.Pages;
 
 public abstract class BasePage
 {
-    protected IWebDriver Driver { get; set; }
-    protected WaitsHelper WaitsHelper { get; set; }
+    protected IWebDriver Driver { get; }
+    protected WaitsHelper WaitsHelper { get; }
 
-    public BasePage(IWebDriver driver)
+    protected BasePage(IWebDriver driver)
     {
         Driver = driver;
         WaitsHelper = new WaitsHelper(Driver, TimeSpan.FromSeconds(Configurator.WaitsTimeout));

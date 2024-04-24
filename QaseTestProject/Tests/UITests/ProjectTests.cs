@@ -5,9 +5,10 @@ using QaseTestProject.Models.UI;
 
 namespace QaseTestProject.Tests.UITests;
 
-public class CreateNewProjectTest : BaseTest
+public class ProjectTests : BaseTest
 {
     [Test(Description = "Create entity (new project) test")]
+    [Order(1)]
     [Category("Smoke")]
     [Category("Regression")]
     [AllureOwner("Dmitry Kuzmin")]
@@ -25,5 +26,17 @@ public class CreateNewProjectTest : BaseTest
         Assert.That(
             ProjectsSteps.CreateProject(projectInput)
                 .IsPageOpened);
+    }
+    
+    [Test(Description = "Delete entity (project) test")]
+    [Order(2)]
+    [Category("Smoke")]
+    [Category("Regression")]
+    [AllureOwner("Dmitry Kuzmin")]
+    [AllureSeverity(SeverityLevel.blocker)]
+    public void DeleteProjectTest()
+    {
+        LoginSteps.SuccessfulLogin(Configurator.Default.Username, Configurator.Default.Password);
+        Assert.That(SettingsSteps.DeleteProject("TESTATCODE").IsPageOpened);
     }
 }

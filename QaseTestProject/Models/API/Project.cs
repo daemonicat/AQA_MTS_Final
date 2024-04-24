@@ -1,12 +1,12 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace QaseTestProject.Models;
+namespace QaseTestProject.Models.API;
 
 public record Project
 {
-    [JsonPropertyName("title")] public string Title { get; set; }
-    [JsonPropertyName("code")] public string Code { get; set; }
-    [JsonPropertyName("description")] public string Description { get; set; }
+    [JsonPropertyName("title")] public string Title { get; set; } = string.Empty;
+    [JsonPropertyName("code")] public string Code { get; set; } = string.Empty;
+    [JsonPropertyName("description")] public string Description { get; set; } = string.Empty;
     [JsonPropertyName("access")] public string Access { get; set; }
     [JsonPropertyName("counts")] public Counts Counts { get; set; }
 }
