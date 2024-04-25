@@ -1,0 +1,27 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Apr 25 15:38:31 GMT 2024","Thu Apr 25 15:38:40 GMT 2024","9124","","UI Tests","","FileUploadTests","UploadFileNegativeTest","UploadFileNegativeTest","Fail to upload test cases test
+"
+"passed","Thu Apr 25 15:38:54 GMT 2024","Thu Apr 25 15:38:54 GMT 2024","153","","API Tests","","TestCaseTests","GetTestCaseTest","GetTestCaseTest",""
+"passed","Thu Apr 25 15:38:40 GMT 2024","Thu Apr 25 15:38:46 GMT 2024","6285","","UI Tests","","BoundaryValueTests","MinOOBValueTest","MinOOBValueTest","Minimum Out of Bounds (1) boundary value Test
+"
+"passed","Thu Apr 25 15:38:31 GMT 2024","Thu Apr 25 15:38:37 GMT 2024","6177","","UI Tests","","LoginTests","SuccessfulLoginTest","SuccessfulLoginTest","Base positive login test
+"
+"passed","Thu Apr 25 15:38:54 GMT 2024","Thu Apr 25 15:38:54 GMT 2024","230","","API Tests","","TestCaseTests","DeleteTestCaseTest","DeleteTestCaseTest",""
+"passed","Thu Apr 25 15:38:47 GMT 2024","Thu Apr 25 15:38:54 GMT 2024","6223","","UI Tests","","ProjectTests","DeleteProjectTest","DeleteProjectTest","Delete entity (project) test
+"
+"broken","Thu Apr 25 15:38:31 GMT 2024","Thu Apr 25 15:38:45 GMT 2024","14276","","UI Tests","","LoginTests","FailedLoginTest","FailedLoginTest","Defect login test
+"
+"passed","Thu Apr 25 15:38:54 GMT 2024","Thu Apr 25 15:38:54 GMT 2024","126","","API Tests","","TestCaseTests","UpdateTestCaseTest","UpdateTestCaseTest",""
+"passed","Thu Apr 25 15:38:46 GMT 2024","Thu Apr 25 15:38:53 GMT 2024","6704","","UI Tests","","ProjectTests","CreateProjectTest","CreateProjectTest","Create entity (new project) test
+"
+"passed","Thu Apr 25 15:38:54 GMT 2024","Thu Apr 25 15:38:54 GMT 2024","325","","API Tests","","TestCaseTests","CreateNewTestCaseTest","CreateNewTestCaseTest",""
+"passed","Thu Apr 25 15:38:31 GMT 2024","Thu Apr 25 15:38:40 GMT 2024","9119","","UI Tests","","FileUploadTests","UploadFilePositiveTest","UploadFilePositiveTest","Upload test cases test
+"
+"passed","Thu Apr 25 15:38:43 GMT 2024","Thu Apr 25 15:38:50 GMT 2024","7304","","UI Tests","","BoundaryValueTests","MinValueTest","MinValueTest","Minimum (2) boundary value Test
+"
+"passed","Thu Apr 25 15:38:40 GMT 2024","Thu Apr 25 15:38:47 GMT 2024","7531","","UI Tests","","BoundaryValueTests","MaxValueTest","MaxValueTest","Maximum (10) boundary value Test
+"
+"passed","Thu Apr 25 15:38:37 GMT 2024","Thu Apr 25 15:38:43 GMT 2024","6130","","UI Tests","","BoundaryValueTests","MaxOOBValueTest","MaxOOBValueTest","Maximum Out of Bounds (11) boundary value Test
+"
+"passed","Thu Apr 25 15:38:45 GMT 2024","Thu Apr 25 15:38:48 GMT 2024","2904","","UI Tests","","InvalidCredentialsTest","InvalidLoginTest","InvalidLoginTest","Negative login test
+"
