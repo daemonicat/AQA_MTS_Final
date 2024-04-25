@@ -1,5 +1,6 @@
 ﻿using Allure.NUnit.Attributes;
 using OpenQA.Selenium;
+using QaseTestProject.Models;
 using QaseTestProject.Objects.Pages;
 
 namespace QaseTestProject.Objects.Steps;
@@ -14,14 +15,14 @@ public class LoginSteps : BaseSteps
     }
 
     [AllureStep]
-    public ProjectsPage SuccessfulLogin(string username, string password)
+    public ProjectsPage SuccessfulLogin(User? user)
     {
         Logger.Info("Successful Login:");
         
-        _loginPage.EmailInput.SendKeys(username);
+        _loginPage.EmailInput.SendKeys(user.Email);
         Logger.Info("EmailInput.SendKeys");
         
-        _loginPage.PasswordInput.SendKeys(password);
+        _loginPage.PasswordInput.SendKeys(user.Password);
         Logger.Info("PasswordInput.SendKeys");
         
         _loginPage.SignInButton.Click();
@@ -31,14 +32,14 @@ public class LoginSteps : BaseSteps
     }
 
     [AllureStep]
-    public LoginPage UnsuccessfulLogin(string username, string password)
+    public LoginPage UnsuccessfulLogin(User? user)
     {
         Logger.Info("Successful Login:");
         
-        _loginPage.EmailInput.SendKeys(username);
+        _loginPage.EmailInput.SendKeys(user.Email);
         Logger.Info("EmailInput.SendKeys");
         
-        _loginPage.PasswordInput.SendKeys(password);
+        _loginPage.PasswordInput.SendKeys(user.Password);
         Logger.Info("PasswordInput.SendKeys");
         
         _loginPage.SignInButton.Click();

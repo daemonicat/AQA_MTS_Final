@@ -1,6 +1,5 @@
 ﻿using Allure.Net.Commons;
 using Allure.NUnit.Attributes;
-using QaseTestProject.Helpers.Configuration;
 using QaseTestProject.Models.UI;
 
 namespace QaseTestProject.Tests.UITests;
@@ -20,7 +19,7 @@ public class BoundaryValueTests : BaseTest
             .SetProjectAccessType("public")
             .Build();
 
-        LoginSteps.SuccessfulLogin(Configurator.Default.Username, Configurator.Default.Password);
+        LoginSteps.SuccessfulLogin(DefaultUser);
         Assert.That(
             ProjectsSteps.CreateProject(
                     projectInput)
@@ -40,7 +39,7 @@ public class BoundaryValueTests : BaseTest
             .SetProjectAccessType("public")
             .Build();
 
-        LoginSteps.SuccessfulLogin(Configurator.Default.Username, Configurator.Default.Password);
+        LoginSteps.SuccessfulLogin(DefaultUser);
         Assert.That(
             ProjectsSteps.CreateProject(
                     projectInput)
@@ -61,7 +60,7 @@ public class BoundaryValueTests : BaseTest
             .SetMemberAccessType("all")
             .Build();
 
-        LoginSteps.SuccessfulLogin(Configurator.Default.Username, Configurator.Default.Password);
+        LoginSteps.SuccessfulLogin(DefaultUser);
         Assert.That(
             ProjectsSteps.FailNewProjectCreation(projectInput).CheckMinCharsProjectCodeError());
     }
@@ -80,7 +79,7 @@ public class BoundaryValueTests : BaseTest
             .SetMemberAccessType("all")
             .Build();
 
-        LoginSteps.SuccessfulLogin(Configurator.Default.Username, Configurator.Default.Password);
+        LoginSteps.SuccessfulLogin(DefaultUser);
         Assert.That(
             ProjectsSteps.FailNewProjectCreation(projectInput).CheckMaxCharsProjectCodeError());
     }

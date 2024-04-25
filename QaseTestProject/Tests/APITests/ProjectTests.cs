@@ -1,4 +1,5 @@
-﻿using Bogus;
+﻿using Allure.NUnit.Attributes;
+using Bogus;
 using QaseTestProject.Fakers;
 using QaseTestProject.Models.API;
 
@@ -11,10 +12,8 @@ public class ProjectTests : BaseApiTest
     
     [Test]
     [Order(1)]
-    [Category("Smoke")]
-    [Category("Regression")]
-    [Category("NFE")]
-    [Category("POST")]
+    [Category("Smoke"), Category("Regression"), Category("POST")]
+    [AllureFeature("NFE")]
     public async Task AddProjectTest()
     {
         Logger.Info(_project);
@@ -28,9 +27,8 @@ public class ProjectTests : BaseApiTest
 
     [Test]
     [Order(2)]
-    [Category("Regression")]
-    [Category("AFE")]
-    [Category("GET")]
+    [Category("Regression"), Category("GET")]
+    [AllureFeature("AFE")]
     public void GetMissingProjectTest()
     {
         const string code = "CODE2";
@@ -48,9 +46,8 @@ public class ProjectTests : BaseApiTest
 
     [Test]
     [Order(3)]
-    [Category("Regression")]
-    [Category("NFE")]
-    [Category("DELETE")]
+    [Category("Regression"), Category("DELETE")]
+    [AllureFeature("NFE")]
     public void DeleteProjectTest()
     {
         var actualProject = ProjectService.DeleteProjectByCode(_project.Code);

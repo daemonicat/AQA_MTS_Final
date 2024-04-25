@@ -49,7 +49,7 @@ public static class Configurator
         }
     }
 
-    private static List<User> Users
+    public static List<User> Users
     {
         get
         {
@@ -60,7 +60,7 @@ public static class Configurator
             {
                 var user = new User()
                 {
-                    Username = section["Username"] ?? throw new SettingsException("No Username in appsettings.json"),
+                    Email = section["Username"] ?? throw new SettingsException("No Username in appsettings.json"),
                     Password = section["Password"] ?? throw new SettingsException("No Password in appsettings.json")
                 };
 

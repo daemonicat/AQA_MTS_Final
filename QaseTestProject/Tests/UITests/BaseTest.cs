@@ -5,13 +5,13 @@ using OpenQA.Selenium;
 using QaseTestProject.Core;
 using QaseTestProject.Helpers;
 using QaseTestProject.Helpers.Configuration;
+using QaseTestProject.Models;
 using QaseTestProject.Objects.Steps;
 
 namespace QaseTestProject.Tests.UITests;
 
 [Parallelizable(scope: ParallelScope.All)]
 [FixtureLifeCycle(LifeCycle.InstancePerTestCase)]
-[SetUpFixture]
 [AllureSuite("UI Tests")]
 [AllureNUnit]
 public class BaseTest
@@ -23,6 +23,9 @@ public class BaseTest
     protected ProjectsSteps ProjectsSteps;
     protected ProjectSteps ProjectSteps;
     protected SettingsSteps SettingsSteps;
+
+    public User? DefaultUser { get; set; }
+    public User? BrokenUser { get; set; }
 
     [OneTimeSetUp]
     public static void GlobalSetup()

@@ -1,4 +1,5 @@
-﻿using Bogus;
+﻿using Allure.NUnit.Attributes;
+using Bogus;
 using QaseTestProject.Fakers;
 using QaseTestProject.Models.API;
 
@@ -12,10 +13,8 @@ public class TestCaseTests : BaseApiTest
 
     [Test]
     [Order(1)]
-    [Category("Smoke")]
-    [Category("Regression")]
-    [Category("NFE")]
-    [Category("POST")]
+    [Category("Smoke"), Category("Regression"), Category("POST")]
+    [AllureFeature("NFE")]
     public async Task CreateNewTestCaseTest()
     {
         Logger.Info(_testCase);
@@ -34,9 +33,8 @@ public class TestCaseTests : BaseApiTest
 
     [Test]
     [Order(2)]
-    [Category("Regression")]
-    [Category("AFE")]
-    [Category("PATCH")]
+    [Category("Regression"), Category("PATCH")]
+    [AllureFeature("AFE")]
     public async Task UpdateTestCaseTest()
     {
         var testCase = new TestCase();
@@ -48,9 +46,8 @@ public class TestCaseTests : BaseApiTest
 
     [Test]
     [Order(3)]
-    [Category("Regression")]
-    [Category("NFE")]
-    [Category("GET")]
+    [Category("Regression"), Category("GET")]
+    [AllureFeature("NFE")]
     public async Task GetTestCaseTest()
     {
         Logger.Info(_testCase);
@@ -62,9 +59,8 @@ public class TestCaseTests : BaseApiTest
 
     [Test]
     [Order(4)]
-    [Category("Regression")]
-    [Category("NFE")]
-    [Category("DELETE")]
+    [Category("Regression"), Category("DELETE")]
+    [AllureFeature("NFE")]
     public async Task DeleteTestCaseTest()
     {
         Logger.Info(_testCase);

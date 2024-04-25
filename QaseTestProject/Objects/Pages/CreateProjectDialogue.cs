@@ -38,18 +38,32 @@ public class CreateProjectDialogue(IWebDriver driver) : BasePage(driver)
         return CreateProjectButton.Displayed;
     }
 
-    public void FillInNameField(string name) => ProjectName.SendKeys(name);
+    public CreateProjectDialogue FillInNameField(string name)
+    {
+        ProjectName.SendKeys(name);
+        return this;
+    }
 
-    public void FillInProjectCode(string code)
+    public CreateProjectDialogue FillInProjectCode(string code)
     {
         ProjectCode.Clear();
         ProjectCode.SendKeys(code);
+        return this;
     }
 
-    public void FillInProjectDescription(string desc) => ProjectDescription.SendKeys(desc);
-    public void ClickCreateProjectButton() => CreateProjectButton.Click();
+    public CreateProjectDialogue FillInProjectDescription(string desc)
+    {
+        ProjectDescription.SendKeys(desc);
+        return this;
+    }
 
-    public void SetProjectAccessType(string projectAccessType)
+    public CreateProjectDialogue ClickCreateProjectButton()
+    {
+        CreateProjectButton.Click();
+        return this;
+    }
+
+    public CreateProjectDialogue SetProjectAccessType(string projectAccessType)
     {
         switch (projectAccessType)
         {
@@ -63,9 +77,11 @@ public class CreateProjectDialogue(IWebDriver driver) : BasePage(driver)
                 ProjectAccessPrivate.Click();
                 break;
         }
+        
+        return this;
     }
 
-    public void SetMemberAccessType(string memberAccessType)
+    public CreateProjectDialogue SetMemberAccessType(string memberAccessType)
     {
         switch (memberAccessType)
         {
@@ -82,6 +98,8 @@ public class CreateProjectDialogue(IWebDriver driver) : BasePage(driver)
                 MemberAccessNone.Click();
                 break;
         }
+        
+        return this;
     }
 
     public bool CheckMinCharsProjectCodeError() => MinCharsProjectCodeError.Displayed;

@@ -1,6 +1,5 @@
 ﻿using Allure.Net.Commons;
 using Allure.NUnit.Attributes;
-using QaseTestProject.Helpers.Configuration;
 
 namespace QaseTestProject.Tests.UITests;
 
@@ -12,7 +11,7 @@ public class FileUploadTests : BaseTest
     [AllureSeverity(SeverityLevel.critical)]
     public void UploadFilePositiveTest()
     {
-        LoginSteps.SuccessfulLogin(Configurator.Default.Username, Configurator.Default.Password);
+        LoginSteps.SuccessfulLogin(DefaultUser);
         Assert.That(
             ProjectSteps.ImportTests("testdata.json").SuccessTextPopUpDisplayed
         );
@@ -24,7 +23,7 @@ public class FileUploadTests : BaseTest
     [AllureSeverity(SeverityLevel.critical)]
     public void UploadFileNegativeTest()
     {
-        LoginSteps.SuccessfulLogin(Configurator.Default.Username, Configurator.Default.Password);
+        LoginSteps.SuccessfulLogin(DefaultUser);
         
         Assert.That(
             ProjectSteps.ImportTests("testdatanegative.json").ErrorTextPopUpDisplayed

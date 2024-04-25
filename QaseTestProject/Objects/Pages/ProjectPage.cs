@@ -28,10 +28,30 @@ public class ProjectPage(IWebDriver driver) : BasePage(driver)
         return CreateNewCaseButton.Displayed;
     }
 
-    public void ClickDataMenuButton() => DataMenuButton.Click();
-    public void ClickImportDataButton() => ImportDataButton.Click();
-    public void ClickChooseFileButton(string path) => ChooseFileButton.SendKeys(path);
-    public void ClickImportTestsButton() => ImportTestsButton.Click();
+    public ProjectPage ClickDataMenuButton()
+    {
+        DataMenuButton.Click();
+        return this;
+    }
+
+    public ProjectPage ClickImportDataButton()
+    {
+        ImportDataButton.Click();
+        return this;
+    }
+
+    public ProjectPage ClickChooseFileButton(string path)
+    {
+        ChooseFileButton.SendKeys(path);
+        return this;
+    }
+
+    public ProjectPage ClickImportTestsButton()
+    {
+        ImportTestsButton.Click();
+        return this;
+    }
+
     public bool ErrorTextPopUpDisplayed() => ErrorTextPopUp.Displayed;
     public bool SuccessTextPopUpDisplayed() => SuccessTextPopUp.Displayed;
 }

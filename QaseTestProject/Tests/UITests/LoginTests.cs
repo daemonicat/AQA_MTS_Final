@@ -1,19 +1,17 @@
 ﻿using Allure.Net.Commons;
 using Allure.NUnit.Attributes;
-using QaseTestProject.Helpers.Configuration;
 
 namespace QaseTestProject.Tests.UITests;
 
 public class LoginTests : BaseTest
 {
     [Test(Description = "Base positive login test")]
-    [Category("Smoke")]
-    [Category("Regression")]
+    [Category("Smoke"), Category("Regression")]
     [AllureOwner("Dmitry Kuzmin")]
     [AllureSeverity(SeverityLevel.blocker)]
     public void SuccessfulLoginTest()
     {
-        Assert.That(LoginSteps.SuccessfulLogin(Configurator.Default.Username, Configurator.Default.Password)
+        Assert.That(LoginSteps.SuccessfulLogin(DefaultUser)
             .IsPageOpened());
     }
     
@@ -23,7 +21,7 @@ public class LoginTests : BaseTest
     [AllureSeverity(SeverityLevel.blocker)]
     public void FailedLoginTest()
     {
-        Assert.That(LoginSteps.SuccessfulLogin("Testeam@ail.com", Configurator.Default.Password)
+        Assert.That(LoginSteps.SuccessfulLogin(BrokenUser)
             .IsPageOpened());
     }
 }
