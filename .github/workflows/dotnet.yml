@@ -42,7 +42,7 @@ jobs:
         run: dotnet test --filter Category=Smoke
         id: Smoke
         
-      - name: Execute Smoke tests
+      - name: Execute Regression tests
         if: "github.event.inputs.deployment_target == 'Regression'"
         run: dotnet test --filter Category=Regression
         id: Regression

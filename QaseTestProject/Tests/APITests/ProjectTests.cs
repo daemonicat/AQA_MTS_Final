@@ -14,6 +14,7 @@ public class ProjectTests : BaseApiTest
     [Category("Smoke")]
     [Category("Regression")]
     [Category("NFE")]
+    [Category("POST")]
     public async Task AddProjectTest()
     {
         Logger.Info(_project);
@@ -29,6 +30,7 @@ public class ProjectTests : BaseApiTest
     [Order(2)]
     [Category("Regression")]
     [Category("AFE")]
+    [Category("GET")]
     public void GetMissingProjectTest()
     {
         const string code = "CODE2";
@@ -48,6 +50,7 @@ public class ProjectTests : BaseApiTest
     [Order(3)]
     [Category("Regression")]
     [Category("NFE")]
+    [Category("DELETE")]
     public void DeleteProjectTest()
     {
         var actualProject = ProjectService.DeleteProjectByCode(_project.Code);
