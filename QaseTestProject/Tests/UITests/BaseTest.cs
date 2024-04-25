@@ -13,7 +13,7 @@ namespace QaseTestProject.Tests.UITests;
 [FixtureLifeCycle(LifeCycle.InstancePerTestCase)]
 [AllureSuite("UI Tests")]
 [AllureNUnit]
-public class BaseTest : BaseGeneralTest
+public class BaseTest
 {
     protected IWebDriver Driver { get; private set; }
     protected WaitsHelper WaitsHelper { get; private set; }
