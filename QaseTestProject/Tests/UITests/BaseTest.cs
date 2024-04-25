@@ -11,7 +11,7 @@ namespace QaseTestProject.Tests.UITests;
 
 [Parallelizable(scope: ParallelScope.All)]
 [FixtureLifeCycle(LifeCycle.InstancePerTestCase)]
-[AllureSuite("API tests")]
+[AllureSuite("UI Tests")]
 [AllureNUnit]
 public class BaseTest
 {

@@ -6,7 +6,7 @@ using QaseTestProject.Services;
 
 namespace QaseTestProject.Tests.APITests;
 
-[AllureSuite("API tests")]
+[AllureSuite("API Tests")]
 [AllureNUnit]
 public class BaseApiTest
 {
