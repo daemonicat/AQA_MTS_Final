@@ -12,8 +12,8 @@ public class LoginPage(IWebDriver driver) : BasePage(driver)
     private static readonly By ErrorAlertBy =
         By.XPath("//div[@id='app']//span[text()='These credentials do not match our records.']");
 
-    public IWebElement EmailInput => WaitsHelper.WaitForExists(EmailInputBy);
-    public IWebElement PasswordInput => WaitsHelper.WaitForExists(PasswordInputBy);
+    public Input EmailInput => new(Driver, EmailInputBy);
+    public Input PasswordInput => new(Driver, PasswordInputBy);
     public Button SignInButton => new(Driver, SignInButtonBy);
     public IWebElement ErrorAlert => WaitsHelper.WaitForVisibilityLocatedBy(ErrorAlertBy);
 

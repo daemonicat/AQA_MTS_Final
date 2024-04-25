@@ -9,7 +9,7 @@ public class ProjectsPage(IWebDriver driver) : BasePage(driver)
     private static readonly By OpenFirstProjectBy = By.XPath("//div[@id='application-content']//tbody/tr[1]/td[2]//a");
 
     private Button CreateNewProjectButton => new(Driver, CreateNewProjectButtonBy);
-    private IWebElement OpenFirstProject => WaitsHelper.WaitForExists(OpenFirstProjectBy);
+    private Button OpenFirstProject => new(Driver, OpenFirstProjectBy);
 
     public override bool IsPageOpened() => CreateNewProjectButton.Displayed;
     public void ClickCreateNewProjectButton() => CreateNewProjectButton.Click();

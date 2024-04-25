@@ -2,13 +2,14 @@
 using Allure.NUnit.Attributes;
 using NLog;
 using QaseTestProject.Clients;
+using QaseTestProject.Helpers;
 using QaseTestProject.Services;
 
 namespace QaseTestProject.Tests.APITests;
 
 [AllureSuite("API Tests")]
 [AllureNUnit]
-public class BaseApiTest
+public class BaseApiTest : BaseGeneralTest
 {
     protected readonly Logger Logger = LogManager.GetCurrentClassLogger();
     protected ProjectService ProjectService;
