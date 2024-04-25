@@ -7,6 +7,6 @@ public class BaseGeneralTest
     [OneTimeSetUp]
     public static void GlobalSetup()
     {
-        AllureLifecycle.Instance.CleanupResultDirectory();
+        //AllureLifecycle.Instance.CleanupResultDirectory();
     }
 }
