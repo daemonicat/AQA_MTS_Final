@@ -1,0 +1,27 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Apr 25 20:55:16 GMT 2024","Thu Apr 25 20:55:16 GMT 2024","169","","API Tests","","TestCaseTests","CreateNewTestCaseTest","CreateNewTestCaseTest",""
+"broken","Thu Apr 25 20:55:00 GMT 2024","Thu Apr 25 20:55:16 GMT 2024","15651","","UI Tests","","BoundaryValueTests","MinValueTest","MinValueTest","Minimum (2) boundary value Test
+"
+"passed","Thu Apr 25 20:55:16 GMT 2024","Thu Apr 25 20:55:16 GMT 2024","83","","API Tests","","TestCaseTests","UpdateTestCaseTest","UpdateTestCaseTest",""
+"passed","Thu Apr 25 20:55:16 GMT 2024","Thu Apr 25 20:55:16 GMT 2024","166","","API Tests","","TestCaseTests","DeleteTestCaseTest","DeleteTestCaseTest",""
+"broken","Thu Apr 25 20:54:49 GMT 2024","Thu Apr 25 20:55:03 GMT 2024","14514","","UI Tests","","LoginTests","FailedLoginTest","FailedLoginTest","Defect login test
+"
+"passed","Thu Apr 25 20:54:49 GMT 2024","Thu Apr 25 20:54:54 GMT 2024","5703","","UI Tests","","LoginTests","SuccessfulLoginTest","SuccessfulLoginTest","Base positive login test
+"
+"broken","Thu Apr 25 20:54:57 GMT 2024","Thu Apr 25 20:55:11 GMT 2024","14395","","UI Tests","","BoundaryValueTests","MaxValueTest","MaxValueTest","Maximum (10) boundary value Test
+"
+"passed","Thu Apr 25 20:55:16 GMT 2024","Thu Apr 25 20:55:16 GMT 2024","100","","API Tests","","TestCaseTests","GetTestCaseTest","GetTestCaseTest",""
+"passed","Thu Apr 25 20:55:06 GMT 2024","Thu Apr 25 20:55:11 GMT 2024","5469","","UI Tests","","ProjectTests","DeleteProjectTest","DeleteProjectTest","Delete entity (project) test
+"
+"passed","Thu Apr 25 20:54:49 GMT 2024","Thu Apr 25 20:54:57 GMT 2024","8209","","UI Tests","","FileUploadTests","UploadFilePositiveTest","UploadFilePositiveTest","Upload test cases test
+"
+"passed","Thu Apr 25 20:54:54 GMT 2024","Thu Apr 25 20:55:00 GMT 2024","5476","","UI Tests","","BoundaryValueTests","MaxOOBValueTest","MaxOOBValueTest","Maximum Out of Bounds (11) boundary value Test
+"
+"passed","Thu Apr 25 20:54:49 GMT 2024","Thu Apr 25 20:54:57 GMT 2024","8522","","UI Tests","","FileUploadTests","UploadFileNegativeTest","UploadFileNegativeTest","Fail to upload test cases test
+"
+"passed","Thu Apr 25 20:55:03 GMT 2024","Thu Apr 25 20:55:09 GMT 2024","5758","","UI Tests","","ProjectTests","CreateProjectTest","CreateProjectTest","Create entity (new project) test
+"
+"passed","Thu Apr 25 20:55:03 GMT 2024","Thu Apr 25 20:55:06 GMT 2024","2613","","UI Tests","","InvalidCredentialsTest","InvalidLoginTest","InvalidLoginTest","Negative login test
+"
+"passed","Thu Apr 25 20:54:57 GMT 2024","Thu Apr 25 20:55:03 GMT 2024","5712","","UI Tests","","BoundaryValueTests","MinOOBValueTest","MinOOBValueTest","Minimum Out of Bounds (1) boundary value Test
+"
