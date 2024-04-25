@@ -1,5 +1,0 @@
-2024/04/23 16:32:51.013|INFO|RestSharp.RestRequest 
-2024/04/23 16:32:51.013|DEBUG|Delete request to: /v1/case/{code}/{id} 
-2024/04/23 16:32:51.222|DEBUG|Request finished with status code: OK 
-2024/04/23 16:32:51.222|DEBUG|Responce: {"status":true,"result":{"id":10}} 
-2024/04/23 16:32:51.222|INFO|DeleteTestCaseTest is successful 

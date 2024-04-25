@@ -1,0 +1,7 @@
+2024/04/25 20:26:26.490|INFO|TestCase { Id = 0, Title = 35qv9n1e7t, Description = Planner Manager parse virtual Reduced, Severity = 3, Priority = 3, Type = 3, Layer = 2, Behavior = 1, Automation = 0, AuthorId = 216468, CreatedAt = 04/25/2024 20:26:26, UpdatedAt = 04/25/2024 20:26:26 } 
+2024/04/25 20:26:26.490|INFO|RestSharp.RestRequest 
+2024/04/25 20:26:26.490|DEBUG|Post request to: /v1/case/{code} 
+2024/04/25 20:26:26.496|DEBUG|body: {"id":0,"title":"35qv9n1e7t","description":"Planner Manager parse virtual Reduced","severity":3,"priority":3,"type":3,"layer":2,"behavior":1,"automation":0,"author_id":216468,"created_at":"04/25/2024 20:26:26","updated_at":"04/25/2024 20:26:26"} 
+2024/04/25 20:26:26.678|DEBUG|Request finished with status code: OK 
+2024/04/25 20:26:26.678|DEBUG|Responce: {"status":true,"result":{"id":1}} 
+2024/04/25 20:26:26.678|INFO|CreateNewTestCaseTest is successful 
