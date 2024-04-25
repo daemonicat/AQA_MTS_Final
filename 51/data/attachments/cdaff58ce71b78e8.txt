@@ -1,0 +1,4 @@
+2024/04/25 20:38:20.868|INFO|Successful Login: 
+2024/04/25 20:38:21.734|INFO|EmailInput.SendKeys 
+2024/04/25 20:38:21.972|INFO|PasswordInput.SendKeys 
+2024/04/25 20:38:22.138|INFO|SignInButton.Click 

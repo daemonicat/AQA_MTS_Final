@@ -1,6 +1,0 @@
-2024/04/23 18:38:50.675|INFO|RestSharp.RestRequest 
-2024/04/23 18:38:50.675|DEBUG|Get request to: /v1/case/{code}/{id} 
-2024/04/23 18:38:50.727|ERROR|Error retrieving response. Check inner details for more info. 
-Request failed with status code NotFound 
-2024/04/23 18:38:50.727|DEBUG|Request finished with status code: NotFound 
-2024/04/23 18:38:50.727|DEBUG|Responce: {"status":false,"errorMessage":"Project not found"} 

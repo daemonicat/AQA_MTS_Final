@@ -1,0 +1,6 @@
+2024/04/25 20:38:44.642|INFO|TestCase { Id = 3, Title = f4m9jd8o8n, Description = Concrete interactive Refined Frozen Shoes Granite Total, Severity = 4, Priority = 2, Type = 1, Layer = 2, Behavior = 2, Automation = 0, AuthorId = 216468, CreatedAt = 04/25/2024 20:38:44, UpdatedAt = 04/25/2024 20:38:44 } 
+2024/04/25 20:38:44.642|INFO|RestSharp.RestRequest 
+2024/04/25 20:38:44.642|DEBUG|Delete request to: /v1/case/{code}/{id} 
+2024/04/25 20:38:44.808|DEBUG|Request finished with status code: OK 
+2024/04/25 20:38:44.808|DEBUG|Responce: {"status":true,"result":{"id":3}} 
+2024/04/25 20:38:44.808|INFO|DeleteTestCaseTest is successful 

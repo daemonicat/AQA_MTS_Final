@@ -1,0 +1,7 @@
+2024/04/25 20:38:44.258|INFO|TestCase { Id = 0, Title = f4m9jd8o8n, Description = Concrete interactive Refined Frozen Shoes Granite Total, Severity = 4, Priority = 2, Type = 1, Layer = 2, Behavior = 2, Automation = 0, AuthorId = 216468, CreatedAt = 04/25/2024 20:38:44, UpdatedAt = 04/25/2024 20:38:44 } 
+2024/04/25 20:38:44.262|INFO|RestSharp.RestRequest 
+2024/04/25 20:38:44.262|DEBUG|Post request to: /v1/case/{code} 
+2024/04/25 20:38:44.266|DEBUG|body: {"id":0,"title":"f4m9jd8o8n","description":"Concrete interactive Refined Frozen Shoes Granite Total","severity":4,"priority":2,"type":1,"layer":2,"behavior":2,"automation":0,"author_id":216468,"created_at":"04/25/2024 20:38:44","updated_at":"04/25/2024 20:38:44"} 
+2024/04/25 20:38:44.455|DEBUG|Request finished with status code: OK 
+2024/04/25 20:38:44.455|DEBUG|Responce: {"status":true,"result":{"id":3}} 
+2024/04/25 20:38:44.455|INFO|CreateNewTestCaseTest is successful 

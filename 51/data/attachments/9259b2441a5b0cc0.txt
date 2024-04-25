@@ -1,0 +1,6 @@
+2024/04/25 20:38:44.547|INFO|TestCase { Id = 3, Title = f4m9jd8o8n, Description = Concrete interactive Refined Frozen Shoes Granite Total, Severity = 4, Priority = 2, Type = 1, Layer = 2, Behavior = 2, Automation = 0, AuthorId = 216468, CreatedAt = 04/25/2024 20:38:44, UpdatedAt = 04/25/2024 20:38:44 } 
+2024/04/25 20:38:44.547|INFO|RestSharp.RestRequest 
+2024/04/25 20:38:44.547|DEBUG|Get request to: /v1/case/{code}/{id} 
+2024/04/25 20:38:44.641|DEBUG|Request finished with status code: OK 
+2024/04/25 20:38:44.641|DEBUG|Responce: {"status":true,"result":{"id":3,"position":1,"title":"f4m9jd8o8n","description":"Concrete interactive Refined Frozen Shoes Granite Total","preconditions":null,"postconditions":null,"severity":4,"priority":2,"type":1,"layer":2,"is_flaky":0,"is_muted":false,"behavior":2,"automation":0,"isManual":true,"isToBeAutomated":false,"status":0,"milestone_id":null,"suite_id":null,"links":[],"custom_fields":[],"attachments":[],"steps_type":null,"steps":[],"params":[],"member_id":1,"author_id":218897,"tags":[],"deleted":null,"created":"2024-04-25T20:38:44.000000Z","updated":"2024-04-25T20:38:44.000000Z","created_at":"2024-04-25T20:38:44+00:00","updated_at":"2024-04-25T20:38:44+00:00"}} 
+2024/04/25 20:38:44.641|INFO|GetTestCaseTest is successful 
