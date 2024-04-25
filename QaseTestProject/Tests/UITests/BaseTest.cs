@@ -27,7 +27,11 @@ public class BaseTest
     protected User? DefaultUser { get; private set; }
     protected User? BrokenUser { get; private set; }
 
-    
+    [OneTimeSetUp]
+    public static void GlobalSetup()
+    {
+        AllureLifecycle.Instance.CleanupResultDirectory();
+    }
 
     [SetUp]
     public void FactoryDriverTest()
