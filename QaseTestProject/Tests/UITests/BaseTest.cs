@@ -24,8 +24,8 @@ public class BaseTest
     protected ProjectSteps ProjectSteps;
     protected SettingsSteps SettingsSteps;
 
-    public User? DefaultUser { get; set; }
-    public User? BrokenUser { get; set; }
+    protected User? DefaultUser { get; private set; }
+    protected User? BrokenUser { get; private set; }
 
     [OneTimeSetUp]
     public static void GlobalSetup()
@@ -43,6 +43,9 @@ public class BaseTest
         ProjectsSteps = new ProjectsSteps(Driver);
         ProjectSteps = new ProjectSteps(Driver);
         SettingsSteps = new SettingsSteps(Driver);
+
+        DefaultUser = Configurator.DefaultUser;
+        BrokenUser = Configurator.BrokenUser;
 
         Driver.Navigate().GoToUrl(Configurator.AppSettings.URL);
     }

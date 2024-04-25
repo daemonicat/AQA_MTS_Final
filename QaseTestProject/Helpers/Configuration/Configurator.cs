@@ -66,8 +66,8 @@ public static class Configurator
 
                 user.UserType = section["UserType"] switch
                 {
-                    "Existing" => UserType.Default,
-                    "Nonexisting" => UserType.Broken,
+                    "Default" => UserType.Default,
+                    "Broken" => UserType.Broken,
                     _ => user.UserType
                 };
 
@@ -78,8 +78,10 @@ public static class Configurator
         }
     }
 
-    public static User Default =>
+    public static User DefaultUser =>
         Users.Find(x => x.UserType == UserType.Default) ?? throw new SettingsException("No such user");
+    public static User BrokenUser =>
+        Users.Find(x => x.UserType == UserType.Broken) ?? throw new SettingsException("No such user");
 
     public static string? BrowserType => SConfiguration.Value[nameof(BrowserType)];
     public static double WaitsTimeout => double.Parse(SConfiguration.Value[nameof(WaitsTimeout)] ?? "15");
