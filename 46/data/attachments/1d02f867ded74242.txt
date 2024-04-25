@@ -1,0 +1,8 @@
+2024/04/25 16:58:29.208|INFO|Project { Title = yfrvab, Code = SYRGYSKN, Description = Planner invoice deposit Health, Computers & Grocery Electronics, Outdoors & Toys, Access = all, Counts =  } 
+2024/04/25 16:58:29.223|INFO|RestSharp.RestRequest 
+2024/04/25 16:58:29.223|DEBUG|Post request to: /v1/project 
+2024/04/25 16:58:29.246|DEBUG|body: {"title":"yfrvab","code":"SYRGYSKN","description":"Planner invoice deposit Health, Computers \u0026 Grocery Electronics, Outdoors \u0026 Toys","access":"all","counts":null} 
+2024/04/25 16:58:29.862|DEBUG|Request finished with status code: OK 
+2024/04/25 16:58:29.862|DEBUG|Responce: {"status":true,"result":{"code":"SYRGYSKN"}} 
+2024/04/25 16:58:29.862|INFO|_project.Status = True 
+2024/04/25 16:58:29.862|INFO|actualProject.Result.Code = SYRGYSKN 

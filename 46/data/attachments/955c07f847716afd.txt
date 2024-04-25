@@ -1,0 +1,7 @@
+2024/04/25 16:58:52.519|INFO|TestCase { Id = 0, Title = 11muezmwps, Description = human-resource Networked cross-platform 1080p interface, Severity = 3, Priority = 1, Type = 2, Layer = 2, Behavior = 1, Automation = 1, AuthorId = 216468, CreatedAt = 04/25/2024 16:58:52, UpdatedAt = 04/25/2024 16:58:52 } 
+2024/04/25 16:58:52.519|INFO|RestSharp.RestRequest 
+2024/04/25 16:58:52.522|DEBUG|Post request to: /v1/case/{code} 
+2024/04/25 16:58:52.522|DEBUG|body: {"id":0,"title":"11muezmwps","description":"human-resource Networked cross-platform 1080p interface","severity":3,"priority":1,"type":2,"layer":2,"behavior":1,"automation":1,"author_id":216468,"created_at":"04/25/2024 16:58:52","updated_at":"04/25/2024 16:58:52"} 
+2024/04/25 16:58:52.840|DEBUG|Request finished with status code: OK 
+2024/04/25 16:58:52.840|DEBUG|Responce: {"status":true,"result":{"id":13}} 
+2024/04/25 16:58:52.840|INFO|CreateNewTestCaseTest is successful 
