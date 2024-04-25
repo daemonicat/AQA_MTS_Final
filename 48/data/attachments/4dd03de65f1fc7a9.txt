@@ -1,0 +1,8 @@
+2024/04/25 18:41:50.117|INFO|Project { Title = dgtz3z, Code = LCLCGNXG, Description = Toys Cambridgeshire scale Granite enable, Access = all, Counts =  } 
+2024/04/25 18:41:50.132|INFO|RestSharp.RestRequest 
+2024/04/25 18:41:50.132|DEBUG|Post request to: /v1/project 
+2024/04/25 18:41:50.153|DEBUG|body: {"title":"dgtz3z","code":"LCLCGNXG","description":"Toys Cambridgeshire scale Granite enable","access":"all","counts":null} 
+2024/04/25 18:41:50.740|DEBUG|Request finished with status code: OK 
+2024/04/25 18:41:50.740|DEBUG|Responce: {"status":true,"result":{"code":"LCLCGNXG"}} 
+2024/04/25 18:41:50.740|INFO|_project.Status = True 
+2024/04/25 18:41:50.740|INFO|actualProject.Result.Code = LCLCGNXG 

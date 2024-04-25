@@ -1,0 +1,6 @@
+2024/04/25 18:41:51.452|INFO|TestCase { Id = 15, Title = ce9rmu0mfr, Description = compressing Soft seize European Unit of Account 17(E.U.A.-17) transmitting, Severity = 1, Priority = 2, Type = 2, Layer = 2, Behavior = 1, Automation = 1, AuthorId = 216468, CreatedAt = 04/25/2024 18:41:50, UpdatedAt = 04/25/2024 18:41:50 } 
+2024/04/25 18:41:51.452|INFO|RestSharp.RestRequest 
+2024/04/25 18:41:51.452|DEBUG|Get request to: /v1/case/{code}/{id} 
+2024/04/25 18:41:51.563|DEBUG|Request finished with status code: OK 
+2024/04/25 18:41:51.563|DEBUG|Responce: {"status":true,"result":{"id":15,"position":2,"title":"ce9rmu0mfr","description":"compressing Soft seize European Unit of Account 17(E.U.A.-17) transmitting","preconditions":null,"postconditions":null,"severity":1,"priority":2,"type":2,"layer":2,"is_flaky":0,"is_muted":false,"behavior":1,"automation":1,"isManual":true,"isToBeAutomated":true,"status":0,"milestone_id":null,"suite_id":null,"links":[],"custom_fields":[],"attachments":[],"steps_type":null,"steps":[],"params":[],"member_id":1,"author_id":216468,"tags":[],"deleted":null,"created":"2024-04-25T18:41:50.000000Z","updated":"2024-04-25T18:41:51.000000Z","created_at":"2024-04-25T18:41:50+00:00","updated_at":"2024-04-25T18:41:51+00:00"}} 
+2024/04/25 18:41:51.563|INFO|GetTestCaseTest is successful 

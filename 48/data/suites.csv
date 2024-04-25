@@ -1,0 +1,8 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Apr 25 18:41:51 GMT 2024","Thu Apr 25 18:41:51 GMT 2024","326","","API Tests","","TestCaseTests","CreateNewTestCaseTest","CreateNewTestCaseTest",""
+"passed","Thu Apr 25 18:41:50 GMT 2024","Thu Apr 25 18:41:50 GMT 2024","635","","API Tests","","ProjectTests","AddProjectTest","AddProjectTest",""
+"passed","Thu Apr 25 18:41:50 GMT 2024","Thu Apr 25 18:41:50 GMT 2024","117","","API Tests","","ProjectTests","DeleteProjectTest","DeleteProjectTest",""
+"passed","Thu Apr 25 18:41:51 GMT 2024","Thu Apr 25 18:41:51 GMT 2024","122","","API Tests","","TestCaseTests","UpdateTestCaseTest","UpdateTestCaseTest",""
+"passed","Thu Apr 25 18:41:51 GMT 2024","Thu Apr 25 18:41:51 GMT 2024","231","","API Tests","","TestCaseTests","DeleteTestCaseTest","DeleteTestCaseTest",""
+"passed","Thu Apr 25 18:41:51 GMT 2024","Thu Apr 25 18:41:51 GMT 2024","111","","API Tests","","TestCaseTests","GetTestCaseTest","GetTestCaseTest",""
+"passed","Thu Apr 25 18:41:50 GMT 2024","Thu Apr 25 18:41:50 GMT 2024","96","","API Tests","","ProjectTests","GetMissingProjectTest","GetMissingProjectTest",""
