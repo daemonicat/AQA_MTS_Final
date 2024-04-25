@@ -1,4 +1,5 @@
-﻿using Allure.NUnit;
+﻿using Allure.Net.Commons;
+using Allure.NUnit;
 using Allure.NUnit.Attributes;
 using NLog;
 using QaseTestProject.Clients;
@@ -17,6 +18,7 @@ public class BaseApiTest
     [OneTimeSetUp]
     public void SetUpApi()
     {
+        AllureLifecycle.Instance.CleanupResultDirectory();
         var client = new RestClientExtended();
         ProjectService = new ProjectService(client);
         TestCaseService = new TestCaseService(client);
