@@ -21,9 +21,9 @@ public class CreateProjectDialogue(IWebDriver driver) : BasePage(driver)
     private static readonly By MaxCharsProjectCodeErrorBy =
         By.XPath("//div[text()='The code may not be greater than 10 characters.']");
 
-    private IWebElement ProjectName => WaitsHelper.WaitForExists(ProjectNameBy);
-    private IWebElement ProjectCode => WaitsHelper.WaitForExists(ProjectCodeBy);
-    private IWebElement ProjectDescription => WaitsHelper.WaitForExists(ProjectDescriptionBy);
+    private Input ProjectName => new(Driver, ProjectNameBy);
+    private Input ProjectCode => new(Driver, ProjectCodeBy);
+    private Input ProjectDescription => new(Driver, ProjectDescriptionBy);
     private IWebElement ProjectAccessPrivate => WaitsHelper.WaitForVisibilityLocatedBy(ProjectAccessPrivateBy);
     private IWebElement ProjectAccessPublic => WaitsHelper.WaitForExists(ProjectAccessPublicBy);
     private IWebElement MemberAccessAll => WaitsHelper.WaitForExists(MemberAccessAllBy);

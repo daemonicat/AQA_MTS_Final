@@ -18,6 +18,8 @@ public class TestCaseTests : BaseApiTest
     [Category("POST")]
     public async Task CreateNewTestCaseTest()
     {
+        Logger.Info(_testCase);
+        
         var actualTestCase = await TestCaseService.CreateNewTestCase(_testCase, ProjectCode);
 
         Assert.Multiple(() =>
@@ -51,6 +53,8 @@ public class TestCaseTests : BaseApiTest
     [Category("GET")]
     public async Task GetTestCaseTest()
     {
+        Logger.Info(_testCase);
+        
         var actualTestCase = await TestCaseService.GetTestCase(ProjectCode, _testCase.Id);
         Assert.That(actualTestCase.Status, Is.EqualTo(true));
         Logger.Info("GetTestCaseTest is successful");
@@ -63,6 +67,8 @@ public class TestCaseTests : BaseApiTest
     [Category("DELETE")]
     public async Task DeleteTestCaseTest()
     {
+        Logger.Info(_testCase);
+        
         var actualTestCase = await TestCaseService.DeleteTestCase(ProjectCode, _testCase.Id);
         Assert.That(actualTestCase.Status, Is.EqualTo(true));
         Logger.Info("DeleteTestCaseTest is successful");
