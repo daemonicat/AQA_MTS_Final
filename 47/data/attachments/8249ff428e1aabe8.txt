@@ -1,0 +1,4 @@
+2024/04/25 17:02:44.826|DEBUG|Delete request to: /v1/project/{code} 
+2024/04/25 17:02:44.906|DEBUG|Request finished with status code: OK 
+2024/04/25 17:02:44.906|DEBUG|Responce: {"status":true} 
+2024/04/25 17:02:44.906|INFO|Response Status = True. 
