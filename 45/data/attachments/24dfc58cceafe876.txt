@@ -1,0 +1,7 @@
+2024/04/25 16:48:51.038|INFO|TestCase { Id = 0, Title = bqazi7pl3m, Description = productivity Stream hacking Internal Cambridgeshire, Severity = 1, Priority = 2, Type = 2, Layer = 2, Behavior = 2, Automation = 1, AuthorId = 216468, CreatedAt = 04/25/2024 16:48:51, UpdatedAt = 04/25/2024 16:48:51 } 
+2024/04/25 16:48:51.041|INFO|RestSharp.RestRequest 
+2024/04/25 16:48:51.041|DEBUG|Post request to: /v1/case/{code} 
+2024/04/25 16:48:51.045|DEBUG|body: {"id":0,"title":"bqazi7pl3m","description":"productivity Stream hacking Internal Cambridgeshire","severity":1,"priority":2,"type":2,"layer":2,"behavior":2,"automation":1,"author_id":216468,"created_at":"04/25/2024 16:48:51","updated_at":"04/25/2024 16:48:51"} 
+2024/04/25 16:48:51.256|DEBUG|Request finished with status code: OK 
+2024/04/25 16:48:51.256|DEBUG|Responce: {"status":true,"result":{"id":12}} 
+2024/04/25 16:48:51.256|INFO|CreateNewTestCaseTest is successful 

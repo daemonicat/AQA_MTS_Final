@@ -1,0 +1,12 @@
+2024/04/25 16:48:37.057|INFO|Successful Login: 
+2024/04/25 16:48:37.371|INFO|EmailInput.SendKeys 
+2024/04/25 16:48:37.645|INFO|PasswordInput.SendKeys 
+2024/04/25 16:48:37.748|INFO|SignInButton.Click 
+2024/04/25 16:48:37.748|INFO|Create Project: 
+2024/04/25 16:48:39.947|INFO|ClickCreateNewProjectButton done 
+2024/04/25 16:48:40.028|INFO|FillInNameField done 
+2024/04/25 16:48:40.203|INFO|FillInProjectCode done 
+2024/04/25 16:48:40.399|INFO|FillInProjectDescription done 
+2024/04/25 16:48:40.484|INFO|SetProjectAccessType done 
+2024/04/25 16:48:40.535|INFO|ClickCreateProjectButton done 
+2024/04/25 16:48:40.535|INFO|Create Project finished 

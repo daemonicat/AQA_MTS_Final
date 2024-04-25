@@ -1,0 +1,8 @@
+2024/04/25 16:48:19.856|INFO|Project { Title = cb8iga, Code = AROKNRQC, Description = Forks Well seamless calculate optimize, Access = all, Counts =  } 
+2024/04/25 16:48:19.871|INFO|RestSharp.RestRequest 
+2024/04/25 16:48:19.873|DEBUG|Post request to: /v1/project 
+2024/04/25 16:48:19.893|DEBUG|body: {"title":"cb8iga","code":"AROKNRQC","description":"Forks Well seamless calculate optimize","access":"all","counts":null} 
+2024/04/25 16:48:20.564|DEBUG|Request finished with status code: OK 
+2024/04/25 16:48:20.564|DEBUG|Responce: {"status":true,"result":{"code":"AROKNRQC"}} 
+2024/04/25 16:48:20.564|INFO|_project.Status = True 
+2024/04/25 16:48:20.564|INFO|actualProject.Result.Code = AROKNRQC 
