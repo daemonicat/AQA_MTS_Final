@@ -1,0 +1,6 @@
+2024/04/25 21:21:19.961|INFO|Successful Login: 
+2024/04/25 21:21:20.438|INFO|EmailInput.SendKeys 
+2024/04/25 21:21:20.926|INFO|PasswordInput.SendKeys 
+2024/04/25 21:21:21.129|INFO|SignInButton.Click 
+2024/04/25 21:21:21.129|INFO|Fail new project creation started 
+2024/04/25 21:21:24.193|INFO|Fail new project creation finished 

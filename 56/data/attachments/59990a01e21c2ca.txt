@@ -1,0 +1,7 @@
+2024/04/25 21:21:38.012|INFO|TestCase { Id = 0, Title = eg9e4bz04g, Description = Internal Engineer Assurance indexing maximize, Severity = 4, Priority = 2, Type = 2, Layer = 2, Behavior = 2, Automation = 1, AuthorId = 216468, CreatedAt = 04/25/2024 21:21:38, UpdatedAt = 04/25/2024 21:21:38 } 
+2024/04/25 21:21:38.012|INFO|RestSharp.RestRequest 
+2024/04/25 21:21:38.012|DEBUG|Post request to: /v1/case/{code} 
+2024/04/25 21:21:38.019|DEBUG|body: {"id":0,"title":"eg9e4bz04g","description":"Internal Engineer Assurance indexing maximize","severity":4,"priority":2,"type":2,"layer":2,"behavior":2,"automation":1,"author_id":216468,"created_at":"04/25/2024 21:21:38","updated_at":"04/25/2024 21:21:38"} 
+2024/04/25 21:21:38.204|DEBUG|Request finished with status code: OK 
+2024/04/25 21:21:38.204|DEBUG|Responce: {"status":true,"result":{"id":6}} 
+2024/04/25 21:21:38.204|INFO|CreateNewTestCaseTest is successful 

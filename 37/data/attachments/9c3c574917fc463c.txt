@@ -1,6 +1,0 @@
-2024/04/23 20:15:40.163|INFO|RestSharp.RestRequest 
-2024/04/23 20:15:40.163|DEBUG|Post request to: /v1/case/{code} 
-2024/04/23 20:15:40.169|DEBUG|body: {"id":0,"title":"MeowTest","description":"Test description","severity":4,"priority":1,"type":1,"layer":1,"behavior":2,"automation":0,"status":0,"author_id":216468,"created_at":"2024-04-23T01:20:00","updated_at":"2024-04-23T01:20:00"} 
-2024/04/23 20:15:40.462|DEBUG|Request finished with status code: OK 
-2024/04/23 20:15:40.462|DEBUG|Responce: {"status":true,"result":{"id":2}} 
-2024/04/23 20:15:40.464|INFO|CreateNewTestCaseTest is successful 

@@ -1,0 +1,6 @@
+2024/04/25 21:21:38.381|INFO|TestCase { Id = 6, Title = eg9e4bz04g, Description = Internal Engineer Assurance indexing maximize, Severity = 4, Priority = 2, Type = 2, Layer = 2, Behavior = 2, Automation = 1, AuthorId = 216468, CreatedAt = 04/25/2024 21:21:38, UpdatedAt = 04/25/2024 21:21:38 } 
+2024/04/25 21:21:38.381|INFO|RestSharp.RestRequest 
+2024/04/25 21:21:38.381|DEBUG|Delete request to: /v1/case/{code}/{id} 
+2024/04/25 21:21:38.580|DEBUG|Request finished with status code: OK 
+2024/04/25 21:21:38.580|DEBUG|Responce: {"status":true,"result":{"id":6}} 
+2024/04/25 21:21:38.580|INFO|DeleteTestCaseTest is successful 
