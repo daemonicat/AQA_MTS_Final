@@ -1,0 +1,6 @@
+2024/04/25 16:33:13.059|INFO|TestCase { Id = 10, Title = mffmh9zs7s, Description = Credit Card Account Manat solid state Terrace haptic, Severity = 1, Priority = 1, Type = 2, Layer = 3, Behavior = 2, Automation = 1, AuthorId = 216468, CreatedAt = 04/25/2024 16:33:12, UpdatedAt = 04/25/2024 16:33:12 } 
+2024/04/25 16:33:13.059|INFO|RestSharp.RestRequest 
+2024/04/25 16:33:13.059|DEBUG|Delete request to: /v1/case/{code}/{id} 
+2024/04/25 16:33:13.242|DEBUG|Request finished with status code: OK 
+2024/04/25 16:33:13.242|DEBUG|Responce: {"status":true,"result":{"id":10}} 
+2024/04/25 16:33:13.242|INFO|DeleteTestCaseTest is successful 
