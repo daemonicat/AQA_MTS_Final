@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Apr 25 20:48:45 GMT 2024","Thu Apr 25 20:48:45 GMT 2024","108","","API Tests","","TestCaseTests","GetTestCaseTest","GetTestCaseTest",""
+"passed","Thu Apr 25 20:48:44 GMT 2024","Thu Apr 25 20:48:45 GMT 2024","281","","API Tests","","TestCaseTests","CreateNewTestCaseTest","CreateNewTestCaseTest",""
+"passed","Thu Apr 25 20:48:45 GMT 2024","Thu Apr 25 20:48:45 GMT 2024","91","","API Tests","","TestCaseTests","UpdateTestCaseTest","UpdateTestCaseTest",""
+"passed","Thu Apr 25 20:48:45 GMT 2024","Thu Apr 25 20:48:45 GMT 2024","200","","API Tests","","TestCaseTests","DeleteTestCaseTest","DeleteTestCaseTest",""

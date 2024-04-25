@@ -1,0 +1,6 @@
+2024/04/25 20:48:45.291|INFO|TestCase { Id = 4, Title = dbhp3oe1xb, Description = Avon Object-based invoice Isle Tasty Frozen Car, Severity = 4, Priority = 1, Type = 1, Layer = 3, Behavior = 1, Automation = 1, AuthorId = 216468, CreatedAt = 04/25/2024 20:48:44, UpdatedAt = 04/25/2024 20:48:44 } 
+2024/04/25 20:48:45.293|INFO|RestSharp.RestRequest 
+2024/04/25 20:48:45.293|DEBUG|Delete request to: /v1/case/{code}/{id} 
+2024/04/25 20:48:45.492|DEBUG|Request finished with status code: OK 
+2024/04/25 20:48:45.492|DEBUG|Responce: {"status":true,"result":{"id":4}} 
+2024/04/25 20:48:45.492|INFO|DeleteTestCaseTest is successful 
