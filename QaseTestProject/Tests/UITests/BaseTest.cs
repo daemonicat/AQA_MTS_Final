@@ -11,6 +11,7 @@ namespace QaseTestProject.Tests.UITests;
 
 [Parallelizable(scope: ParallelScope.All)]
 [FixtureLifeCycle(LifeCycle.InstancePerTestCase)]
+[SetUpFixture]
 [AllureSuite("UI Tests")]
 [AllureNUnit]
 public class BaseTest
@@ -22,6 +23,12 @@ public class BaseTest
     protected ProjectsSteps ProjectsSteps;
     protected ProjectSteps ProjectSteps;
     protected SettingsSteps SettingsSteps;
+
+    [OneTimeSetUp]
+    public static void GlobalSetup()
+    {
+        AllureLifecycle.Instance.CleanupResultDirectory();
+    }
 
     [SetUp]
     public void FactoryDriverTest()

@@ -2,7 +2,6 @@
 using Allure.NUnit.Attributes;
 using NLog;
 using QaseTestProject.Clients;
-using QaseTestProject.Helpers;
 using QaseTestProject.Services;
 
 namespace QaseTestProject.Tests.APITests;
