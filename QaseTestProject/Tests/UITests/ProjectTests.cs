@@ -1,6 +1,5 @@
 ﻿using Allure.Net.Commons;
 using Allure.NUnit.Attributes;
-using QaseTestProject.Helpers.Configuration;
 using QaseTestProject.Models.UI;
 
 namespace QaseTestProject.Tests.UITests;
@@ -9,8 +8,7 @@ public class ProjectTests : BaseTest
 {
     [Test(Description = "Create entity (new project) test")]
     [Order(1)]
-    [Category("Smoke")]
-    [Category("Regression")]
+    [Category("Smoke"), Category("Regression")]
     [AllureOwner("Dmitry Kuzmin")]
     [AllureSeverity(SeverityLevel.blocker)]
     public void CreateProjectTest()
@@ -22,7 +20,7 @@ public class ProjectTests : BaseTest
             .SetProjectAccessType("public")
             .Build();
         
-        LoginSteps.SuccessfulLogin(Configurator.Default.Username, Configurator.Default.Password);
+        LoginSteps.SuccessfulLogin(DefaultUser);
         Assert.That(
             ProjectsSteps.CreateProject(projectInput)
                 .IsPageOpened);
@@ -30,13 +28,12 @@ public class ProjectTests : BaseTest
     
     [Test(Description = "Delete entity (project) test")]
     [Order(2)]
-    [Category("Smoke")]
-    [Category("Regression")]
+    [Category("Smoke"), Category("Regression")]
     [AllureOwner("Dmitry Kuzmin")]
     [AllureSeverity(SeverityLevel.blocker)]
     public void DeleteProjectTest()
     {
-        LoginSteps.SuccessfulLogin(Configurator.Default.Username, Configurator.Default.Password);
+        LoginSteps.SuccessfulLogin(DefaultUser);
         Assert.That(SettingsSteps.DeleteProject("TESTATCODE").IsPageOpened);
     }
 }

@@ -18,7 +18,16 @@ public class SettingsPage(IWebDriver driver) : BasePage(driver)
     {
         return TitleLabel.Text.Trim().Equals("Projects");
     }
-    
-    public void ClickDeleteProjectButton() => DeleteProjectButton.Click();
-    public void ClickDeleteProjectFinalButton() => DeleteProjectFinalButton.Click();
+
+    public SettingsPage ClickDeleteProjectButton()
+    {
+        DeleteProjectButton.Click();
+        return this;
+    }
+
+    public SettingsPage ClickDeleteProjectFinalButton()
+    {
+        DeleteProjectFinalButton.Click();
+        return this;
+    }
 }

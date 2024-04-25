@@ -49,7 +49,7 @@ public static class Configurator
         }
     }
 
-    private static List<User> Users
+    public static List<User> Users
     {
         get
         {
@@ -60,14 +60,14 @@ public static class Configurator
             {
                 var user = new User()
                 {
-                    Username = section["Username"] ?? throw new SettingsException("No Username in appsettings.json"),
+                    Email = section["Username"] ?? throw new SettingsException("No Username in appsettings.json"),
                     Password = section["Password"] ?? throw new SettingsException("No Password in appsettings.json")
                 };
 
                 user.UserType = section["UserType"] switch
                 {
-                    "Existing" => UserType.Default,
-                    "Nonexisting" => UserType.Broken,
+                    "Default" => UserType.Default,
+                    "Broken" => UserType.Broken,
                     _ => user.UserType
                 };
 
@@ -78,8 +78,10 @@ public static class Configurator
         }
     }
 
-    public static User Default =>
+    public static User DefaultUser =>
         Users.Find(x => x.UserType == UserType.Default) ?? throw new SettingsException("No such user");
+    public static User BrokenUser =>
+        Users.Find(x => x.UserType == UserType.Broken) ?? throw new SettingsException("No such user");
 
     public static string? BrowserType => SConfiguration.Value[nameof(BrowserType)];
     public static double WaitsTimeout => double.Parse(SConfiguration.Value[nameof(WaitsTimeout)] ?? "15");

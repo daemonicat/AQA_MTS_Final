@@ -12,7 +12,7 @@ public class InvalidCredentialsTest : BaseTest
     public void InvalidLoginTest()
     {
         Assert.That(
-            LoginSteps.UnsuccessfulLogin("blah@blah.com", "definitelyWrongPassword")
+            LoginSteps.UnsuccessfulLogin(BrokenUser)
                 .ErrorAlert.Text.Trim(),
             Is.EqualTo("These credentials do not match our records."));
     }

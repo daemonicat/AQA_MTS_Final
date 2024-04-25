@@ -5,6 +5,7 @@ using OpenQA.Selenium;
 using QaseTestProject.Core;
 using QaseTestProject.Helpers;
 using QaseTestProject.Helpers.Configuration;
+using QaseTestProject.Models;
 using QaseTestProject.Objects.Steps;
 
 namespace QaseTestProject.Tests.UITests;
@@ -13,7 +14,7 @@ namespace QaseTestProject.Tests.UITests;
 [FixtureLifeCycle(LifeCycle.InstancePerTestCase)]
 [AllureSuite("UI Tests")]
 [AllureNUnit]
-public class BaseTest : BaseGeneralTest
+public class BaseTest
 {
     protected IWebDriver Driver { get; private set; }
     protected WaitsHelper WaitsHelper { get; private set; }
@@ -22,6 +23,15 @@ public class BaseTest : BaseGeneralTest
     protected ProjectsSteps ProjectsSteps;
     protected ProjectSteps ProjectSteps;
     protected SettingsSteps SettingsSteps;
+
+    protected User? DefaultUser { get; private set; }
+    protected User? BrokenUser { get; private set; }
+
+    [OneTimeSetUp]
+    public static void GlobalSetup()
+    {
+        AllureLifecycle.Instance.CleanupResultDirectory();
+    }
 
     [SetUp]
     public void FactoryDriverTest()
@@ -33,6 +43,9 @@ public class BaseTest : BaseGeneralTest
         ProjectsSteps = new ProjectsSteps(Driver);
         ProjectSteps = new ProjectSteps(Driver);
         SettingsSteps = new SettingsSteps(Driver);
+
+        DefaultUser = Configurator.DefaultUser;
+        BrokenUser = Configurator.BrokenUser;
 
         Driver.Navigate().GoToUrl(Configurator.AppSettings.URL);
     }
