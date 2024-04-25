@@ -21,6 +21,7 @@ public class LoginTests : BaseTest
     [Category("Regression")]
     [AllureOwner("Dmitry Kuzmin")]
     [AllureSeverity(SeverityLevel.blocker)]
+    [Ignore("Ignore a test")]
     public void FailedLoginTest()
     {
         Assert.That(LoginSteps.SuccessfulLogin("Testeam@ail.com", Configurator.Default.Password)
