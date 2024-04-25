@@ -1,0 +1,6 @@
+2024/04/25 20:28:01.434|INFO|TestCase { Id = 2, Title = dmn1ck71v2, Description = Liaison Sleek Division portals Executive, Severity = 4, Priority = 1, Type = 2, Layer = 3, Behavior = 2, Automation = 0, AuthorId = 216468, CreatedAt = 04/25/2024 20:28:01, UpdatedAt = 04/25/2024 20:28:01 } 
+2024/04/25 20:28:01.436|INFO|RestSharp.RestRequest 
+2024/04/25 20:28:01.436|DEBUG|Delete request to: /v1/case/{code}/{id} 
+2024/04/25 20:28:01.635|DEBUG|Request finished with status code: OK 
+2024/04/25 20:28:01.635|DEBUG|Responce: {"status":true,"result":{"id":2}} 
+2024/04/25 20:28:01.635|INFO|DeleteTestCaseTest is successful 

@@ -1,0 +1,7 @@
+2024/04/25 20:28:01.028|INFO|TestCase { Id = 0, Title = dmn1ck71v2, Description = Liaison Sleek Division portals Executive, Severity = 4, Priority = 1, Type = 2, Layer = 3, Behavior = 2, Automation = 0, AuthorId = 216468, CreatedAt = 04/25/2024 20:28:01, UpdatedAt = 04/25/2024 20:28:01 } 
+2024/04/25 20:28:01.028|INFO|RestSharp.RestRequest 
+2024/04/25 20:28:01.028|DEBUG|Post request to: /v1/case/{code} 
+2024/04/25 20:28:01.033|DEBUG|body: {"id":0,"title":"dmn1ck71v2","description":"Liaison Sleek Division portals Executive","severity":4,"priority":1,"type":2,"layer":3,"behavior":2,"automation":0,"author_id":216468,"created_at":"04/25/2024 20:28:01","updated_at":"04/25/2024 20:28:01"} 
+2024/04/25 20:28:01.246|DEBUG|Request finished with status code: OK 
+2024/04/25 20:28:01.246|DEBUG|Responce: {"status":true,"result":{"id":2}} 
+2024/04/25 20:28:01.246|INFO|CreateNewTestCaseTest is successful 
