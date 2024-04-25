@@ -1,5 +1,6 @@
 using Allure.Net.Commons;
 using Allure.NUnit;
+using Allure.NUnit.Attributes;
 using OpenQA.Selenium;
 using QaseTestProject.Core;
 using QaseTestProject.Helpers;
@@ -10,6 +11,7 @@ namespace QaseTestProject.Tests.UITests;
 
 [Parallelizable(scope: ParallelScope.All)]
 [FixtureLifeCycle(LifeCycle.InstancePerTestCase)]
+[AllureSuite("API tests")]
 [AllureNUnit]
 public class BaseTest
 {

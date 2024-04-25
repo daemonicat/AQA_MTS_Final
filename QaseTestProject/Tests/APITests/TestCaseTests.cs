@@ -15,6 +15,7 @@ public class TestCaseTests : BaseApiTest
     [Category("Smoke")]
     [Category("Regression")]
     [Category("NFE")]
+    [Category("POST")]
     public async Task CreateNewTestCaseTest()
     {
         var actualTestCase = await TestCaseService.CreateNewTestCase(_testCase, ProjectCode);
@@ -33,6 +34,7 @@ public class TestCaseTests : BaseApiTest
     [Order(2)]
     [Category("Regression")]
     [Category("AFE")]
+    [Category("PATCH")]
     public async Task UpdateTestCaseTest()
     {
         var testCase = new TestCase();
@@ -46,6 +48,7 @@ public class TestCaseTests : BaseApiTest
     [Order(3)]
     [Category("Regression")]
     [Category("NFE")]
+    [Category("GET")]
     public async Task GetTestCaseTest()
     {
         var actualTestCase = await TestCaseService.GetTestCase(ProjectCode, _testCase.Id);
@@ -57,6 +60,7 @@ public class TestCaseTests : BaseApiTest
     [Order(4)]
     [Category("Regression")]
     [Category("NFE")]
+    [Category("DELETE")]
     public async Task DeleteTestCaseTest()
     {
         var actualTestCase = await TestCaseService.DeleteTestCase(ProjectCode, _testCase.Id);

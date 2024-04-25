@@ -1,10 +1,12 @@
 ﻿using Allure.NUnit;
+using Allure.NUnit.Attributes;
 using NLog;
 using QaseTestProject.Clients;
 using QaseTestProject.Services;
 
 namespace QaseTestProject.Tests.APITests;
 
+[AllureSuite("API tests")]
 [AllureNUnit]
 public class BaseApiTest
 {
