@@ -1,4 +1,5 @@
-﻿using Allure.NUnit.Attributes;
+﻿using Allure.Net.Commons;
+using Allure.NUnit.Attributes;
 using Bogus;
 using QaseTestProject.Fakers;
 using QaseTestProject.Models.API;
@@ -10,10 +11,12 @@ public class ProjectTests : BaseApiTest
     private static Faker<Project> Project => new ProjectFaker();
     private readonly Project _project = Project.Generate();
     
-    [Test]
+    [Test(Description = "Create entity (project) test")]
     [Order(1)]
     [Category("Smoke"), Category("Regression"), Category("POST")]
+    [AllureOwner("Dmitry Kuzmin")]
     [AllureFeature("NFE")]
+    [AllureSeverity(SeverityLevel.blocker)]
     public async Task AddProjectTest()
     {
         Logger.Info(_project);
@@ -25,10 +28,12 @@ public class ProjectTests : BaseApiTest
         Assert.That(actualProject.Status, Is.EqualTo(true));
     }
 
-    [Test]
+    [Test(Description = "Get missing entity (project) test")]
     [Order(2)]
     [Category("Regression"), Category("GET")]
+    [AllureOwner("Dmitry Kuzmin")]
     [AllureFeature("AFE")]
+    [AllureSeverity(SeverityLevel.critical)]
     public void GetMissingProjectTest()
     {
         const string code = "CODE2";
@@ -44,10 +49,12 @@ public class ProjectTests : BaseApiTest
         });
     }
 
-    [Test]
+    [Test(Description = "Delete entity (project) test")]
     [Order(3)]
     [Category("Regression"), Category("DELETE")]
+    [AllureOwner("Dmitry Kuzmin")]
     [AllureFeature("NFE")]
+    [AllureSeverity(SeverityLevel.blocker)]
     public void DeleteProjectTest()
     {
         var actualProject = ProjectService.DeleteProjectByCode(_project.Code);

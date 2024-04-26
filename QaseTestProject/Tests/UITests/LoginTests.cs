@@ -8,6 +8,7 @@ public class LoginTests : BaseTest
     [Test(Description = "Base positive login test")]
     [Category("Smoke"), Category("Regression")]
     [AllureOwner("Dmitry Kuzmin")]
+    [AllureFeature("NFE")]
     [AllureSeverity(SeverityLevel.blocker)]
     public void SuccessfulLoginTest()
     {
@@ -18,6 +19,7 @@ public class LoginTests : BaseTest
     [Test(Description = "Defect login test")]
     [Category("Regression")]
     [AllureOwner("Dmitry Kuzmin")]
+    [AllureFeature("NFE")]
     [AllureSeverity(SeverityLevel.blocker)]
     public void FailedLoginTest()
     {

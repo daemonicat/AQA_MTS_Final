@@ -24,14 +24,8 @@ public class BaseTest
     protected ProjectSteps ProjectSteps;
     protected SettingsSteps SettingsSteps;
 
-    protected User? DefaultUser { get; private set; }
-    protected User? BrokenUser { get; private set; }
-
-    [OneTimeSetUp]
-    public static void GlobalSetup()
-    {
-        AllureLifecycle.Instance.CleanupResultDirectory();
-    }
+    protected User DefaultUser { get; private set; }
+    protected User BrokenUser { get; private set; }
 
     [SetUp]
     public void FactoryDriverTest()

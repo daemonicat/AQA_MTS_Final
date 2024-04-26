@@ -8,6 +8,7 @@ public class FileUploadTests : BaseTest
     [Test(Description = "Upload test cases test")]
     [Category("Regression")]
     [AllureOwner("Dmitry Kuzmin")]
+    [AllureFeature("NFE")]
     [AllureSeverity(SeverityLevel.critical)]
     public void UploadFilePositiveTest()
     {
@@ -20,6 +21,7 @@ public class FileUploadTests : BaseTest
     [Test(Description = "Fail to upload test cases test")]
     [Category("Regression")]
     [AllureOwner("Dmitry Kuzmin")]
+    [AllureFeature("AFE")]
     [AllureSeverity(SeverityLevel.critical)]
     public void UploadFileNegativeTest()
     {

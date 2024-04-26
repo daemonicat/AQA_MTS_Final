@@ -9,7 +9,7 @@ public class TestCaseService(RestClientExtended client) : ITestCaseService, IDis
 {
     private readonly Logger _logger = LogManager.GetCurrentClassLogger();
 
-    public async Task<ApiResult<TestCase>> CreateNewTestCase(TestCase? testCase, string code)
+    public async Task<ApiResult<TestCase>> CreateNewTestCase(TestCase testCase, string code)
     {
         var request = new RestRequest("/v1/case/{code}", Method.Post)
             .AddJsonBody(testCase)
@@ -27,7 +27,7 @@ public class TestCaseService(RestClientExtended client) : ITestCaseService, IDis
         return await client.ExecuteAsync<ApiResult<TestCase>>(request);
     }
 
-    public async Task<ApiResult<TestCase>> UpdateTestCase(TestCase? testCase, string code, int id)
+    public async Task<ApiResult<TestCase>> UpdateTestCase(TestCase testCase, string code, int id)
     {
         var request = new RestRequest("/v1/case/{code}/{id}", Method.Patch)
             .AddJsonBody(testCase)
