@@ -3,6 +3,8 @@ using Allure.NUnit.Attributes;
 
 namespace QaseTestProject.Tests.UITests;
 
+[TestFixture]
+[Order(1)]
 public class LoginTests : BaseTest
 {
     [Test(Description = "Base positive login test")]
