@@ -1,8 +1,0 @@
-2024/04/25 16:32:50.094|INFO|Project { Title = 34u2lj, Code = RWEBWGTU, Description = quantifying Gourde orchid multi-byte Multi-layered, Access = all, Counts =  } 
-2024/04/25 16:32:50.105|INFO|RestSharp.RestRequest 
-2024/04/25 16:32:50.111|DEBUG|Post request to: /v1/project 
-2024/04/25 16:32:50.130|DEBUG|body: {"title":"34u2lj","code":"RWEBWGTU","description":"quantifying Gourde orchid multi-byte Multi-layered","access":"all","counts":null} 
-2024/04/25 16:32:50.750|DEBUG|Request finished with status code: OK 
-2024/04/25 16:32:50.750|DEBUG|Responce: {"status":true,"result":{"code":"RWEBWGTU"}} 
-2024/04/25 16:32:50.750|INFO|_project.Status = True 
-2024/04/25 16:32:50.750|INFO|actualProject.Result.Code = RWEBWGTU 

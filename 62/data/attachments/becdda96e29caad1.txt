@@ -1,0 +1,8 @@
+2024/04/26 17:13:48.345|INFO|Project { Title = jjr2ni, Code = NIDYUCKH, Description = maximize Sleek Granite Fish invoice Georgia intermediate, Access = all, Counts =  } 
+2024/04/26 17:13:48.350|INFO|RestSharp.RestRequest 
+2024/04/26 17:13:48.350|DEBUG|Post request to: /v1/project 
+2024/04/26 17:13:48.373|DEBUG|body: {"title":"jjr2ni","code":"NIDYUCKH","description":"maximize Sleek Granite Fish invoice Georgia intermediate","access":"all","counts":null} 
+2024/04/26 17:13:48.769|DEBUG|Request finished with status code: OK 
+2024/04/26 17:13:48.769|DEBUG|Responce: {"status":true,"result":{"code":"NIDYUCKH"}} 
+2024/04/26 17:13:48.769|INFO|_project.Status = True 
+2024/04/26 17:13:48.769|INFO|actualProject.Result.Code = NIDYUCKH 

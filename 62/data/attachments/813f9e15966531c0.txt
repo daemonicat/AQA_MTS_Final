@@ -1,0 +1,7 @@
+2024/04/26 17:13:48.937|INFO|TestCase { Id = 0, Title = l0ozt3huc9, Description = Usability Quality Trinidad and Tobago application Reverse-engineered, Severity = 3, Priority = 2, Type = 3, Layer = 1, Behavior = 1, Automation = 1, AuthorId = 216468, CreatedAt = 04/26/2024 17:13:48, UpdatedAt = 04/26/2024 17:13:48 } 
+2024/04/26 17:13:48.937|INFO|RestSharp.RestRequest 
+2024/04/26 17:13:48.937|DEBUG|Post request to: /v1/case/{code} 
+2024/04/26 17:13:48.940|DEBUG|body: {"id":0,"title":"l0ozt3huc9","description":"Usability Quality Trinidad and Tobago application Reverse-engineered","severity":3,"priority":2,"type":3,"layer":1,"behavior":1,"automation":1,"author_id":216468,"created_at":"04/26/2024 17:13:48","updated_at":"04/26/2024 17:13:48"} 
+2024/04/26 17:13:49.117|DEBUG|Request finished with status code: OK 
+2024/04/26 17:13:49.117|DEBUG|Responce: {"status":true,"result":{"id":13}} 
+2024/04/26 17:13:49.117|INFO|CreateNewTestCaseTest is successful 
