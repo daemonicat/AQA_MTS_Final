@@ -1,0 +1,6 @@
+2024/04/26 15:31:27.114|INFO|TestCase { Id = 7, Title = 52juxo13pj, Description = Virtual Handmade Plastic Towels payment Progressive Personal Loan Account, Severity = 4, Priority = 1, Type = 3, Layer = 2, Behavior = 2, Automation = 1, AuthorId = 216468, CreatedAt = 04/26/2024 15:31:26, UpdatedAt = 04/26/2024 15:31:26 } 
+2024/04/26 15:31:27.114|INFO|RestSharp.RestRequest 
+2024/04/26 15:31:27.114|DEBUG|Get request to: /v1/case/{code}/{id} 
+2024/04/26 15:31:27.219|DEBUG|Request finished with status code: OK 
+2024/04/26 15:31:27.219|DEBUG|Responce: {"status":true,"result":{"id":7,"position":1,"title":"52juxo13pj","description":"Virtual Handmade Plastic Towels payment Progressive Personal Loan Account","preconditions":null,"postconditions":null,"severity":4,"priority":1,"type":3,"layer":2,"is_flaky":0,"is_muted":false,"behavior":2,"automation":1,"isManual":true,"isToBeAutomated":true,"status":0,"milestone_id":null,"suite_id":null,"links":[],"custom_fields":[],"attachments":[],"steps_type":null,"steps":[],"params":[],"member_id":1,"author_id":218897,"tags":[],"deleted":null,"created":"2024-04-26T15:31:26.000000Z","updated":"2024-04-26T15:31:26.000000Z","created_at":"2024-04-26T15:31:26+00:00","updated_at":"2024-04-26T15:31:26+00:00"}} 
+2024/04/26 15:31:27.219|INFO|GetTestCaseTest is successful 

@@ -1,0 +1,8 @@
+2024/04/26 15:31:27.028|INFO|RestSharp.RestRequest 
+2024/04/26 15:31:27.028|DEBUG|Patch request to: /v1/case/{code}/{id} 
+2024/04/26 15:31:27.028|DEBUG|body: {"id":0,"title":"","description":"","severity":0,"priority":0,"type":0,"layer":0,"behavior":0,"automation":0,"author_id":0,"created_at":"","updated_at":""} 
+2024/04/26 15:31:27.114|ERROR|Error retrieving response. Check inner details for more info. 
+Request failed with status code UnprocessableEntity 
+2024/04/26 15:31:27.114|DEBUG|Request finished with status code: UnprocessableEntity 
+2024/04/26 15:31:27.114|DEBUG|Responce: {"message":"The title must be a string.","errors":{"title":["The title must be a string."]}} 
+2024/04/26 15:31:27.114|INFO|UpdateTestCaseTest is successful 
