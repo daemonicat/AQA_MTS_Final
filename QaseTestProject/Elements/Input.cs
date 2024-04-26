@@ -11,7 +11,6 @@ public class Input
     public Input(IWebDriver webDriver, IWebElement webElement) => _uiElement = new UIElement(webDriver, webElement);
     
     public void Clear() => _uiElement.Clear();
-    public void Click() => _uiElement.Click();
         
     public void SendKeys(string text) => _uiElement.SendKeys(text);
 }

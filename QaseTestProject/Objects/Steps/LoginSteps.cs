@@ -15,7 +15,7 @@ public class LoginSteps : BaseSteps
     }
 
     [AllureStep]
-    public ProjectsPage SuccessfulLogin(User? user)
+    public ProjectsPage SuccessfulLogin(User user)
     {
         Logger.Info("Successful Login:");
         
@@ -32,7 +32,7 @@ public class LoginSteps : BaseSteps
     }
 
     [AllureStep]
-    public LoginPage UnsuccessfulLogin(User? user)
+    public LoginPage UnsuccessfulLogin(User user)
     {
         Logger.Info("Successful Login:");
         

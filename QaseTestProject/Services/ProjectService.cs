@@ -9,7 +9,7 @@ public class ProjectService(RestClientExtended client) : IProjectService, IDispo
 {
     private readonly Logger _logger = LogManager.GetCurrentClassLogger();
 
-    public async Task<ApiResult<Project>> CreateNewProject(Project? project)
+    public async Task<ApiResult<Project>> CreateNewProject(Project project)
     {
         var request = new RestRequest("/v1/project", Method.Post).AddJsonBody(project);
         _logger.Info(request);

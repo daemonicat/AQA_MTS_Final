@@ -23,7 +23,7 @@ public class UIElement : IWebElement
 
     public UIElement(IWebDriver webDriver, By by) : this(webDriver)
     {
-        _webElement = _waitsHelper.WaitForExists(by);
+        _webElement = _waitsHelper.WaitForExists(by) ?? throw new InvalidOperationException();
     }
 
     public UIElement(IWebDriver webDriver, IWebElement webElement) : this(webDriver)
