@@ -36,7 +36,10 @@ jobs:
           sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
           sudo apt-get update
           sudo apt-get --only-upgrade install google-chrome-stable
-          
+
+      - name: CleanupResultDirectory
+        run: dotnet test --filter Category=Initial
+        
       - name: Execute Smoke tests
         if: "github.event.inputs.deployment_target == 'Smoke'"
         run: dotnet test --filter Category=Smoke
