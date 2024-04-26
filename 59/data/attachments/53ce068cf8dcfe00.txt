@@ -1,0 +1,6 @@
+2024/04/26 15:53:11.134|INFO|TestCase { Id = 9, Title = zwru87bcb3, Description = Gorgeous Cotton Mouse Small Soft Chicken Rhode Island generate deploy, Severity = 4, Priority = 3, Type = 2, Layer = 3, Behavior = 2, Automation = 1, AuthorId = 216468, CreatedAt = 04/26/2024 15:53:10, UpdatedAt = 04/26/2024 15:53:10 } 
+2024/04/26 15:53:11.134|INFO|RestSharp.RestRequest 
+2024/04/26 15:53:11.134|DEBUG|Delete request to: /v1/case/{code}/{id} 
+2024/04/26 15:53:11.318|DEBUG|Request finished with status code: OK 
+2024/04/26 15:53:11.318|DEBUG|Responce: {"status":true,"result":{"id":9}} 
+2024/04/26 15:53:11.318|INFO|DeleteTestCaseTest is successful 
