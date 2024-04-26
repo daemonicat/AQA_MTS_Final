@@ -10,24 +10,21 @@ namespace QaseTestProject.Elements;
 public class UIElement : IWebElement
 {
     private readonly IWebDriver _webDriver;
-    private readonly WaitsHelper _waitsHelper;
     private readonly IWebElement _webElement;
     private readonly Actions _actions;
 
-    private UIElement(IWebDriver webDriver)
+    public UIElement(IWebDriver webDriver, By by)
     {
         _webDriver = webDriver;
-        _waitsHelper = new WaitsHelper(webDriver, TimeSpan.FromSeconds(Configurator.WaitsTimeout));
+        var waitsHelper = new WaitsHelper(webDriver, TimeSpan.FromSeconds(Configurator.WaitsTimeout));
         _actions = new Actions(webDriver);
+        _webElement = waitsHelper.WaitForExists(by) ?? throw new InvalidOperationException();
     }
 
-    public UIElement(IWebDriver webDriver, By by) : this(webDriver)
+    public UIElement(IWebDriver webDriver, IWebElement webElement)
     {
-        _webElement = _waitsHelper.WaitForExists(by) ?? throw new InvalidOperationException();
-    }
-
-    public UIElement(IWebDriver webDriver, IWebElement webElement) : this(webDriver)
-    {
+        _webDriver = webDriver;
+        _actions = new Actions(webDriver);
         _webElement = webElement;
     }
 

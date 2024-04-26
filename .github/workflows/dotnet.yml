@@ -38,7 +38,7 @@ jobs:
           sudo apt-get --only-upgrade install google-chrome-stable
 
       - name: CleanupResultDirectory
-        run: dotnet test --filter Category=Initial
+        run: rm ./QaseTestProject/bin/Debug/net8.0/allure-results -rf
         
       - name: Execute Smoke tests
         if: "github.event.inputs.deployment_target == 'Smoke'"

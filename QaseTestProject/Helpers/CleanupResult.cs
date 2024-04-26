@@ -1,4 +1,4 @@
-﻿using Allure.Net.Commons;
+﻿/*using Allure.Net.Commons;
 
 namespace QaseTestProject.Helpers;
 
@@ -10,4 +10,4 @@ public class CleanupResult
     {
         AllureLifecycle.Instance.CleanupResultDirectory();
     }
-}
+}*/
