@@ -10,6 +10,7 @@ public class ProjectTests : BaseTest
     [Order(1)]
     [Category("Smoke"), Category("Regression")]
     [AllureOwner("Dmitry Kuzmin")]
+    [AllureFeature("NFE")]
     [AllureSeverity(SeverityLevel.blocker)]
     public void CreateProjectTest()
     {
@@ -30,6 +31,7 @@ public class ProjectTests : BaseTest
     [Order(2)]
     [Category("Smoke"), Category("Regression")]
     [AllureOwner("Dmitry Kuzmin")]
+    [AllureFeature("NFE")]
     [AllureSeverity(SeverityLevel.blocker)]
     public void DeleteProjectTest()
     {

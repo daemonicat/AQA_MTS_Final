@@ -9,6 +9,7 @@ public class BoundaryValueTests : BaseTest
     [Test(Description = "Minimum (2) boundary value Test")]
     [Category("Regression")]
     [AllureOwner("Dmitry Kuzmin")]
+    [AllureFeature("NFE")]
     [AllureSeverity(SeverityLevel.critical)]
     public void MinValueTest()
     {
@@ -29,6 +30,7 @@ public class BoundaryValueTests : BaseTest
     [Test(Description = "Maximum (10) boundary value Test")]
     [Category("Regression")]
     [AllureOwner("Dmitry Kuzmin")]
+    [AllureFeature("NFE")]
     [AllureSeverity(SeverityLevel.critical)]
     public void MaxValueTest()
     {
@@ -49,6 +51,7 @@ public class BoundaryValueTests : BaseTest
     [Test(Description = "Minimum Out of Bounds (1) boundary value Test")]
     [Category("Regression")]
     [AllureOwner("Dmitry Kuzmin")]
+    [AllureFeature("AFE")]
     [AllureSeverity(SeverityLevel.critical)]
     public void MinOOBValueTest()
     {
@@ -68,6 +71,7 @@ public class BoundaryValueTests : BaseTest
     [Test(Description = "Maximum Out of Bounds (11) boundary value Test")]
     [Category("Regression")]
     [AllureOwner("Dmitry Kuzmin")]
+    [AllureFeature("AFE")]
     [AllureSeverity(SeverityLevel.critical)]
     public void MaxOOBValueTest()
     {

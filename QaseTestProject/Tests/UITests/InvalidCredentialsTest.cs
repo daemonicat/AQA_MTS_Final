@@ -8,6 +8,7 @@ public class InvalidCredentialsTest : BaseTest
     [Test(Description = "Negative login test")]
     [Category("Regression")]
     [AllureOwner("Dmitry Kuzmin")]
+    [AllureFeature("AFE")]
     [AllureSeverity(SeverityLevel.critical)]
     public void InvalidLoginTest()
     {

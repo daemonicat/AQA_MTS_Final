@@ -1,4 +1,5 @@
-﻿using Allure.NUnit.Attributes;
+﻿using Allure.Net.Commons;
+using Allure.NUnit.Attributes;
 using Bogus;
 using QaseTestProject.Fakers;
 using QaseTestProject.Models.API;
@@ -11,10 +12,12 @@ public class TestCaseTests : BaseApiTest
     private static Faker<TestCase> TestCase => new TestCaseFaker();
     private readonly TestCase _testCase = TestCase.Generate();
 
-    [Test]
+    [Test(Description = "Create entity (test case) test")]
     [Order(1)]
     [Category("Smoke"), Category("Regression"), Category("POST")]
+    [AllureOwner("Dmitry Kuzmin")]
     [AllureFeature("NFE")]
+    [AllureSeverity(SeverityLevel.blocker)]
     public async Task CreateNewTestCaseTest()
     {
         Logger.Info(_testCase);
@@ -31,10 +34,12 @@ public class TestCaseTests : BaseApiTest
         Logger.Info("CreateNewTestCaseTest is successful");
     }
 
-    [Test]
+    [Test(Description = "Update entity (test case) test")]
     [Order(2)]
     [Category("Regression"), Category("PATCH")]
+    [AllureOwner("Dmitry Kuzmin")]
     [AllureFeature("AFE")]
+    [AllureSeverity(SeverityLevel.critical)]
     public async Task UpdateTestCaseTest()
     {
         var testCase = new TestCase();
@@ -44,10 +49,12 @@ public class TestCaseTests : BaseApiTest
         Logger.Info("UpdateTestCaseTest is successful");
     }
 
-    [Test]
+    [Test(Description = "Get entity (test case) test")]
     [Order(3)]
     [Category("Regression"), Category("GET")]
+    [AllureOwner("Dmitry Kuzmin")]
     [AllureFeature("NFE")]
+    [AllureSeverity(SeverityLevel.blocker)]
     public async Task GetTestCaseTest()
     {
         Logger.Info(_testCase);
@@ -57,10 +64,12 @@ public class TestCaseTests : BaseApiTest
         Logger.Info("GetTestCaseTest is successful");
     }
 
-    [Test]
+    [Test(Description = "Delete entity (test case) test")]
     [Order(4)]
     [Category("Regression"), Category("DELETE")]
+    [AllureOwner("Dmitry Kuzmin")]
     [AllureFeature("NFE")]
+    [AllureSeverity(SeverityLevel.critical)]
     public async Task DeleteTestCaseTest()
     {
         Logger.Info(_testCase);
