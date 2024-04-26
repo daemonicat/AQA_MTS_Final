@@ -1,0 +1,6 @@
+2024/04/26 17:08:08.835|INFO|TestCase { Id = 12, Title = tisft7gox1, Description = array extend overriding Palestinian Territory expedite, Severity = 1, Priority = 2, Type = 2, Layer = 3, Behavior = 2, Automation = 1, AuthorId = 216468, CreatedAt = 04/26/2024 17:08:08, UpdatedAt = 04/26/2024 17:08:08 } 
+2024/04/26 17:08:08.837|INFO|RestSharp.RestRequest 
+2024/04/26 17:08:08.837|DEBUG|Delete request to: /v1/case/{code}/{id} 
+2024/04/26 17:08:09.051|DEBUG|Request finished with status code: OK 
+2024/04/26 17:08:09.051|DEBUG|Responce: {"status":true,"result":{"id":12}} 
+2024/04/26 17:08:09.051|INFO|DeleteTestCaseTest is successful 

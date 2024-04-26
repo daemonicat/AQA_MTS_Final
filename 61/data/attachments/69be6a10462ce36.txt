@@ -1,0 +1,8 @@
+2024/04/26 17:08:07.749|INFO|Project { Title = bbfll0, Code = KHGCCNJG, Description = Incredible Frozen Shoes transmit Kansas actuating protocol, Access = all, Counts =  } 
+2024/04/26 17:08:07.755|INFO|RestSharp.RestRequest 
+2024/04/26 17:08:07.757|DEBUG|Post request to: /v1/project 
+2024/04/26 17:08:07.776|DEBUG|body: {"title":"bbfll0","code":"KHGCCNJG","description":"Incredible Frozen Shoes transmit Kansas actuating protocol","access":"all","counts":null} 
+2024/04/26 17:08:08.223|DEBUG|Request finished with status code: OK 
+2024/04/26 17:08:08.223|DEBUG|Responce: {"status":true,"result":{"code":"KHGCCNJG"}} 
+2024/04/26 17:08:08.223|INFO|_project.Status = True 
+2024/04/26 17:08:08.223|INFO|actualProject.Result.Code = KHGCCNJG 

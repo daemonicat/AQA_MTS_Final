@@ -1,0 +1,7 @@
+2024/04/26 17:08:08.427|INFO|TestCase { Id = 0, Title = tisft7gox1, Description = array extend overriding Palestinian Territory expedite, Severity = 1, Priority = 2, Type = 2, Layer = 3, Behavior = 2, Automation = 1, AuthorId = 216468, CreatedAt = 04/26/2024 17:08:08, UpdatedAt = 04/26/2024 17:08:08 } 
+2024/04/26 17:08:08.427|INFO|RestSharp.RestRequest 
+2024/04/26 17:08:08.427|DEBUG|Post request to: /v1/case/{code} 
+2024/04/26 17:08:08.430|DEBUG|body: {"id":0,"title":"tisft7gox1","description":"array extend overriding Palestinian Territory expedite","severity":1,"priority":2,"type":2,"layer":3,"behavior":2,"automation":1,"author_id":216468,"created_at":"04/26/2024 17:08:08","updated_at":"04/26/2024 17:08:08"} 
+2024/04/26 17:08:08.635|DEBUG|Request finished with status code: OK 
+2024/04/26 17:08:08.635|DEBUG|Responce: {"status":true,"result":{"id":12}} 
+2024/04/26 17:08:08.638|INFO|CreateNewTestCaseTest is successful 
