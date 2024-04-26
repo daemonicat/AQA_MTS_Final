@@ -1,0 +1,8 @@
+2024/04/26 19:25:26.372|INFO|Project { Title = lxz3fq, Code = RLEFCWKB, Description = Unbranded Soft Hat Checking Account Licensed Fresh Hat redundant Multi-layered, Access = all, Counts =  } 
+2024/04/26 19:25:26.384|INFO|RestSharp.RestRequest 
+2024/04/26 19:25:26.390|DEBUG|Post request to: /v1/project 
+2024/04/26 19:25:26.409|DEBUG|body: {"title":"lxz3fq","code":"RLEFCWKB","description":"Unbranded Soft Hat Checking Account Licensed Fresh Hat redundant Multi-layered","access":"all","counts":null} 
+2024/04/26 19:25:27.209|DEBUG|Request finished with status code: OK 
+2024/04/26 19:25:27.209|DEBUG|Responce: {"status":true,"result":{"code":"RLEFCWKB"}} 
+2024/04/26 19:25:27.209|INFO|_project.Status = True 
+2024/04/26 19:25:27.209|INFO|actualProject.Result.Code = RLEFCWKB 
