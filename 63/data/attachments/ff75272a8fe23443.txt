@@ -1,0 +1,8 @@
+2024/04/26 19:04:03.539|INFO|Project { Title = kz45db, Code = RQXBTSUA, Description = synthesizing Quetzal Groves Checking Account Personal Loan Account, Access = all, Counts =  } 
+2024/04/26 19:04:03.551|INFO|RestSharp.RestRequest 
+2024/04/26 19:04:03.557|DEBUG|Post request to: /v1/project 
+2024/04/26 19:04:03.576|DEBUG|body: {"title":"kz45db","code":"RQXBTSUA","description":"synthesizing Quetzal Groves Checking Account Personal Loan Account","access":"all","counts":null} 
+2024/04/26 19:04:04.166|DEBUG|Request finished with status code: OK 
+2024/04/26 19:04:04.166|DEBUG|Responce: {"status":true,"result":{"code":"RQXBTSUA"}} 
+2024/04/26 19:04:04.166|INFO|_project.Status = True 
+2024/04/26 19:04:04.166|INFO|actualProject.Result.Code = RQXBTSUA 
