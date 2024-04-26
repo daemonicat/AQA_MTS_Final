@@ -2,7 +2,7 @@ name: .NET
 
 on:
   push:
-    branches: [ "master", "Refactoring" ]
+    branches: [ "master" ]
   pull_request:
     branches: [ "develop" ]
   workflow_dispatch:
