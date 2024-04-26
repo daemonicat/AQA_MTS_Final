@@ -8,7 +8,7 @@ public record Project
     [JsonPropertyName("code")] public string Code { get; set; } = string.Empty;
     [JsonPropertyName("description")] public string Description { get; set; } = string.Empty;
     [JsonPropertyName("access")] public string Access { get; set; } = string.Empty;
-    [JsonPropertyName("counts")] public Counts Counts { get; set; }
+    [JsonPropertyName("counts")] public Counts? Counts { get; set; }
 }
 
 public record Counts
@@ -16,8 +16,8 @@ public record Counts
     [JsonPropertyName("cases")] public int Cases { get; set; }
     [JsonPropertyName("suites")] public int Suites { get; set; }
     [JsonPropertyName("milestones")] public int Milestones { get; set; }
-    [JsonPropertyName("runs")] public Runs Runs { get; set; }
-    [JsonPropertyName("defects")] public Defects Defects { get; set; }
+    [JsonPropertyName("runs")] public Runs? Runs { get; set; }
+    [JsonPropertyName("defects")] public Defects? Defects { get; set; }
 }
 
 public record Runs

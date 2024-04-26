@@ -23,7 +23,7 @@ public class ProjectTests : BaseApiTest
 
         var actualProject = await ProjectService.CreateNewProject(_project);
         Logger.Info($"_project.Status = {actualProject.Status}");
-        Logger.Info($"actualProject.Result.Code = {actualProject.Result.Code}");
+        Logger.Info($"actualProject.Result.Code = {actualProject.Result?.Code}");
 
         Assert.That(actualProject.Status, Is.EqualTo(true));
     }

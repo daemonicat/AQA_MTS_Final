@@ -27,7 +27,7 @@ public class TestCaseTests : BaseApiTest
         Assert.Multiple(() =>
             {
                 Assert.That(actualTestCase.Status, Is.EqualTo(true));
-                Assert.That(actualTestCase.Result.Id, Is.Not.EqualTo(0));
+                Assert.That(actualTestCase.Result?.Id, Is.Not.EqualTo(null));
             }
         );
         _testCase.Id = actualTestCase.Result.Id;
