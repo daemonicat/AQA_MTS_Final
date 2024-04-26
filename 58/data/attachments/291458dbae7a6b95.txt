@@ -1,0 +1,6 @@
+2024/04/26 15:44:23.220|INFO|TestCase { Id = 8, Title = qxbshuew4k, Description = Handcrafted Missouri virtual Ergonomic Frozen Computer empower, Severity = 4, Priority = 1, Type = 2, Layer = 2, Behavior = 2, Automation = 1, AuthorId = 216468, CreatedAt = 04/26/2024 15:44:22, UpdatedAt = 04/26/2024 15:44:22 } 
+2024/04/26 15:44:23.220|INFO|RestSharp.RestRequest 
+2024/04/26 15:44:23.220|DEBUG|Delete request to: /v1/case/{code}/{id} 
+2024/04/26 15:44:23.400|DEBUG|Request finished with status code: OK 
+2024/04/26 15:44:23.400|DEBUG|Responce: {"status":true,"result":{"id":8}} 
+2024/04/26 15:44:23.400|INFO|DeleteTestCaseTest is successful 

@@ -1,0 +1,8 @@
+2024/04/26 15:44:22.321|INFO|Project { Title = o2hj9e, Code = IEJRZQXI, Description = synergistic THX Small Plastic Pants Sleek Licensed, Access = all, Counts =  } 
+2024/04/26 15:44:22.327|INFO|RestSharp.RestRequest 
+2024/04/26 15:44:22.329|DEBUG|Post request to: /v1/project 
+2024/04/26 15:44:22.348|DEBUG|body: {"title":"o2hj9e","code":"IEJRZQXI","description":"synergistic THX Small Plastic Pants Sleek Licensed","access":"all","counts":null} 
+2024/04/26 15:44:22.770|DEBUG|Request finished with status code: OK 
+2024/04/26 15:44:22.770|DEBUG|Responce: {"status":true,"result":{"code":"IEJRZQXI"}} 
+2024/04/26 15:44:22.770|INFO|_project.Status = True 
+2024/04/26 15:44:22.770|INFO|actualProject.Result.Code = IEJRZQXI 
