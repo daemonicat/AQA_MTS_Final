@@ -1,0 +1,8 @@
+2024/04/26 16:13:58.861|INFO|Project { Title = 9okhnd, Code = YPWWSJGP, Description = SCSI Handmade Cotton Gloves silver generating Nepal, Access = all, Counts =  } 
+2024/04/26 16:13:58.868|INFO|RestSharp.RestRequest 
+2024/04/26 16:13:58.870|DEBUG|Post request to: /v1/project 
+2024/04/26 16:13:58.889|DEBUG|body: {"title":"9okhnd","code":"YPWWSJGP","description":"SCSI Handmade Cotton Gloves silver generating Nepal","access":"all","counts":null} 
+2024/04/26 16:13:59.508|DEBUG|Request finished with status code: OK 
+2024/04/26 16:13:59.508|DEBUG|Responce: {"status":true,"result":{"code":"YPWWSJGP"}} 
+2024/04/26 16:13:59.508|INFO|_project.Status = True 
+2024/04/26 16:13:59.509|INFO|actualProject.Result.Code = YPWWSJGP 
