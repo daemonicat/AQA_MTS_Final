@@ -1,0 +1,6 @@
+2024/04/26 19:01:45.589|INFO|TestCase { Id = 14, Title = n6rbudjwdi, Description = generating Investment Account azure Personal Loan Account Granite, Severity = 4, Priority = 1, Type = 3, Layer = 2, Behavior = 2, Automation = 0, AuthorId = 216468, CreatedAt = 04/26/2024 19:01:45, UpdatedAt = 04/26/2024 19:01:45 } 
+2024/04/26 19:01:45.589|INFO|RestSharp.RestRequest 
+2024/04/26 19:01:45.589|DEBUG|Get request to: /v1/case/{code}/{id} 
+2024/04/26 19:01:45.688|DEBUG|Request finished with status code: OK 
+2024/04/26 19:01:45.688|DEBUG|Responce: {"status":true,"result":{"id":14,"position":1,"title":"n6rbudjwdi","description":"generating Investment Account azure Personal Loan Account Granite","preconditions":null,"postconditions":null,"severity":4,"priority":1,"type":3,"layer":2,"is_flaky":0,"is_muted":false,"behavior":2,"automation":0,"isManual":true,"isToBeAutomated":false,"status":0,"milestone_id":null,"suite_id":null,"links":[],"custom_fields":[],"attachments":[],"steps_type":null,"steps":[],"params":[],"member_id":1,"author_id":218897,"tags":[],"deleted":null,"created":"2024-04-26T19:01:45.000000Z","updated":"2024-04-26T19:01:45.000000Z","created_at":"2024-04-26T19:01:45+00:00","updated_at":"2024-04-26T19:01:45+00:00"}} 
+2024/04/26 19:01:45.688|INFO|GetTestCaseTest is successful 

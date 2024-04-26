@@ -1,0 +1,7 @@
+2024/04/26 19:01:45.289|INFO|TestCase { Id = 0, Title = n6rbudjwdi, Description = generating Investment Account azure Personal Loan Account Granite, Severity = 4, Priority = 1, Type = 3, Layer = 2, Behavior = 2, Automation = 0, AuthorId = 216468, CreatedAt = 04/26/2024 19:01:45, UpdatedAt = 04/26/2024 19:01:45 } 
+2024/04/26 19:01:45.289|INFO|RestSharp.RestRequest 
+2024/04/26 19:01:45.289|DEBUG|Post request to: /v1/case/{code} 
+2024/04/26 19:01:45.293|DEBUG|body: {"id":0,"title":"n6rbudjwdi","description":"generating Investment Account azure Personal Loan Account Granite","severity":4,"priority":1,"type":3,"layer":2,"behavior":2,"automation":0,"author_id":216468,"created_at":"04/26/2024 19:01:45","updated_at":"04/26/2024 19:01:45"} 
+2024/04/26 19:01:45.493|DEBUG|Request finished with status code: OK 
+2024/04/26 19:01:45.493|DEBUG|Responce: {"status":true,"result":{"id":14}} 
+2024/04/26 19:01:45.493|INFO|CreateNewTestCaseTest is successful 

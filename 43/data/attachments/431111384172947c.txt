@@ -1,7 +1,0 @@
-2024/04/25 16:43:40.217|INFO|TestCase { Id = 0, Title = 9og08jmdjk, Description = Taiwan Lead Global architect back-end, Severity = 1, Priority = 3, Type = 2, Layer = 2, Behavior = 2, Automation = 0, AuthorId = 216468, CreatedAt = 04/25/2024 16:43:40, UpdatedAt = 04/25/2024 16:43:40 } 
-2024/04/25 16:43:40.219|INFO|RestSharp.RestRequest 
-2024/04/25 16:43:40.219|DEBUG|Post request to: /v1/case/{code} 
-2024/04/25 16:43:40.219|DEBUG|body: {"id":0,"title":"9og08jmdjk","description":"Taiwan Lead Global architect back-end","severity":1,"priority":3,"type":2,"layer":2,"behavior":2,"automation":0,"author_id":216468,"created_at":"04/25/2024 16:43:40","updated_at":"04/25/2024 16:43:40"} 
-2024/04/25 16:43:40.392|DEBUG|Request finished with status code: OK 
-2024/04/25 16:43:40.392|DEBUG|Responce: {"status":true,"result":{"id":11}} 
-2024/04/25 16:43:40.392|INFO|CreateNewTestCaseTest is successful 
