@@ -9,5 +9,6 @@ public class CleanupResult
     public static void GlobalSetup()
     {
         AllureLifecycle.Instance.CleanupResultDirectory();
+        Assert.That(true);
     }
 }

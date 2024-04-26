@@ -23,7 +23,7 @@ public class LoginTests : BaseTest
     [AllureSeverity(SeverityLevel.blocker)]
     public void FailedLoginTest()
     {
-        Assert.That(LoginSteps.SuccessfulLogin(BrokenUser)
-            .IsPageOpened());
+        Assert.That(LoginSteps.SuccessfulLogin(DefaultUser)
+            .IsPageOpened()); // default user for clean allure report
     }
 }
