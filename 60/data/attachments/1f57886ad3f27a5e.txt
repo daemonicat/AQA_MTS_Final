@@ -1,0 +1,8 @@
+2024/04/26 16:17:00.816|INFO|Project { Title = 22n42v, Code = WTJDONWV, Description = Ergonomic Plastic Sausages Kina Designer ubiquitous 24 hour, Access = all, Counts =  } 
+2024/04/26 16:17:00.823|INFO|RestSharp.RestRequest 
+2024/04/26 16:17:00.826|DEBUG|Post request to: /v1/project 
+2024/04/26 16:17:00.849|DEBUG|body: {"title":"22n42v","code":"WTJDONWV","description":"Ergonomic Plastic Sausages Kina Designer ubiquitous 24 hour","access":"all","counts":null} 
+2024/04/26 16:17:01.262|DEBUG|Request finished with status code: OK 
+2024/04/26 16:17:01.262|DEBUG|Responce: {"status":true,"result":{"code":"WTJDONWV"}} 
+2024/04/26 16:17:01.262|INFO|_project.Status = True 
+2024/04/26 16:17:01.262|INFO|actualProject.Result.Code = WTJDONWV 

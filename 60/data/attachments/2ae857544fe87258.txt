@@ -1,0 +1,6 @@
+2024/04/26 16:17:01.267|DEBUG|Get request to: /v1/project/{code} 
+2024/04/26 16:17:01.331|ERROR|Error retrieving response. Check inner details for more info. 
+Request failed with status code NotFound 
+2024/04/26 16:17:01.331|DEBUG|Request finished with status code: NotFound 
+2024/04/26 16:17:01.331|DEBUG|Responce: {"status":false,"errorMessage":"Project not found"} 
+2024/04/26 16:17:01.331|INFO|Response Status = False. Error message: Project not found 

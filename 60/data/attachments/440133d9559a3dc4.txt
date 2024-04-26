@@ -1,0 +1,6 @@
+2024/04/26 16:17:01.640|INFO|TestCase { Id = 11, Title = f6fbarerw0, Description = Computers index port Fundamental Human, Severity = 1, Priority = 1, Type = 3, Layer = 3, Behavior = 1, Automation = 1, AuthorId = 216468, CreatedAt = 04/26/2024 16:17:01, UpdatedAt = 04/26/2024 16:17:01 } 
+2024/04/26 16:17:01.640|INFO|RestSharp.RestRequest 
+2024/04/26 16:17:01.640|DEBUG|Get request to: /v1/case/{code}/{id} 
+2024/04/26 16:17:01.730|DEBUG|Request finished with status code: OK 
+2024/04/26 16:17:01.730|DEBUG|Responce: {"status":true,"result":{"id":11,"position":1,"title":"f6fbarerw0","description":"Computers index port Fundamental Human","preconditions":null,"postconditions":null,"severity":1,"priority":1,"type":3,"layer":3,"is_flaky":0,"is_muted":false,"behavior":1,"automation":1,"isManual":true,"isToBeAutomated":true,"status":0,"milestone_id":null,"suite_id":null,"links":[],"custom_fields":[],"attachments":[],"steps_type":null,"steps":[],"params":[],"member_id":1,"author_id":218897,"tags":[],"deleted":null,"created":"2024-04-26T16:17:01.000000Z","updated":"2024-04-26T16:17:01.000000Z","created_at":"2024-04-26T16:17:01+00:00","updated_at":"2024-04-26T16:17:01+00:00"}} 
+2024/04/26 16:17:01.730|INFO|GetTestCaseTest is successful 
