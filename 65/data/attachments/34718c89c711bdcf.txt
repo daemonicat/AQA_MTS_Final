@@ -1,0 +1,6 @@
+2024/04/29 21:52:26.167|INFO|TestCase { Id = 17, Title = h63sjrzfac, Description = IB Generic Secured Refined Fresh Chair Buckinghamshire, Severity = 1, Priority = 2, Type = 3, Layer = 1, Behavior = 2, Automation = 0, AuthorId = 216468, CreatedAt = 04/29/2024 21:52:25, UpdatedAt = 04/29/2024 21:52:25 } 
+2024/04/29 21:52:26.167|INFO|RestSharp.RestRequest 
+2024/04/29 21:52:26.167|DEBUG|Delete request to: /v1/case/{code}/{id} 
+2024/04/29 21:52:26.392|DEBUG|Request finished with status code: OK 
+2024/04/29 21:52:26.392|DEBUG|Responce: {"status":true,"result":{"id":17}} 
+2024/04/29 21:52:26.392|INFO|DeleteTestCaseTest is successful 

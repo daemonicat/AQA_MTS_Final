@@ -1,0 +1,8 @@
+2024/04/29 21:52:02.083|INFO|Project { Title = xpmcro, Code = PKZYAQLE, Description = Handmade Nebraska Illinois synthesize Principal, Access = all, Counts =  } 
+2024/04/29 21:52:02.099|INFO|RestSharp.RestRequest 
+2024/04/29 21:52:02.101|DEBUG|Post request to: /v1/project 
+2024/04/29 21:52:02.121|DEBUG|body: {"title":"xpmcro","code":"PKZYAQLE","description":"Handmade Nebraska Illinois synthesize Principal","access":"all","counts":null} 
+2024/04/29 21:52:02.749|DEBUG|Request finished with status code: OK 
+2024/04/29 21:52:02.749|DEBUG|Responce: {"status":true,"result":{"code":"PKZYAQLE"}} 
+2024/04/29 21:52:02.749|INFO|_project.Status = True 
+2024/04/29 21:52:02.749|INFO|actualProject.Result.Code = PKZYAQLE 

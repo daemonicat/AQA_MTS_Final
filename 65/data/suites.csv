@@ -1,0 +1,37 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon Apr 29 21:52:26 GMT 2024","Mon Apr 29 21:52:26 GMT 2024","223","","API Tests","","TestCaseTests","DeleteTestCaseTest","DeleteTestCaseTest","Delete entity (test case) test
+"
+"passed","Mon Apr 29 21:52:02 GMT 2024","Mon Apr 29 21:52:02 GMT 2024","677","","API Tests","","ProjectTests","AddProjectTest","AddProjectTest","Create entity (project) test
+"
+"passed","Mon Apr 29 21:52:03 GMT 2024","Mon Apr 29 21:52:12 GMT 2024","9387","","UI Tests","","FileUploadTests","UploadFilePositiveTest","UploadFilePositiveTest","Upload test cases test
+"
+"passed","Mon Apr 29 21:52:07 GMT 2024","Mon Apr 29 21:52:14 GMT 2024","6809","","UI Tests","","ProjectTests","DeleteProjectTest","DeleteProjectTest","Delete entity (project) test
+"
+"passed","Mon Apr 29 21:52:18 GMT 2024","Mon Apr 29 21:52:25 GMT 2024","6615","","UI Tests","","BoundaryValueTests","MinValueTest","MinValueTest","Minimum (2) boundary value Test
+"
+"passed","Mon Apr 29 21:52:26 GMT 2024","Mon Apr 29 21:52:26 GMT 2024","141","","API Tests","","TestCaseTests","GetTestCaseTest","GetTestCaseTest","Get entity (test case) test
+"
+"passed","Mon Apr 29 21:52:25 GMT 2024","Mon Apr 29 21:52:26 GMT 2024","132","","API Tests","","TestCaseTests","UpdateTestCaseTest","UpdateTestCaseTest","Update entity (test case) test
+"
+"passed","Mon Apr 29 21:52:03 GMT 2024","Mon Apr 29 21:52:12 GMT 2024","9110","","UI Tests","","ProjectTests","CreateProjectTest","CreateProjectTest","Create entity (new project) test
+"
+"passed","Mon Apr 29 21:52:12 GMT 2024","Mon Apr 29 21:52:18 GMT 2024","6430","","UI Tests","","BoundaryValueTests","MaxOOBValueTest","MaxOOBValueTest","Maximum Out of Bounds (11) boundary value Test
+"
+"passed","Mon Apr 29 21:52:14 GMT 2024","Mon Apr 29 21:52:21 GMT 2024","7027","","UI Tests","","BoundaryValueTests","MaxValueTest","MaxValueTest","Maximum (10) boundary value Test
+"
+"passed","Mon Apr 29 21:52:17 GMT 2024","Mon Apr 29 21:52:22 GMT 2024","5609","","UI Tests","","BoundaryValueTests","MinOOBValueTest","MinOOBValueTest","Minimum Out of Bounds (1) boundary value Test
+"
+"passed","Mon Apr 29 21:52:03 GMT 2024","Mon Apr 29 21:52:12 GMT 2024","9422","","UI Tests","","FileUploadTests","UploadFileNegativeTest","UploadFileNegativeTest","Fail to upload test cases test
+"
+"passed","Mon Apr 29 21:52:02 GMT 2024","Mon Apr 29 21:52:02 GMT 2024","114","","API Tests","","ProjectTests","GetMissingProjectTest","GetMissingProjectTest","Get missing entity (project) test
+"
+"passed","Mon Apr 29 21:52:02 GMT 2024","Mon Apr 29 21:52:03 GMT 2024","147","","API Tests","","ProjectTests","DeleteProjectTest","DeleteProjectTest","Delete entity (project) test
+"
+"passed","Mon Apr 29 21:52:12 GMT 2024","Mon Apr 29 21:52:17 GMT 2024","4935","","UI Tests","","LoginTests","SuccessfulLoginTest","SuccessfulLoginTest","Base positive login test
+"
+"passed","Mon Apr 29 21:52:25 GMT 2024","Mon Apr 29 21:52:25 GMT 2024","353","","API Tests","","TestCaseTests","CreateNewTestCaseTest","CreateNewTestCaseTest","Create entity (test case) test
+"
+"passed","Mon Apr 29 21:52:03 GMT 2024","Mon Apr 29 21:52:07 GMT 2024","4607","","UI Tests","","InvalidCredentialsTest","InvalidLoginTest","InvalidLoginTest","Negative login test
+"
+"broken","Mon Apr 29 21:52:12 GMT 2024","Mon Apr 29 21:52:25 GMT 2024","13090","","UI Tests","","LoginTests","FailedLoginTest","FailedLoginTest","Defect login test
+"
