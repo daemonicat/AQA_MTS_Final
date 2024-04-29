@@ -8,11 +8,12 @@ public class InvalidCredentialsTest : BaseTest
     [Test(Description = "Negative login test")]
     [Category("Regression")]
     [AllureOwner("Dmitry Kuzmin")]
+    [AllureFeature("AFE")]
     [AllureSeverity(SeverityLevel.critical)]
     public void InvalidLoginTest()
     {
         Assert.That(
-            LoginSteps.UnsuccessfulLogin("blah@blah.com", "definitelyWrongPassword")
+            LoginSteps.UnsuccessfulLogin(BrokenUser)
                 .ErrorAlert.Text.Trim(),
             Is.EqualTo("These credentials do not match our records."));
     }

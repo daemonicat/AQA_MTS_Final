@@ -1,51 +1,79 @@
-# This workflow will build a .NET project
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
-
 name: .NET
 
 on:
   push:
-    branches: [ "master", "develop", "Feature-PageObject" ]
+    branches: [ "master" ]
   pull_request:
     branches: [ "develop" ]
+  workflow_dispatch:
+    inputs:
+      deployment_target:
+        description: Choose target
+        default: Smoke
+        type: choice
+        options:
+          - Smoke
+          - Regression
 
 jobs:
-  build:
+  test:
+    strategy:
+      matrix:
+        configuration: [ Debug ]
 
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: 8.0.x
-    - name: Restore dependencies
-      run: dotnet restore
-    - name: Build
-      run: dotnet build --no-restore
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
-    - name: Load test report history
-      uses: actions/checkout@v3
-      if: always()
-      continue-on-error: true
-      with:
-        ref: gh-pages
-        path: gh-pages
+      - uses: actions/checkout@v4
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
 
-    - name: Build test report
-      uses: simple-elf/allure-report-action@v1.7
-      if: always()
-      with:
+      - name: Update Chrome # See https://stackoverflow.com/q/63651059/419956
+        run: |
+          wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+          sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+          sudo apt-get update
+          sudo apt-get --only-upgrade install google-chrome-stable
+
+      - name: CleanupResultDirectory
+        run: rm ./QaseTestProject/bin/Debug/net8.0/allure-results -rf
+        
+      - name: Execute Smoke tests
+        if: "github.event.inputs.deployment_target == 'Smoke'"
+        run: dotnet test --filter Category=Smoke
+        id: Smoke
+        
+      - name: Execute Regression tests
+        if: "github.event.inputs.deployment_target == 'Regression'"
+        run: dotnet test --filter Category=Regression
+        id: Regression
+        
+      - name: Execute unit tests
+        if: steps.Smoke.conclusion == 'skipped' && steps.Regression.conclusion == 'skipped'
+        run: dotnet test
+
+      - name: Load test report history
+        uses: actions/checkout@v4
+        if: always()
+        continue-on-error: true
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Build test report
+        uses: simple-elf/allure-report-action@v1.7
+        if: always()
+        with:
           gh_pages: gh-pages
           allure_history: allure-history
           allure_results: QaseTestProject/bin/Debug/net8.0/allure-results
 
-    - name: Publish test report
-      uses: peaceiris/actions-gh-pages@v4
-      if: always()
-      with:
+      - name: Publish test report
+        uses: peaceiris/actions-gh-pages@v4
+        if: always()
+        with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: allure-history

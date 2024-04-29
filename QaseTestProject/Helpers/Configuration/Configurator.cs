@@ -1,26 +1,29 @@
 using System.Reflection;
 using Microsoft.Extensions.Configuration;
+using Microsoft.VisualStudio.TestPlatform.ObjectModel;
+using QaseTestProject.Models;
+using QaseTestProject.Models.Enums;
 
 namespace QaseTestProject.Helpers.Configuration;
 
 public static class Configurator
 {
-    private static readonly Lazy<IConfiguration> s_configuration;
-    public static IConfiguration Configuration => s_configuration.Value;
+    private static readonly Lazy<IConfiguration> SConfiguration;
 
     static Configurator()
     {
-        s_configuration = new Lazy<IConfiguration>(BuildConfiguration);
+        SConfiguration = new Lazy<IConfiguration>(BuildConfiguration);
     }
 
     private static IConfiguration BuildConfiguration()
     {
-        var basePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+        var basePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ??
+                       throw new InvalidOperationException();
         var builder = new ConfigurationBuilder()
-            .SetBasePath(basePath ?? throw new InvalidOperationException())
+            .SetBasePath(basePath)
             .AddJsonFile("appsettings.json");
 
-        var appSettingFiles = Directory.EnumerateFiles(basePath ?? string.Empty, "appsettings.*.json");
+        var appSettingFiles = Directory.EnumerateFiles(basePath, "appsettings.*.json");
 
         foreach (var appSettingFile in appSettingFiles)
         {
@@ -35,16 +38,51 @@ public static class Configurator
         get
         {
             var appSettings = new AppSettings();
-            var child = Configuration.GetSection("AppSettings");
+            var child = SConfiguration.Value.GetSection("AppSettings");
 
-            appSettings.URL = child["URL"];
-            appSettings.Username = child["Username"];
-            appSettings.Password = child["Password"];
+            appSettings.URL = child["URL"] ?? throw new SettingsException("No URL in appsettings.json");
+            appSettings.URI = child["URI"] ?? throw new SettingsException("No URI in appsettings.json");
+            appSettings.Token = child["Token"] ?? throw new SettingsException("No Token in appsettings.json");
+
 
             return appSettings;
         }
     }
 
-    public static string? BrowserType => Configuration[nameof(BrowserType)];
-    public static double WaitsTimeout => Double.Parse(Configuration[nameof(WaitsTimeout)] ?? "120");
+    public static List<User> Users
+    {
+        get
+        {
+            var users = new List<User>();
+            var child = SConfiguration.Value.GetSection("Users");
+
+            foreach (var section in child.GetChildren())
+            {
+                var user = new User()
+                {
+                    Email = section["Username"] ?? throw new SettingsException("No Username in appsettings.json"),
+                    Password = section["Password"] ?? throw new SettingsException("No Password in appsettings.json")
+                };
+
+                user.UserType = section["UserType"] switch
+                {
+                    "Default" => UserType.Default,
+                    "Broken" => UserType.Broken,
+                    _ => user.UserType
+                };
+
+                users.Add(user);
+            }
+
+            return users;
+        }
+    }
+
+    public static User DefaultUser =>
+        Users.Find(x => x.UserType == UserType.Default) ?? throw new SettingsException("No such user");
+    public static User BrokenUser =>
+        Users.Find(x => x.UserType == UserType.Broken) ?? throw new SettingsException("No such user");
+
+    public static string? BrowserType => SConfiguration.Value[nameof(BrowserType)];
+    public static double WaitsTimeout => double.Parse(SConfiguration.Value[nameof(WaitsTimeout)] ?? "15");
 }

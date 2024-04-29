@@ -1,8 +1,9 @@
 ﻿using OpenQA.Selenium;
+using QaseTestProject.Elements;
 
 namespace QaseTestProject.Objects.Pages;
 
-public class CreateProjectDialogue : BasePage
+public class CreateProjectDialogue(IWebDriver driver) : BasePage(driver)
 {
     private static readonly By ProjectNameBy = By.Id("project-name");
     private static readonly By ProjectCodeBy = By.Id("project-code");
@@ -13,22 +14,22 @@ public class CreateProjectDialogue : BasePage
     private static readonly By MemberAccessGroupBy = By.XPath("//input[@type='radio'][@value='group']");
     private static readonly By MemberAccessNoneBy = By.XPath("//input[@type='radio'][@value='none']");
     private static readonly By CreateProjectButtonBy = By.XPath("//button[@type='submit']");
-    private static readonly By MinCharsProjectCodeErrorBy = By.XPath("//div[text()='The code must be at least 2 characters.']");
-    private static readonly By MaxCharsProjectCodeErrorBy = By.XPath("//div[text()='The code may not be greater than 10 characters.']");
 
-    public CreateProjectDialogue(IWebDriver driver) : base(driver)
-    {
-    }
+    private static readonly By MinCharsProjectCodeErrorBy =
+        By.XPath("//div[text()='The code must be at least 2 characters.']");
 
-    private IWebElement ProjectName => WaitsHelper.WaitForExists(ProjectNameBy);
-    private IWebElement ProjectCode => WaitsHelper.WaitForExists(ProjectCodeBy);
-    private IWebElement ProjectDescription => WaitsHelper.WaitForExists(ProjectDescriptionBy);
+    private static readonly By MaxCharsProjectCodeErrorBy =
+        By.XPath("//div[text()='The code may not be greater than 10 characters.']");
+
+    private Input ProjectName => new(Driver, ProjectNameBy);
+    private Input ProjectCode => new(Driver, ProjectCodeBy);
+    private Input ProjectDescription => new(Driver, ProjectDescriptionBy);
     private IWebElement ProjectAccessPrivate => WaitsHelper.WaitForVisibilityLocatedBy(ProjectAccessPrivateBy);
     private IWebElement ProjectAccessPublic => WaitsHelper.WaitForExists(ProjectAccessPublicBy);
     private IWebElement MemberAccessAll => WaitsHelper.WaitForExists(MemberAccessAllBy);
     private IWebElement MemberAccessGroup => WaitsHelper.WaitForExists(MemberAccessGroupBy);
     private IWebElement MemberAccessNone => WaitsHelper.WaitForVisibilityLocatedBy(MemberAccessNoneBy);
-    private IWebElement CreateProjectButton => WaitsHelper.WaitForExists(CreateProjectButtonBy);
+    private Button CreateProjectButton => new(Driver, CreateProjectButtonBy);
     private IWebElement MinCharsProjectCodeError => WaitsHelper.WaitForExists(MinCharsProjectCodeErrorBy);
     private IWebElement MaxCharsProjectCodeError => WaitsHelper.WaitForExists(MaxCharsProjectCodeErrorBy);
 
@@ -37,17 +38,32 @@ public class CreateProjectDialogue : BasePage
         return CreateProjectButton.Displayed;
     }
 
-    public void FillInNameField(string name) => ProjectName.SendKeys(name);
+    public CreateProjectDialogue FillInNameField(string name)
+    {
+        ProjectName.SendKeys(name);
+        return this;
+    }
 
-    public void FillInProjectCode(string code)
+    public CreateProjectDialogue FillInProjectCode(string code)
     {
         ProjectCode.Clear();
         ProjectCode.SendKeys(code);
+        return this;
     }
 
-    public void FillInProjectDescription(string desc) => ProjectDescription.SendKeys(desc);
-    public void ClickCreateProjectButton() => CreateProjectButton.Click();
-    public void SetProjectAccessType(string projectAccessType)
+    public CreateProjectDialogue FillInProjectDescription(string desc)
+    {
+        ProjectDescription.SendKeys(desc);
+        return this;
+    }
+
+    public CreateProjectDialogue ClickCreateProjectButton()
+    {
+        CreateProjectButton.Click();
+        return this;
+    }
+
+    public CreateProjectDialogue SetProjectAccessType(string projectAccessType)
     {
         switch (projectAccessType)
         {
@@ -61,9 +77,11 @@ public class CreateProjectDialogue : BasePage
                 ProjectAccessPrivate.Click();
                 break;
         }
+        
+        return this;
     }
 
-    public void SetMemberAccessType(string memberAccessType)
+    public CreateProjectDialogue SetMemberAccessType(string memberAccessType)
     {
         switch (memberAccessType)
         {
@@ -80,8 +98,10 @@ public class CreateProjectDialogue : BasePage
                 MemberAccessNone.Click();
                 break;
         }
+        
+        return this;
     }
-    
+
     public bool CheckMinCharsProjectCodeError() => MinCharsProjectCodeError.Displayed;
     public bool CheckMaxCharsProjectCodeError() => MaxCharsProjectCodeError.Displayed;
 }
