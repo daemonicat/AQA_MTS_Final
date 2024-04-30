@@ -49,7 +49,7 @@ public class BaseTest
     {
         try
         {
-            if (TestContext.CurrentContext.Result.Outcome.Status != NUnit.Framework.Interfaces.TestStatus.Passed ||
+            if (TestContext.CurrentContext.Result.Outcome.Status != NUnit.Framework.Interfaces.TestStatus.Passed &&
                 TestContext.CurrentContext.Result.Outcome.Status != NUnit.Framework.Interfaces.TestStatus.Skipped)
             {
                 var screenshot = ((ITakesScreenshot)Driver).GetScreenshot();
