@@ -1,0 +1,7 @@
+2024/04/30 13:51:57.613|INFO|TestCase { Id = 0, Title = fhsliffp2x, Description = RSS Unbranded Soft Table Customer COM invoice, Severity = 2, Priority = 2, Type = 3, Layer = 3, Behavior = 1, Automation = 0, AuthorId = 216468, CreatedAt = 04/30/2024 13:51:57, UpdatedAt = 04/30/2024 13:51:57 } 
+2024/04/30 13:51:57.613|INFO|RestSharp.RestRequest 
+2024/04/30 13:51:57.613|DEBUG|Post request to: /v1/case/{code} 
+2024/04/30 13:51:57.620|DEBUG|body: {"id":0,"title":"fhsliffp2x","description":"RSS Unbranded Soft Table Customer COM invoice","severity":2,"priority":2,"type":3,"layer":3,"behavior":1,"automation":0,"author_id":216468,"created_at":"04/30/2024 13:51:57","updated_at":"04/30/2024 13:51:57"} 
+2024/04/30 13:51:57.978|DEBUG|Request finished with status code: OK 
+2024/04/30 13:51:57.978|DEBUG|Responce: {"status":true,"result":{"id":18}} 
+2024/04/30 13:51:57.978|INFO|CreateNewTestCaseTest is successful 

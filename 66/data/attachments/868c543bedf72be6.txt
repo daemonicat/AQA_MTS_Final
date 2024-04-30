@@ -1,0 +1,8 @@
+2024/04/30 13:51:39.355|INFO|Project { Title = jygn66, Code = AXYEHQTV, Description = upward-trending Regional SAS Incredible Wooden Bike Metrics, Access = all, Counts =  } 
+2024/04/30 13:51:39.371|INFO|RestSharp.RestRequest 
+2024/04/30 13:51:39.373|DEBUG|Post request to: /v1/project 
+2024/04/30 13:51:39.393|DEBUG|body: {"title":"jygn66","code":"AXYEHQTV","description":"upward-trending Regional SAS Incredible Wooden Bike Metrics","access":"all","counts":null} 
+2024/04/30 13:51:39.989|DEBUG|Request finished with status code: OK 
+2024/04/30 13:51:39.989|DEBUG|Responce: {"status":true,"result":{"code":"AXYEHQTV"}} 
+2024/04/30 13:51:39.989|INFO|_project.Status = True 
+2024/04/30 13:51:39.989|INFO|actualProject.Result.Code = AXYEHQTV 

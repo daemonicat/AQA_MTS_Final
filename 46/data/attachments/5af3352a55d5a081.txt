@@ -1,6 +1,0 @@
-2024/04/25 16:58:52.974|INFO|TestCase { Id = 13, Title = 11muezmwps, Description = human-resource Networked cross-platform 1080p interface, Severity = 3, Priority = 1, Type = 2, Layer = 2, Behavior = 1, Automation = 1, AuthorId = 216468, CreatedAt = 04/25/2024 16:58:52, UpdatedAt = 04/25/2024 16:58:52 } 
-2024/04/25 16:58:52.974|INFO|RestSharp.RestRequest 
-2024/04/25 16:58:52.974|DEBUG|Get request to: /v1/case/{code}/{id} 
-2024/04/25 16:58:53.128|DEBUG|Request finished with status code: OK 
-2024/04/25 16:58:53.128|DEBUG|Responce: {"status":true,"result":{"id":13,"position":2,"title":"11muezmwps","description":"human-resource Networked cross-platform 1080p interface","preconditions":null,"postconditions":null,"severity":3,"priority":1,"type":2,"layer":2,"is_flaky":0,"is_muted":false,"behavior":1,"automation":1,"isManual":true,"isToBeAutomated":true,"status":0,"milestone_id":null,"suite_id":null,"links":[],"custom_fields":[],"attachments":[],"steps_type":null,"steps":[],"params":[],"member_id":1,"author_id":216468,"tags":[],"deleted":null,"created":"2024-04-25T16:58:52.000000Z","updated":"2024-04-25T16:58:52.000000Z","created_at":"2024-04-25T16:58:52+00:00","updated_at":"2024-04-25T16:58:52+00:00"}} 
-2024/04/25 16:58:53.128|INFO|GetTestCaseTest is successful 
