@@ -1,0 +1,7 @@
+2024/04/30 14:45:27.568|INFO|TestCase { Id = 0, Title = gicqhpl8h3, Description = Intelligent Granite Salad maximize array convergence hacking, Severity = 1, Priority = 3, Type = 3, Layer = 1, Behavior = 2, Automation = 0, AuthorId = 216468, CreatedAt = 04/30/2024 14:45:27, UpdatedAt = 04/30/2024 14:45:27 } 
+2024/04/30 14:45:27.569|INFO|RestSharp.RestRequest 
+2024/04/30 14:45:27.569|DEBUG|Post request to: /v1/case/{code} 
+2024/04/30 14:45:27.569|DEBUG|body: {"id":0,"title":"gicqhpl8h3","description":"Intelligent Granite Salad maximize array convergence hacking","severity":1,"priority":3,"type":3,"layer":1,"behavior":2,"automation":0,"author_id":216468,"created_at":"04/30/2024 14:45:27","updated_at":"04/30/2024 14:45:27"} 
+2024/04/30 14:45:27.733|DEBUG|Request finished with status code: OK 
+2024/04/30 14:45:27.733|DEBUG|Responce: {"status":true,"result":{"id":19}} 
+2024/04/30 14:45:27.733|INFO|CreateNewTestCaseTest is successful 

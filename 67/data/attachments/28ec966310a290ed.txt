@@ -1,0 +1,6 @@
+2024/04/30 14:45:27.825|INFO|TestCase { Id = 19, Title = gicqhpl8h3, Description = Intelligent Granite Salad maximize array convergence hacking, Severity = 1, Priority = 3, Type = 3, Layer = 1, Behavior = 2, Automation = 0, AuthorId = 216468, CreatedAt = 04/30/2024 14:45:27, UpdatedAt = 04/30/2024 14:45:27 } 
+2024/04/30 14:45:27.825|INFO|RestSharp.RestRequest 
+2024/04/30 14:45:27.825|DEBUG|Get request to: /v1/case/{code}/{id} 
+2024/04/30 14:45:27.921|DEBUG|Request finished with status code: OK 
+2024/04/30 14:45:27.921|DEBUG|Responce: {"status":true,"result":{"id":19,"position":2,"title":"gicqhpl8h3","description":"Intelligent Granite Salad maximize array convergence hacking","preconditions":null,"postconditions":null,"severity":1,"priority":3,"type":3,"layer":1,"is_flaky":0,"is_muted":false,"behavior":2,"automation":0,"isManual":true,"isToBeAutomated":false,"status":0,"milestone_id":null,"suite_id":null,"links":[],"custom_fields":[],"attachments":[],"steps_type":null,"steps":[],"params":[],"member_id":1,"author_id":218897,"tags":[],"deleted":null,"created":"2024-04-30T14:45:27.000000Z","updated":"2024-04-30T14:45:27.000000Z","created_at":"2024-04-30T14:45:27+00:00","updated_at":"2024-04-30T14:45:27+00:00"}} 
+2024/04/30 14:45:27.921|INFO|GetTestCaseTest is successful 

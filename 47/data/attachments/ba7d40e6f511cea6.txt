@@ -1,8 +1,0 @@
-2024/04/25 17:02:44.099|INFO|Project { Title = 1y8x44, Code = ZDYCGGNJ, Description = Applications Health Refined Ville Avon, Access = all, Counts =  } 
-2024/04/25 17:02:44.114|INFO|RestSharp.RestRequest 
-2024/04/25 17:02:44.117|DEBUG|Post request to: /v1/project 
-2024/04/25 17:02:44.136|DEBUG|body: {"title":"1y8x44","code":"ZDYCGGNJ","description":"Applications Health Refined Ville Avon","access":"all","counts":null} 
-2024/04/25 17:02:44.721|DEBUG|Request finished with status code: OK 
-2024/04/25 17:02:44.721|DEBUG|Responce: {"status":true,"result":{"code":"ZDYCGGNJ"}} 
-2024/04/25 17:02:44.721|INFO|_project.Status = True 
-2024/04/25 17:02:44.721|INFO|actualProject.Result.Code = ZDYCGGNJ 

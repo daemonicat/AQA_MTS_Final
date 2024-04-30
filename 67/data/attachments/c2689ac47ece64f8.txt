@@ -1,0 +1,8 @@
+2024/04/30 14:45:04.542|INFO|Project { Title = 33a7wl, Code = ZVSPHHQP, Description = Tasty Avon back up neural multi-byte, Access = all, Counts =  } 
+2024/04/30 14:45:04.557|INFO|RestSharp.RestRequest 
+2024/04/30 14:45:04.557|DEBUG|Post request to: /v1/project 
+2024/04/30 14:45:04.579|DEBUG|body: {"title":"33a7wl","code":"ZVSPHHQP","description":"Tasty Avon back up neural multi-byte","access":"all","counts":null} 
+2024/04/30 14:45:05.277|DEBUG|Request finished with status code: OK 
+2024/04/30 14:45:05.277|DEBUG|Responce: {"status":true,"result":{"code":"ZVSPHHQP"}} 
+2024/04/30 14:45:05.277|INFO|_project.Status = True 
+2024/04/30 14:45:05.277|INFO|actualProject.Result.Code = ZVSPHHQP 

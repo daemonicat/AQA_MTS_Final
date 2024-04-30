@@ -1,6 +1,0 @@
-2024/04/25 17:03:15.772|INFO|TestCase { Id = 14, Title = z0m2ax1yzz, Description = turn-key Creative withdrawal overriding Bedfordshire, Severity = 3, Priority = 2, Type = 2, Layer = 3, Behavior = 2, Automation = 1, AuthorId = 216468, CreatedAt = 04/25/2024 17:03:15, UpdatedAt = 04/25/2024 17:03:15 } 
-2024/04/25 17:03:15.772|INFO|RestSharp.RestRequest 
-2024/04/25 17:03:15.772|DEBUG|Delete request to: /v1/case/{code}/{id} 
-2024/04/25 17:03:15.974|DEBUG|Request finished with status code: OK 
-2024/04/25 17:03:15.974|DEBUG|Responce: {"status":true,"result":{"id":14}} 
-2024/04/25 17:03:15.974|INFO|DeleteTestCaseTest is successful 

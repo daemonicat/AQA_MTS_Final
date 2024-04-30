@@ -1,6 +1,0 @@
-2024/04/25 17:03:15.676|INFO|TestCase { Id = 14, Title = z0m2ax1yzz, Description = turn-key Creative withdrawal overriding Bedfordshire, Severity = 3, Priority = 2, Type = 2, Layer = 3, Behavior = 2, Automation = 1, AuthorId = 216468, CreatedAt = 04/25/2024 17:03:15, UpdatedAt = 04/25/2024 17:03:15 } 
-2024/04/25 17:03:15.676|INFO|RestSharp.RestRequest 
-2024/04/25 17:03:15.676|DEBUG|Get request to: /v1/case/{code}/{id} 
-2024/04/25 17:03:15.770|DEBUG|Request finished with status code: OK 
-2024/04/25 17:03:15.770|DEBUG|Responce: {"status":true,"result":{"id":14,"position":2,"title":"z0m2ax1yzz","description":"turn-key Creative withdrawal overriding Bedfordshire","preconditions":null,"postconditions":null,"severity":3,"priority":2,"type":2,"layer":3,"is_flaky":0,"is_muted":false,"behavior":2,"automation":1,"isManual":true,"isToBeAutomated":true,"status":0,"milestone_id":null,"suite_id":null,"links":[],"custom_fields":[],"attachments":[],"steps_type":null,"steps":[],"params":[],"member_id":1,"author_id":216468,"tags":[],"deleted":null,"created":"2024-04-25T17:03:15.000000Z","updated":"2024-04-25T17:03:15.000000Z","created_at":"2024-04-25T17:03:15+00:00","updated_at":"2024-04-25T17:03:15+00:00"}} 
-2024/04/25 17:03:15.770|INFO|GetTestCaseTest is successful 
